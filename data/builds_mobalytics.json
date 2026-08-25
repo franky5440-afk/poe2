@@ -1,0 +1,135 @@
+[
+ {
+  "id": "157ec4a9b28b28ef07c8ff76ad14c083",
+  "title": "[0.5] BALROG - (0* button) Fire Bear Fury of the King Kitava",
+  "url": "https://mobalytics.gg/poe-2/builds/balrog-fire-bear-smith",
+  "author": "Skadoosh",
+  "updated": "Aug 21, 2026",
+  "classes": [
+   "Warrior"
+  ],
+  "tags": [
+   "Smith of Kitava",
+   "Starter"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-08-26",
+  "rank": 1
+ },
+ {
+  "id": "83297e780e1522efa8d0001ee0eaf110",
+  "title": "[0.5] GEMLING SPARK - Endgame BLASTER @animeprincess",
+  "url": "https://mobalytics.gg/poe-2/builds/adonia-s-gemling-spark-anime-princess",
+  "author": "animeprincess",
+  "updated": "Aug 9, 2026",
+  "classes": [
+   "Mercenary"
+  ],
+  "tags": [
+   "Gemling Legionnaire"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-08-26",
+  "rank": 2
+ },
+ {
+  "id": "1fb62fe22c7904d90889f2f1de2c616e",
+  "title": "[0.5] Plants Abyssal Lich  League Starter (Level 1 to Endgame)",
+  "url": "https://mobalytics.gg/poe-2/builds/plants-lich-deadrabb1t",
+  "author": "DEADRABB1T",
+  "updated": "Jul 29, 2026",
+  "classes": [
+   "Witch"
+  ],
+  "tags": [
+   "Abyssal Lich",
+   "Starter"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-08-26",
+  "rank": 3
+ },
+ {
+  "id": "df1a015d15c59bd08e7c79e424576d38",
+  "title": "[0.5] FULL Adonia's Trifusion Stormweaver Guide",
+  "url": "https://mobalytics.gg/poe-2/builds/adonia-s-trifusion-stormweaver",
+  "author": "OperatorOtter",
+  "updated": "Jul 28, 2026",
+  "classes": [
+   "Sorceress"
+  ],
+  "tags": [
+   "Stormweaver"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-08-26",
+  "rank": 4
+ },
+ {
+  "id": "cac0defd8ffaed10bf302996686db617",
+  "title": "[0.5] WHIRLING Trinity Martial Artist Monk Build - League Starter to Endgame",
+  "url": "https://mobalytics.gg/poe-2/builds/martial-artist-monk-build-league-starter-to-endgame",
+  "author": "Ronarray",
+  "updated": "Jul 19, 2026",
+  "classes": [
+   "Monk"
+  ],
+  "tags": [
+   "Martial Artist",
+   "Starter"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-08-26",
+  "rank": 5
+ },
+ {
+  "id": "2d5b08d1f9562906ca9427fee8e449df",
+  "title": "0.5 Fubgun Ice Shot Deadeye",
+  "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
+  "author": "Fubgun",
+  "updated": "Jun 18, 2026",
+  "classes": [
+   "Ranger"
+  ],
+  "tags": [
+   "Deadeye"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-08-26",
+  "rank": 6
+ },
+ {
+  "id": "8afcf60f3c07762269ffdb44e5fe8685",
+  "title": "[0.5] Twister Spirit Walker",
+  "url": "https://mobalytics.gg/poe-2/builds/twister-spirit-walker-snoobae",
+  "author": "snoobae85",
+  "updated": "Jul 28, 2026",
+  "classes": [
+   "Huntress"
+  ],
+  "tags": [
+   "Spirit Walker",
+   "Starter"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-08-26",
+  "rank": 7
+ },
+ {
+  "id": "2cb7ffd9085eb37b32aa6ed4f241270f",
+  "title": "[0.5] Comprehensive CoC Frostbolt/Spark Comet Recoup Infernalist - by Ignatius",
+  "url": "https://mobalytics.gg/poe-2/builds/coc-spark-comet-recoup-infernalist-by-ignatius",
+  "author": "Ignatius",
+  "updated": "Aug 24, 2026",
+  "classes": [
+   "Witch"
+  ],
+  "tags": [
+   "Infernalist",
+   "Starter"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-08-26",
+  "rank": 8
+ }
+]

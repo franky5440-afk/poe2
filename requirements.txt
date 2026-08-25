@@ -1,0 +1,6 @@
+flask
+yt-dlp
+ddgs
+requests
+beautifulsoup4
+cloudscraper
