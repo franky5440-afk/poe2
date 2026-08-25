@@ -48,6 +48,7 @@ scraper.py ──> data/*.json ──> build_site.py ──> site/（靜態站�
 ### poe.ninja BD
 - builds 頁面本身是 client-rendered Astro，HTML 內沒有表格資料，不要嘗試解析 HTML
 - 正解是未公開但穩定的 JSON 端點 `GET https://poe.ninja/poe2/api/data/build-index-state`（免 auth、datacenter IP 可打）；取第一個 `hardcore=false` 的聯盟，`statistics` 即前十升華占比（percentage = share of ladder）
+- **各升華專屬連結**：依官方前端 routing（`a2.AsVFAiaS.mjs`），格式為 `https://poe.ninja/poe2/builds/{leagueUrl}?class={Name}`（空格以 `+` 連接），點擊可直達該升華篩選頁
 - 不要再花時間逆推 builds 表格的列表端點（2026-08-26 已掃過全部 astro chunks，只有這一個公開端點）
 
 ### yt-dlp（v2026.08+）
@@ -85,7 +86,10 @@ git add -A && git -c core.editor=true rebase --continue && git push
 
 4. repo 必須保持 public（免費 Pages 限制），資料皆為公開網頁內容無敏感性問題
 
-## 驗證清單
+## 前端呈現規則
+
+- **BD 卡採純文字顯示**：三來源（Mobalytics / Maxroll / poe.ninja）卡片皆無縮圖與外部連結 icon，僅顯示排名、標題、作者/更新日、標籤（或使用率條），避免缺圖導致版面崩壞
+- Tweet 區外部連結 icon（`.ext-icon`）保留 13px 尺寸
 
 改動後必須實際執行驗證，順序：
 
