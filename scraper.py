@@ -275,10 +275,13 @@ def scrape_poeninja():
     if not league:
         raise ValueError("no softcore league in build-index-state")
     out = []
+    league_url = (league.get("leagueUrl") or "").strip("/")
     for st in (league.get("statistics") or [])[:BUILD_TOP_N]:
         cls = (st.get("class") or "").strip()
         if not cls:
             continue
+        # poe.ninja 官方連結格式：/poe2/builds/{leagueUrl}?class={Name}（空格以 + 連接）
+        url = f"{NINJAA_SITE_URL}/{league_url}?class={cls.replace(' ', '+')}" if league_url else NINJAA_SITE_URL
         out.append({
             "id": md5_id(f"{league.get('leagueName')}/{cls}"),
             "rank": len(out) + 1,
@@ -287,7 +290,7 @@ def scrape_poeninja():
             "trend": st.get("trend", 0),
             "league": league.get("leagueName"),
             "total_chars": league.get("total"),
-            "url": NINJAA_SITE_URL,
+            "url": url,
             "source": "poeninja",
             "found_date": now_str()[:10],
         })

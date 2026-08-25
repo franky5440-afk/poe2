@@ -214,6 +214,7 @@ main { flex: 1; padding-top: 28px; padding-bottom: 48px; }
 .tweet-text a:hover { color: var(--gold-hi); }
 .ext-link { margin-left: auto; display: inline-flex; color: var(--muted); flex-shrink: 0; }
 .ext-link:hover { color: var(--gold-hi); }
+.ext-icon { width: 13px; height: 13px; color: var(--muted); }
 
 /* ---------- search results ---------- */
 #searchResults .group-title {

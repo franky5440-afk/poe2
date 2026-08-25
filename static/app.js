@@ -42,7 +42,7 @@ function buildCard(b) {
     <div class="build-main">
       <h4><a href="${esc(b.url)}" target="_blank" rel="noopener noreferrer">${esc(b.title)}</a></h4>
       ${sub ? `<div class="thread-sub">${sub}</div>` : ""}
-      ${(tags || b.classes?.length) ? `<div class="card-foot">${tags}${EXT_ICON}</div>` : `<div class="card-foot">${EXT_ICON}</div>`}
+      ${tags ? `<div class="card-foot">${tags}</div>` : ""}
     </div>
   </article>`;
 }
@@ -64,7 +64,6 @@ function metaCard(m, maxPct) {
         <span>${pct.toFixed(2)}% 使用率</span>${trend}
         <span>聯盟：${esc(m.league || "")}</span>
         ${typeof m.total_chars === "number" ? `<span>樣本 ${m.total_chars.toLocaleString()} 角色</span>` : ""}
-        ${EXT_ICON}
       </div>
     </div>
   </article>`;
