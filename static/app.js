@@ -245,4 +245,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   $("#searchForm").addEventListener("submit", (e) => { e.preventDefault(); doSearch($("#searchInput").value); });
   $("#clearSearch").addEventListener("click", () => { $("#searchInput").value = ""; switchView(state.activeTab); });
+
+  switchView(state.activeTab);
 });

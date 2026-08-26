@@ -37,13 +37,22 @@ const CONTRACT = `(async () => {
     await sleep(100);
   }
 
+  // ── 回歸：初次載入就該看得到內容（必須放在任何點擊/捲動之前）──
+  check("R0 初次載入內容區就可見（不需先點 tab）", () => {
+    const v = document.querySelector("#view-builds");
+    if (!v) return "找不到 #view-builds";
+    if (v.classList.contains("hidden")) return "#view-builds 初次載入就是 hidden — init 沒有做初始 switchView";
+    const h = Math.round(v.getBoundingClientRect().height);
+    return h > 0 ? true : "#view-builds 可見但高度是 " + h;
+  });
+
   // ── 契約：hero 結構 ──
   check("C1 hero section 存在", () =>
     document.querySelector("#hero") ? true : "找不到 #hero");
 
   check("C2 三個場景圖層齊全且順序正確", () => {
     const got = [...document.querySelectorAll("#hero .scene-img")]
-      .map(e => [...e.classList].find(c => c.startsWith("scene-")) ?? e.className);
+      .map(e => [...e.classList].find(c => c.startsWith("scene-") && c !== "scene-img") ?? e.className);
     const want = ["scene-sky", "scene-town", "scene-frame"];
     return JSON.stringify(got) === JSON.stringify(want)
       ? true : \`期望 \${JSON.stringify(want)}，實得 \${JSON.stringify(got)}\`;
