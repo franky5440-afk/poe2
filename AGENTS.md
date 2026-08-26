@@ -100,9 +100,12 @@ git add data/ && git -c core.editor=true rebase --continue && git push
 
 1. `./venv/bin/python -c "import ast; ast.parse(open('scraper.py').read())"` — Python 語法
 2. `node --check static/app.js` — JS 語法
-3. 跑 scraper 後檢查各區筆數與語言誤配 = 0
-4. `./start.sh` 後 curl 兩項：`/` 200、`/data/site.json` 可解析（本機埠 8766）
-5. push 後觸發 workflow，確認 run success 再 curl 線上 site.json
+3. **`node tests/hero_contract.mjs` — 站台契約，必須全綠**（含 hero 三層結構、
+   5 張 CTA 卡對應、以及「初次載入內容區就可見」的回歸保護）。不需額外套件，
+   它會自己建站、起 server、驅動本機 Chrome headless
+4. 跑 scraper 後檢查各區筆數與語言誤配 = 0
+5. `./start.sh` 後 curl 兩項：`/` 200、`/data/site.json` 可解析（本機埠 8766）
+6. push 後觸發 workflow，確認 run success 再 curl 線上 site.json
 
 ## 其他約定
 
