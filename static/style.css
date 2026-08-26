@@ -81,7 +81,7 @@ a { color: inherit; text-decoration: none; }
   background-image: url("scene/frame.webp"), linear-gradient(90deg, rgba(5, 6, 10, .9), transparent 25%, transparent 75%, rgba(5, 6, 10, .9));
   background-size: cover;
   background-position: center;
-  transform: translate3d(var(--frame-x), 0, 0) scale(1.04);
+  transform: scale(calc(1.04 + var(--hero-progress) * 0.30));
 }
 .hero-shade {
   z-index: 3;
@@ -110,7 +110,7 @@ a { color: inherit; text-decoration: none; }
   text-shadow: 0 4px 30px rgba(0, 0, 0, .65);
   transition: opacity .15s linear;
 }
-.hero-prompt { margin-bottom: 18px; opacity: .72; }
+.hero-prompt { margin-bottom: 18px; opacity: max(0, calc(.72 * (1 - var(--hero-progress) * 5))); }
 .cta-grid { display: grid; grid-template-columns: repeat(5, minmax(130px, 1fr)); gap: 10px; width: min(1120px, 100%); opacity: var(--cards-opacity); transform: translate3d(0, var(--cards-y), 0); will-change: transform, opacity; }
 .cta-card {
   min-height: 112px;
