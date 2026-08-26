@@ -6,10 +6,30 @@
 <title>流亡黯道2 攻略武庫 | PoE2 Build Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
+<section id="hero" class="hero-cinema" aria-label="PoE2 cinematic introduction">
+  <div class="hero-stage">
+    <div class="scene-img scene-sky" aria-hidden="true"></div>
+    <div class="scene-img scene-town" aria-hidden="true"></div>
+    <div class="scene-img scene-frame" aria-hidden="true"></div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">THE EXILED PATH</p>
+      <h2 class="hero-title">PATH OF EXILE 2</h2>
+      <p class="hero-prompt">SCROLL TO EXPLORE</p>
+      <div class="cta-grid" aria-label="Explore PoE2 content">
+        <button class="cta-card" type="button" data-tab="builds"><span class="cta-index">01</span><span>三大來源 Top 10 Build</span><span class="cta-arrow">↗</span></button>
+        <button class="cta-card" type="button" data-tab="hot"><span class="cta-index">02</span><span>近 30 天熱門攻略影片 TOP 10</span><span class="cta-arrow">↗</span></button>
+        <button class="cta-card" type="button" data-tab="new"><span class="cta-index">03</span><span>最新發布攻略影片</span><span class="cta-arrow">↗</span></button>
+        <button class="cta-card" type="button" data-tab="bahamut"><span class="cta-index">04</span><span>巴哈姆特 流亡黯道2 哈啦板</span><span class="cta-arrow">↗</span></button>
+        <button class="cta-card" type="button" data-tab="tweets"><span class="cta-index">05</span><span>X（Twitter）PoE2 相關推文</span><span class="cta-arrow">↗</span></button>
+      </div>
+    </div>
+  </div>
+</section>
 <header class="site-header">
   <div class="header-inner">
     <div class="brand">
@@ -133,6 +153,35 @@
   <p id="lastRun"></p>
 </footer>
 
+<script>
+(() => {
+  const hero = document.querySelector("#hero");
+  const root = document.documentElement;
+  const cards = document.querySelectorAll("#hero .cta-card");
+  let ticking = false;
+
+  const updateHero = () => {
+    const range = Math.max(hero.offsetHeight - window.innerHeight, 1);
+    const progress = Math.min(Math.max(window.scrollY / range, 0), 1);
+    root.style.setProperty("--hero-progress", progress.toFixed(4));
+    root.style.setProperty("--title-opacity", Math.max(0, 1 - progress * 2.4).toFixed(4));
+    root.style.setProperty("--town-y", `${-progress * 18}vh`);
+    root.style.setProperty("--town-scale", (1 + progress * .08).toFixed(4));
+    root.style.setProperty("--frame-x", `${progress * 18}vw`);
+    root.style.setProperty("--cards-y", `${(1 - progress) * 24}vh`);
+    root.style.setProperty("--cards-opacity", Math.min(1, progress * 2.2).toFixed(4));
+    ticking = false;
+  };
+  window.addEventListener("scroll", () => {
+    if (!ticking) { window.requestAnimationFrame(updateHero); ticking = true; }
+  }, { passive: true });
+  cards.forEach((card) => card.addEventListener("click", () => {
+    window.switchView(card.dataset.tab);
+    document.querySelector("#main").scrollIntoView({ behavior: "smooth", block: "start" });
+  }));
+  updateHero();
+})();
+</script>
 <script src="static/app.js"></script>
 </body>
 </html>
