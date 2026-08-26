@@ -1,7 +1,7 @@
 # poe2 專案規範
 
 流亡黯道2（Path of Exile 2）攻略聚合站。Flask 本機版 + GitHub Pages 線上版共用同一套前端與資料。
-架構複製自同類專案 `../nioh3`（仁王3 版），全域規範見 `~/.config/opencode/AGENTS.md`，本檔只列專案特有規則。
+架構複製自同類專案 `../nioh3`（仁王3 版），全域規範見 `~/.codex/AGENTS.md`，本檔只列專案特有規則。
 
 ## 語言
 
@@ -74,14 +74,19 @@ scraper.py ──> data/*.json ──> build_site.py ──> site/（靜態站�
 
 ## Git 與部署流程
 
+> 🔴 **本 repo 是 PUBLIC，builder 一律不得執行 `git push`。**
+> 實作完成後 commit 到本地就停，回報「哪幾個 commit 可推」，由 Frank 逐次授權後人工推送。
+> **下方步驟 2–3 是在描述整條流程（含 Frank 負責的部分），其中出現的 `git push` 不是給你執行的。**
+> 細則見全域規範 `~/.codex/AGENTS.md` 的「Git：本機操作自由，push 是閘門」，此處不另立一套說法。
+
 1. push 前依全域規範做機密掃描
 2. **push 之後線上不會自動更新**，必須手動觸發：`gh workflow run deploy.yml --ref main`（workflow 也負責當天的雲端爬蟲）
-3. 雲端 bot 每天 UTC 00:00 會產生 "daily data update" commit。本機 push 若被拒或 rebase 撞到 `data/*.json` 衝突：
+3. 雲端 bot 每天 UTC 00:00 會產生 "daily data update" commit。本機 push 若被拒或 rebase 撞到 `data/*.json` 衝突（⚠️ 以下含推送指令，**僅限已獲授權者執行**）：
 
 ```bash
 git pull --rebase
 git checkout --theirs -- data/   # 衝突時以本地較新資料為準
-git add -A && git -c core.editor=true rebase --continue && git push
+git add data/ && git -c core.editor=true rebase --continue && git push
 ```
 
 4. repo 必須保持 public（免費 Pages 限制），資料皆為公開網頁內容無敏感性問題
