@@ -6,70 +6,70 @@
   "share_pct": 19.75,
   "trend": -1,
   "league": "Runes of Aldur",
-  "total_chars": 124182,
+  "total_chars": 124177,
   "url": "https://poe.ninja/poe2/builds/runesofaldur?class=Martial+Artist",
   "source": "poeninja",
-  "found_date": "2026-08-25"
+  "found_date": "2026-08-26"
  },
  {
   "id": "a5b80b9ce60a7263152bca2955e400a8",
   "rank": 2,
   "title": "Gemling Legionnaire",
-  "share_pct": 16.47,
+  "share_pct": 16.49,
   "trend": 1,
   "league": "Runes of Aldur",
-  "total_chars": 124182,
+  "total_chars": 124177,
   "url": "https://poe.ninja/poe2/builds/runesofaldur?class=Gemling+Legionnaire",
   "source": "poeninja",
-  "found_date": "2026-08-25"
+  "found_date": "2026-08-26"
  },
  {
   "id": "59703c2728675b2e655b0bd32efd3b0e",
   "rank": 3,
   "title": "Spirit Walker",
-  "share_pct": 11.4,
+  "share_pct": 11.36,
   "trend": -1,
   "league": "Runes of Aldur",
-  "total_chars": 124182,
+  "total_chars": 124177,
   "url": "https://poe.ninja/poe2/builds/runesofaldur?class=Spirit+Walker",
   "source": "poeninja",
-  "found_date": "2026-08-25"
+  "found_date": "2026-08-26"
  },
  {
   "id": "199a256274b4e18a75a55901c21afa09",
   "rank": 4,
   "title": "Deadeye",
-  "share_pct": 8.43,
-  "trend": -1,
+  "share_pct": 8.44,
+  "trend": 1,
   "league": "Runes of Aldur",
-  "total_chars": 124182,
+  "total_chars": 124177,
   "url": "https://poe.ninja/poe2/builds/runesofaldur?class=Deadeye",
   "source": "poeninja",
-  "found_date": "2026-08-25"
+  "found_date": "2026-08-26"
  },
  {
   "id": "164d35381ffc067091b6f425e117f529",
   "rank": 5,
   "title": "Oracle",
-  "share_pct": 5.74,
+  "share_pct": 5.73,
   "trend": -1,
   "league": "Runes of Aldur",
-  "total_chars": 124182,
+  "total_chars": 124177,
   "url": "https://poe.ninja/poe2/builds/runesofaldur?class=Oracle",
   "source": "poeninja",
-  "found_date": "2026-08-25"
+  "found_date": "2026-08-26"
  },
  {
   "id": "56af9a1670901fa191c4f7fee1352639",
   "rank": 6,
   "title": "Infernalist",
-  "share_pct": 4.91,
+  "share_pct": 4.92,
   "trend": 1,
   "league": "Runes of Aldur",
-  "total_chars": 124182,
+  "total_chars": 124177,
   "url": "https://poe.ninja/poe2/builds/runesofaldur?class=Infernalist",
   "source": "poeninja",
-  "found_date": "2026-08-25"
+  "found_date": "2026-08-26"
  },
  {
   "id": "216bd0876b5bc3783c9913d78deb09a4",
@@ -78,10 +78,10 @@
   "share_pct": 4.74,
   "trend": 1,
   "league": "Runes of Aldur",
-  "total_chars": 124182,
+  "total_chars": 124177,
   "url": "https://poe.ninja/poe2/builds/runesofaldur?class=Stormweaver",
   "source": "poeninja",
-  "found_date": "2026-08-25"
+  "found_date": "2026-08-26"
  },
  {
   "id": "081caa603bd19bb914ba75fbfd5e0b47",
@@ -90,33 +90,33 @@
   "share_pct": 3.51,
   "trend": -1,
   "league": "Runes of Aldur",
-  "total_chars": 124182,
+  "total_chars": 124177,
   "url": "https://poe.ninja/poe2/builds/runesofaldur?class=Blood+Mage",
   "source": "poeninja",
-  "found_date": "2026-08-25"
+  "found_date": "2026-08-26"
  },
  {
   "id": "3437ef5b3948ee5c2926a13efeae1925",
   "rank": 9,
   "title": "Titan",
-  "share_pct": 3.43,
-  "trend": 0,
+  "share_pct": 3.44,
+  "trend": 1,
   "league": "Runes of Aldur",
-  "total_chars": 124182,
+  "total_chars": 124177,
   "url": "https://poe.ninja/poe2/builds/runesofaldur?class=Titan",
   "source": "poeninja",
-  "found_date": "2026-08-25"
+  "found_date": "2026-08-26"
  },
  {
   "id": "cc48745c1afee2909170359104d3120e",
   "rank": 10,
   "title": "Disciple of Varashta",
-  "share_pct": 3.05,
-  "trend": 1,
+  "share_pct": 3.04,
+  "trend": -1,
   "league": "Runes of Aldur",
-  "total_chars": 124182,
+  "total_chars": 124177,
   "url": "https://poe.ninja/poe2/builds/runesofaldur?class=Disciple+of+Varashta",
   "source": "poeninja",
-  "found_date": "2026-08-25"
+  "found_date": "2026-08-26"
  }
 ]
