@@ -15,8 +15,8 @@ import { fileURLToPath } from "node:url";
 
 const BASE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = path.join(BASE, "site");
-const HTTP_PORT = 8791;
-const CDP_PORT = 9333;
+const HTTP_PORT = 8797;  // 8791 被 nioh3 專案的 dev server 佔用
+const CDP_PORT = 9337;
 
 const MIME = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css",
                ".json": "application/json", ".webp": "image/webp", ".png": "image/png",
@@ -50,10 +50,10 @@ const CONTRACT = `(async () => {
   check("C1 hero section 存在", () =>
     document.querySelector("#hero") ? true : "找不到 #hero");
 
-  check("C2 三個場景圖層齊全且順序正確", () => {
+  check("C2 四個場景圖層齊全且順序正確", () => {
     const got = [...document.querySelectorAll("#hero .scene-img")]
       .map(e => [...e.classList].find(c => c.startsWith("scene-") && c !== "scene-img") ?? e.className);
-    const want = ["scene-sky", "scene-town", "scene-frame"];
+    const want = ["scene-sky", "scene-town", "scene-frame-left", "scene-frame-right"];
     return JSON.stringify(got) === JSON.stringify(want)
       ? true : \`期望 \${JSON.stringify(want)}，實得 \${JSON.stringify(got)}\`;
   });
@@ -63,6 +63,35 @@ const CONTRACT = `(async () => {
     const want = ["builds", "hot", "new", "bahamut", "tweets"];
     return JSON.stringify(got) === JSON.stringify(want)
       ? true : \`期望 \${JSON.stringify(want)}，實得 \${JSON.stringify(got)}\`;
+  });
+
+  // ── 契約：巨蛇邊框必須貼齊視窗左右緣（Bug A）──
+  const edgeCheck = (el, side, vw) => {
+    const cs = getComputedStyle(el);
+    const box = el.getBoundingClientRect();
+    if (box.width < 30) return \`\${side} 邊框只有 \${box.width.toFixed(0)}px 寬，等於看不到\`;
+    const touches = side === "left" ? box.left <= 1 : box.right >= vw - 1;
+    if (!touches) return \`\${side} 邊框沒有貼齊視窗\${side === "left" ? "左" : "右"}緣（left=\${box.left.toFixed(0)}, right=\${box.right.toFixed(0)}, vw=\${vw}）\`;
+    // 貼邊還不夠：背景若用 cover + center，窄視窗一樣會把蛇裁掉
+    const posX = (cs.backgroundPosition.split(",")[0] || "").trim().split(/\\s+/)[0];
+    const sizeX = (cs.backgroundSize.split(",")[0] || "").trim().split(/\\s+/)[0];
+    const pinned = side === "left"
+      ? ["0%", "0px", "left"].includes(posX)
+      : ["100%", "right"].includes(posX);
+    const unclipped = ["100%", "contain"].includes(sizeX) || sizeX.endsWith("px");
+    if (!pinned && !unclipped)
+      return \`\${side} 邊框貼邊了，但 background-position-x="\${posX}" / background-size-x="\${sizeX}" 仍會裁掉外緣的蛇\`;
+    return true;
+  };
+
+  check("C6 左右邊框貼齊視窗兩緣且外緣不被裁（桌機 1440）", () => {
+    const l = document.querySelector("#hero .scene-frame-left");
+    const r = document.querySelector("#hero .scene-frame-right");
+    if (!l || !r) return "找不到 .scene-frame-left / .scene-frame-right";
+    const vw = document.documentElement.clientWidth;
+    const rl = edgeCheck(l, "left", vw);
+    if (rl !== true) return rl;
+    return edgeCheck(r, "right", vw);
   });
 
   // ── 契約：hero 行為 ──
@@ -79,6 +108,94 @@ const CONTRACT = `(async () => {
     const v = parseFloat(raw);
     if (Number.isNaN(v)) return "--title-opacity 未定義";
     return v <= 0.05 ? true : \`實得 \${v}\`;
+  });
+
+  check("C7 捲動時左右邊框往反方向移開（--frame-x 有被 CSS 消費）", () => {
+    const l = document.querySelector("#hero .scene-frame-left");
+    const r = document.querySelector("#hero .scene-frame-right");
+    if (!l || !r) return "找不到 .scene-frame-left / .scene-frame-right";
+    const tx = el => new DOMMatrixReadOnly(getComputedStyle(el).transform).m41;
+    const lx = tx(l), rx = tx(r);
+    if (Math.abs(lx) < 1 && Math.abs(rx) < 1)
+      return "已捲到 hero 底部，但兩側邊框都沒有水平位移 — --frame-x 沒有被 CSS 讀取";
+    if (!(lx < 0 && rx > 0))
+      return \`方向不對：左邊框應往負向、右邊框應往正向，實得 left=\${lx.toFixed(1)}, right=\${rx.toFixed(1)}\`;
+    return true;
+  });
+
+  // 依 CSS 規則算出背景實際被畫成多大，用來同時抓「變形」與「放大到只看得到局部」
+  const drawnSize = async (el) => {
+    const cs = getComputedStyle(el);
+    const url = (cs.backgroundImage.match(/url\\(\"?(.*?)\"?\\)/) || [])[1];
+    if (!url) return null;
+    const img = new Image();
+    img.src = url;
+    await img.decode();
+    const nw = img.naturalWidth, nh = img.naturalHeight, ratio = nw / nh;
+    const ew = el.clientWidth, eh = el.clientHeight;
+    const spec = cs.backgroundSize.split(",")[0].trim();
+    let dw, dh;
+    if (spec === "cover" || spec === "contain") {
+      const sc = spec === "cover" ? Math.max(ew / nw, eh / nh) : Math.min(ew / nw, eh / nh);
+      dw = nw * sc; dh = nh * sc;
+    } else {
+      const parts = spec.split(/\\s+/);
+      const parse = (v, base) => (!v || v === "auto") ? null
+        : (v.endsWith("%") ? parseFloat(v) / 100 * base : parseFloat(v));
+      const w = parse(parts[0], ew), h = parse(parts[1], eh);
+      if (w === null && h === null) { dw = nw; dh = nh; }
+      else if (w === null) { dh = h; dw = h * ratio; }
+      else if (h === null) { dw = w; dh = w / ratio; }
+      else { dw = w; dh = h; }
+    }
+    return { dw, dh, ew, eh, ratio, spec };
+  };
+
+  const frames = {};
+  for (const sel of [".scene-frame-left", ".scene-frame-right"]) {
+    const el = document.querySelector("#hero " + sel);
+    frames[sel] = el ? await drawnSize(el) : null;
+  }
+
+  check("C9 邊框素材不得被拉伸變形", () => {
+    const bad = [];
+    for (const [sel, m] of Object.entries(frames)) {
+      if (!m) { bad.push(sel + " 量不到背景"); continue; }
+      const drawn = m.dw / m.dh;
+      if (Math.abs(drawn - m.ratio) / m.ratio > 0.05)
+        bad.push(\`\${sel} background-size="\${m.spec}" 把素材畫成 \${m.dw.toFixed(0)}x\${m.dh.toFixed(0)}（比例 \${drawn.toFixed(3)}），素材原比例是 \${m.ratio.toFixed(3)} — 蛇會變形\`);
+    }
+    return bad.length ? bad.join("；") : true;
+  });
+
+  check("C10 邊框素材不得被放大到只看得見局部", () => {
+    const bad = [];
+    for (const [sel, m] of Object.entries(frames)) {
+      if (!m) { bad.push(sel + " 量不到背景"); continue; }
+      const over = m.dw / m.ew;
+      if (over > 1.15)
+        bad.push(\`\${sel} 背景被畫成 \${m.dw.toFixed(0)}px 寬，但元素只有 \${m.ew.toFixed(0)}px — 素材有 \${((1 - 1 / over) * 100).toFixed(0)}% 被裁掉，等於只看得到蛇的局部\`);
+    }
+    return bad.length ? bad.join("；") : true;
+  });
+
+  // C4 用 scrollTo(0, hero.offsetHeight) 會捲過 sticky 的有效範圍，
+  // 舞台已經離開畫面，量幾何沒有意義。這裡捲回「進度 100% 但舞台仍黏著」的位置。
+  if (hero) {
+    window.scrollTo(0, hero.offsetHeight - window.innerHeight);
+    window.dispatchEvent(new Event("scroll"));
+    await sleep(400);
+  }
+
+  check("C11 捲動時 town 層仍蓋滿視窗底部（不露出下緣硬邊）", () => {
+    const t = document.querySelector("#hero .scene-town");
+    if (!t) return "找不到 .scene-town";
+    const box = t.getBoundingClientRect();
+    const vh = document.documentElement.clientHeight;
+    // town 捲動時會上移做視差，若元素本身沒有向下的餘裕，下緣就會離開視窗、
+    // 在畫面底部切出一條橫向硬邊（放大截圖可見）
+    return box.bottom >= vh - 1 ? true
+      : \`town 下緣在 \${box.bottom.toFixed(0)}px，視窗高 \${vh}px — 底部露出 \${(vh - box.bottom).toFixed(0)}px 的硬邊\`;
   });
 
   check("C5 點第 3 張 CTA 卡會切到「最新影片」view", () => {
@@ -110,6 +227,67 @@ const CONTRACT = `(async () => {
     const n = document.querySelector("#buildList")?.children.length ?? 0;
     return n > 0 ? true : "#buildList 是空的";
   });
+
+  return JSON.stringify(results);
+})()`;
+
+
+// ── 窄／直式視窗下的巨蛇可見性契約（跑在多個尺寸上）───────────
+const narrowContract = (label) => `(async () => {
+  const results = [];
+  const l = document.querySelector("#hero .scene-frame-left");
+  const r = document.querySelector("#hero .scene-frame-right");
+  const vw = document.documentElement.clientWidth;
+  const push = (name, ok, detail) => results.push({ name, ok, detail });
+
+  if (!l || !r) {
+    push("C8 ${label} 左右巨蛇貼齊兩緣可見", false, "找不到 .scene-frame-left / .scene-frame-right");
+    return JSON.stringify(results);
+  }
+
+  const bl = l.getBoundingClientRect(), br = r.getBoundingClientRect();
+  let ok = true, detail = "";
+  if (bl.width < 30 || br.width < 30) { ok = false; detail = \`邊框寬度 left=\${bl.width.toFixed(0)}px right=\${br.width.toFixed(0)}px，等於看不到蛇\`; }
+  else if (bl.left > 1) { ok = false; detail = \`左邊框沒貼左緣（left=\${bl.left.toFixed(0)}）\`; }
+  else if (br.right < vw - 1) { ok = false; detail = \`右邊框沒貼右緣（right=\${br.right.toFixed(0)}, vw=\${vw}）\`; }
+  push("C8 ${label} 左右巨蛇貼齊兩緣可見", ok, detail);
+
+  // 同一組尺寸下也要驗「沒被放大到只剩局部」—— iPad 直式就是栽在這裡
+  const drawn = async (el) => {
+    const cs = getComputedStyle(el);
+    const url = (cs.backgroundImage.match(/url\\(\"?(.*?)\"?\\)/) || [])[1];
+    if (!url) return null;
+    const img = new Image(); img.src = url; await img.decode();
+    const nw = img.naturalWidth, nh = img.naturalHeight, ratio = nw / nh;
+    const ew = el.clientWidth, eh = el.clientHeight;
+    const spec = cs.backgroundSize.split(",")[0].trim();
+    let dw, dh;
+    if (spec === "cover" || spec === "contain") {
+      const sc = spec === "cover" ? Math.max(ew / nw, eh / nh) : Math.min(ew / nw, eh / nh);
+      dw = nw * sc; dh = nh * sc;
+    } else {
+      const parts = spec.split(/\\s+/);
+      const parse = (v, base) => (!v || v === "auto") ? null
+        : (v.endsWith("%") ? parseFloat(v) / 100 * base : parseFloat(v));
+      const w = parse(parts[0], ew), h = parse(parts[1], eh);
+      if (w === null && h === null) { dw = nw; dh = nh; }
+      else if (w === null) { dh = h; dw = h * ratio; }
+      else if (h === null) { dw = w; dh = w / ratio; }
+      else { dw = w; dh = h; }
+    }
+    return { dw, dh, ew, ratio, spec };
+  };
+
+  const bad = [];
+  for (const [sel, el] of [[".scene-frame-left", l], [".scene-frame-right", r]]) {
+    const m = await drawn(el);
+    if (!m) { bad.push(sel + " 量不到背景"); continue; }
+    if (Math.abs(m.dw / m.dh - m.ratio) / m.ratio > 0.05)
+      bad.push(\`\${sel} 變形（畫成 \${m.dw.toFixed(0)}x\${m.dh.toFixed(0)}，原比例 \${m.ratio.toFixed(3)}）\`);
+    else if (m.dw / m.ew > 1.15)
+      bad.push(\`\${sel} 被放大到 \${m.dw.toFixed(0)}px 寬但元素只有 \${m.ew.toFixed(0)}px，只看得到局部\`);
+  }
+  push("C10 ${label} 巨蛇不變形也不被放大到只剩局部", bad.length === 0, bad.join("；"));
 
   return JSON.stringify(results);
 })()`;
@@ -187,6 +365,22 @@ async function main() {
     expression: CONTRACT, awaitPromise: true, returnByValue: true,
   });
 
+  // 切成直式尺寸再驗巨蛇可見性（Bug A 的真正現場，桌機看不出來）
+  const PORTRAITS = [
+    { label: "iPad 直式 768x1024", w: 768, h: 1024 },
+    { label: "手機直式 390x844", w: 390, h: 844 },
+  ];
+  const rn = [];
+  for (const p of PORTRAITS) {
+    await cdp.send("Emulation.setDeviceMetricsOverride", {
+      width: p.w, height: p.h, deviceScaleFactor: 1, mobile: false });
+    await cdp.send("Runtime.evaluate", { expression: "window.scrollTo(0,0); window.dispatchEvent(new Event('scroll'));" });
+    await sleep(400);
+    rn.push(await cdp.send("Runtime.evaluate", {
+      expression: narrowContract(p.label), awaitPromise: true, returnByValue: true }));
+  }
+  await cdp.send("Emulation.clearDeviceMetricsOverride");
+
   ws.close(); chrome.kill(); server.close();
 
   if (r.error) {
@@ -202,6 +396,14 @@ async function main() {
     return 2;
   }
   const results = JSON.parse(r.result.result.value);
+  for (let i = 0; i < rn.length; i++) {
+    try {
+      results.push(...JSON.parse(rn[i].result.result.value));
+    } catch {
+      results.push({ name: `直式契約（第 ${i + 1} 組尺寸）`, ok: false,
+                     detail: "沒有回傳結果：" + JSON.stringify(rn[i]).slice(0, 300) });
+    }
+  }
   console.log("[4/4] 契約結果：\n");
   let passed = 0;
   for (const x of results) {
