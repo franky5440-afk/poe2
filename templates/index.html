@@ -14,7 +14,8 @@
   <div class="hero-stage">
     <div class="scene-img scene-sky" aria-hidden="true"></div>
     <div class="scene-img scene-town" aria-hidden="true"></div>
-    <div class="scene-img scene-frame" aria-hidden="true"></div>
+    <div class="scene-img scene-frame-left" aria-hidden="true"></div>
+    <div class="scene-img scene-frame-right" aria-hidden="true"></div>
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="hero-content">
       <p class="hero-eyebrow">THE EXILED PATH</p>
@@ -167,6 +168,7 @@
     root.style.setProperty("--title-opacity", Math.max(0, 1 - progress * 2.4).toFixed(4));
     root.style.setProperty("--town-y", `${-progress * 18}vh`);
     root.style.setProperty("--town-scale", (1 + progress * .08).toFixed(4));
+    root.style.setProperty("--town-height", `${100 + progress * 10}vh`);
     root.style.setProperty("--frame-x", `${progress * 18}vw`);
     root.style.setProperty("--cards-y", `${(1 - progress) * 24}vh`);
     root.style.setProperty("--cards-opacity", Math.min(1, progress * 2.2).toFixed(4));
