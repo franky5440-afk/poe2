@@ -1,11 +1,91 @@
 [
  {
-  "id": "44d7b4cfbefd6d17c1d1c6c1781bd081",
+  "id": "5e07084b4d3929a4a9f427cd8e827c6a",
   "rank": 1,
-  "title": "Ice Shot Amazon Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/ice-shot-amazon-build-guide",
-  "author": "aer0",
-  "updated": "August 26, 2026",
+  "title": "Cold Spark Pathfinder Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/cold-spark-pathfinder-build-guide",
+  "author": "goratha",
+  "updated": "August 27, 2026",
+  "patch": "Return Of The Ancients 0.5.4",
+  "classes": [
+   "Ranger"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Ranger",
+   "Pathfinder"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-08-28"
+ },
+ {
+  "id": "103400381c71c5baa27eddd4a2f3bbab",
+  "rank": 2,
+  "title": "Disciple of Varashta Plant Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-plant-build-guide",
+  "author": "goratha",
+  "updated": "August 27, 2026",
+  "patch": "Return Of The Ancients 0.5.4",
+  "classes": [
+   "Sorceress"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Sorceress",
+   "Disciple of Varashta"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-08-28"
+ },
+ {
+  "id": "941451e884f3f9e92017f6b28f47d3cb",
+  "rank": 3,
+  "title": "Poisonburst Arrow Acolyte of Chayula",
+  "url": "https://maxroll.gg/poe2/build-guides/poisonburst-arrow-acolyte-of-chayula-build-guide",
+  "author": "goratha",
+  "updated": "August 27, 2026",
+  "patch": "Return Of The Ancients 0.5.4",
+  "classes": [
+   "Monk"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Monk",
+   "Acolyte of Chayula"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-08-28"
+ },
+ {
+  "id": "8e01a8f5022c1bf30b4ea97698fa2737",
+  "rank": 4,
+  "title": "Hollow Focus Storm Wave Martial Artist Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/hollow-focus-storm-wave-martial-artist-build-guide",
+  "author": "goratha",
+  "updated": "August 27, 2026",
+  "patch": "Return Of The Ancients 0.5.4",
+  "classes": [
+   "Monk"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Monk",
+   "Martial Artist"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-08-28"
+ },
+ {
+  "id": "0462d6d7269fa2abade9096c2f952bbe",
+  "rank": 5,
+  "title": "Bleed Rake Amazon Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/bleed-rake-amazon-build-guide",
+  "author": "goratha",
+  "updated": "August 27, 2026",
   "patch": "Return Of The Ancients 0.5.4",
   "classes": [
    "Huntress"
@@ -17,11 +97,51 @@
    "Amazon"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-27"
+  "found_date": "2026-08-28"
+ },
+ {
+  "id": "4d163efe56f9ed04289e32044016069b",
+  "rank": 6,
+  "title": "Gemling Legionnaire Twister Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
+  "author": "goratha",
+  "updated": "August 27, 2026",
+  "patch": "Return Of The Ancients 0.5.4",
+  "classes": [
+   "Mercenary"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Mercenary",
+   "Gemling Legionnaire"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-08-28"
+ },
+ {
+  "id": "44d7b4cfbefd6d17c1d1c6c1781bd081",
+  "rank": 7,
+  "title": "Ice Shot Amazon Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/ice-shot-amazon-build-guide",
+  "author": "aer0",
+  "updated": "August 27, 2026",
+  "patch": "Return Of The Ancients 0.5.4",
+  "classes": [
+   "Huntress"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Huntress",
+   "Amazon"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-08-28"
  },
  {
   "id": "2b282814747062582073c3a56680f177",
-  "rank": 2,
+  "rank": 8,
   "title": "Disciple of Varashta Minion Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
   "author": "helmbreaker",
@@ -37,11 +157,11 @@
    "Disciple of Varashta"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-27"
+  "found_date": "2026-08-28"
  },
  {
   "id": "aec46e6070985fc5145a26199d2ebc1d",
-  "rank": 3,
+  "rank": 9,
   "title": "Minion Army Spirit Walker Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/minion-army-spirit-walker-build-guide",
   "author": "helmbreaker",
@@ -57,11 +177,11 @@
    "Spirit Walker"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-27"
+  "found_date": "2026-08-28"
  },
  {
   "id": "7f6beffad17562f4ab6251da5fe6a17b",
-  "rank": 4,
+  "rank": 10,
   "title": "Lightning Minion Lich Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/storm-mage-lich-build-guide",
   "author": "helmbreaker",
@@ -77,125 +197,6 @@
    "Lich"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-27"
- },
- {
-  "id": "9ecb482a3616545f7a9af47282d258e1",
-  "rank": 5,
-  "title": "Lightning Minion Shaman Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/lightning-minion-shaman-build-guide",
-  "author": "helmbreaker",
-  "updated": "August 5, 2026",
-  "patch": "Return Of The Ancients 0.5.4",
-  "classes": [
-   "Druid"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Druid",
-   "Shaman"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-08-27"
- },
- {
-  "id": "8e01a8f5022c1bf30b4ea97698fa2737",
-  "rank": 6,
-  "title": "Hollow Focus Storm Wave Martial Artist Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/hollow-focus-storm-wave-martial-artist-build-guide",
-  "author": "goratha",
-  "updated": "August 3, 2026",
-  "patch": "Return Of The Ancients 0.5.4",
-  "classes": [
-   "Monk"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Monk",
-   "Martial Artist"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-08-27"
- },
- {
-  "id": "941451e884f3f9e92017f6b28f47d3cb",
-  "rank": 7,
-  "title": "Poisonburst Arrow Acolyte of Chayula",
-  "url": "https://maxroll.gg/poe2/build-guides/poisonburst-arrow-acolyte-of-chayula-build-guide",
-  "author": "goratha",
-  "updated": "August 3, 2026",
-  "patch": "Return Of The Ancients 0.5.4",
-  "classes": [
-   "Monk"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Monk",
-   "Acolyte of Chayula"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-08-27"
- },
- {
-  "id": "4d163efe56f9ed04289e32044016069b",
-  "rank": 8,
-  "title": "Gemling Legionnaire Twister Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
-  "author": "goratha",
-  "updated": "August 3, 2026",
-  "patch": "Return Of The Ancients 0.5.4",
-  "classes": [
-   "Mercenary"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Mercenary",
-   "Gemling Legionnaire"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-08-27"
- },
- {
-  "id": "e211a2ac62c469c9b345650bc39e2921",
-  "rank": 9,
-  "title": "Spark Comet Gemling Legionnaire Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/spark-comet-gemling-legionnaire-build-guide",
-  "author": "legi",
-  "updated": "July 17, 2026",
-  "patch": "Return Of The Ancients 0.5.4",
-  "classes": [
-   "Mercenary"
-  ],
-  "tags": [
-   "Endgame",
-   "Mercenary",
-   "Gemling Legionnaire"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-08-27"
- },
- {
-  "id": "761b0e58ba807016f95db8b458c2b8e2",
-  "rank": 10,
-  "title": "Twister Deadeye Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/twister-deadeye-build-guide",
-  "author": "legi",
-  "updated": "July 17, 2026",
-  "patch": "Return Of The Ancients 0.5.4",
-  "classes": [
-   "Ranger"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Ranger",
-   "Deadeye"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-08-27"
+  "found_date": "2026-08-28"
  }
 ]
