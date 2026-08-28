@@ -4,16 +4,20 @@
 Run with the system interpreter (it has Pillow installed):
     python3 scripts/build_scene.py
 
-The two source images are not in this repo (they are large and this repo is
-public). Put them in ~/下載, or point POE2_SCENE_SRC at whatever directory
-holds them:
+Source images live in picture/ (not in this repo: large, and this repo is
+public). Point POE2_SCENE_SRC at another directory if needed:
     POE2_SCENE_SRC=/path/to/sources python3 scripts/build_scene.py
 
-Parameters below are intentionally kept in one place:
-* SKY_BRIGHTNESS darkens the supplied sky; SKY_SATURATION below 1 removes colour.
-* TOWN_FADE_START/END define the transparent-to-opaque town edge feather.
-* FRAME_CROP is the fraction of the source retained for each edge snake.
-* FRAME_FADE_START/END define the snake's outward-to-inward alpha feather.
+Sources:
+* aztec_ruined_city.jpg      full scene WITHOUT serpents -> town layer as-is
+* storm_clouds_dusk.webp     plain sky -> sky layer (darkened, desaturated)
+* serpent-left-cut.png       true alpha cutout of the left serpent (Adobe
+* serpent-right-cut.png      image_remove_background on a white-bg render)
+
+The serpents were rendered on white with flat bright light, far brighter than
+the dusk scene, so FRAME_* grades them back down into the scene's tonality.
+An earlier version of this script faked the cutout with a rectangular alpha
+ramp; that is why scrolling dragged a slab of background along with the snake.
 """
 
 import os
@@ -23,94 +27,54 @@ from PIL import Image, ImageEnhance, ImageStat
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_DIR = Path(os.environ.get("POE2_SCENE_SRC") or Path.home() / "下載")
-ORIGINAL = SOURCE_DIR / "image (1).webp"
+SOURCE_DIR = Path(os.environ.get("POE2_SCENE_SRC") or ROOT / "picture")
+SOURCE_SCENE = SOURCE_DIR / "aztec_ruined_city.jpg"
 SOURCE_SKY = SOURCE_DIR / "storm_clouds_dusk.webp"
+SOURCE_LEFT = SOURCE_DIR / "serpent-left-cut.png"
+SOURCE_RIGHT = SOURCE_DIR / "serpent-right-cut.png"
 OUT_DIR = ROOT / "static" / "scene"
 
 SKY_BRIGHTNESS = 0.56
 SKY_SATURATION = 0.35
-TOWN_FADE_START = 0.18
-TOWN_FADE_END = 0.28
-FRAME_CROP = 0.28
-FRAME_FADE_START = 0.20
-FRAME_FADE_END = 0.255
+FRAME_BRIGHTNESS = 0.42
+FRAME_SATURATION = 0.80
+FRAME_TINT = (0.94, 0.99, 1.08)  # per-channel multiplier: push the stone cold
 
 
-def edge_alpha(width, start, end, reverse=False):
-    """Create a horizontal alpha ramp, constant vertically."""
-    values = []
-    for x in range(width):
-        position = x / max(width - 1, 1)
-        if reverse:
-            position = 1 - position
-        if position <= start:
-            alpha = 255
-        elif position >= end:
-            alpha = 0
-        else:
-            alpha = round(255 * (end - position) / (end - start))
-        values.append(alpha)
-    alpha = Image.new("L", (width, 1))
-    alpha.putdata(values)
-    return alpha
-
-
-def town_layer(original):
-    width, height = original.size
-    alpha = Image.new("L", (width, height), 0)
-    row = []
-    for x in range(width):
-        position = x / max(width - 1, 1)
-        if position < TOWN_FADE_START:
-            value = 0
-        elif position < TOWN_FADE_END:
-            value = round(255 * (position - TOWN_FADE_START) / (TOWN_FADE_END - TOWN_FADE_START))
-        elif position <= 1 - TOWN_FADE_END:
-            value = 255
-        elif position <= 1 - TOWN_FADE_START:
-            value = round(255 * (position - (1 - TOWN_FADE_END)) / (TOWN_FADE_END - TOWN_FADE_START))
-        else:
-            value = 0
-        row.append(value)
-    alpha.putdata(row * height)
-    layer = original.convert("RGBA").copy()
-    layer.putalpha(alpha)
-    return layer
-
-
-def frame_layer(original, left):
-    width, height = original.size
-    crop_width = round(width * FRAME_CROP)
-    box = (0, 0, crop_width, height) if left else (width - crop_width, 0, width, height)
-    layer = original.crop(box).convert("RGBA")
-    if left:
-        alpha = edge_alpha(crop_width, FRAME_FADE_START / FRAME_CROP, FRAME_FADE_END / FRAME_CROP)
-    else:
-        alpha = edge_alpha(crop_width, FRAME_FADE_START / FRAME_CROP, FRAME_FADE_END / FRAME_CROP, reverse=True)
-    layer.putalpha(alpha.resize(layer.size))
-    return layer
+def grade_frame(layer):
+    """Darken/cool a white-background render so it sits in the dusk scene."""
+    rgb = layer.convert("RGB")
+    rgb = ImageEnhance.Color(rgb).enhance(FRAME_SATURATION)
+    rgb = ImageEnhance.Brightness(rgb).enhance(FRAME_BRIGHTNESS)
+    r, g, b = rgb.split()
+    r = r.point(lambda v: min(255, round(v * FRAME_TINT[0])))
+    g = g.point(lambda v: min(255, round(v * FRAME_TINT[1])))
+    b = b.point(lambda v: min(255, round(v * FRAME_TINT[2])))
+    out = Image.merge("RGB", (r, g, b)).convert("RGBA")
+    out.putalpha(layer.getchannel("A"))
+    return out
 
 
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    original = Image.open(ORIGINAL).convert("RGB")
+    scene = Image.open(SOURCE_SCENE).convert("RGB")
     source_sky = Image.open(SOURCE_SKY).convert("RGB")
+    left = Image.open(SOURCE_LEFT).convert("RGBA")
+    right = Image.open(SOURCE_RIGHT).convert("RGBA")
 
     sky = ImageEnhance.Color(source_sky).enhance(SKY_SATURATION)
     sky = ImageEnhance.Brightness(sky).enhance(SKY_BRIGHTNESS)
-    town = town_layer(original)
-    left = frame_layer(original, left=True)
-    right = frame_layer(original, left=False)
 
     sky.save(OUT_DIR / "sky.webp", "WEBP", quality=88, method=6)
-    town.save(OUT_DIR / "town.webp", "WEBP", quality=90, method=6)
-    left.save(OUT_DIR / "frame-left.webp", "WEBP", quality=90, method=6)
-    right.save(OUT_DIR / "frame-right.webp", "WEBP", quality=90, method=6)
+    scene.save(OUT_DIR / "town.webp", "WEBP", quality=90, method=6)
+    grade_frame(left).save(OUT_DIR / "frame-left.webp", "WEBP", quality=88, method=6)
+    grade_frame(right).save(OUT_DIR / "frame-right.webp", "WEBP", quality=88, method=6)
 
     mean = ImageStat.Stat(sky).mean
     print(f"sky mean RGB: {tuple(round(v, 1) for v in mean)}")
-    print(f"wrote {OUT_DIR / 'sky.webp'}, {OUT_DIR / 'town.webp'}, frame-left.webp, frame-right.webp")
+    for name in ("sky", "town", "frame-left", "frame-right"):
+        p = OUT_DIR / f"{name}.webp"
+        print(f"wrote {p.relative_to(ROOT)} {Image.open(p).size} {p.stat().st_size // 1024} KB")
 
 
 if __name__ == "__main__":
