@@ -1,7 +1,27 @@
 [
  {
-  "id": "5e07084b4d3929a4a9f427cd8e827c6a",
+  "id": "aec46e6070985fc5145a26199d2ebc1d",
   "rank": 1,
+  "title": "Minion Army Spirit Walker Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/minion-army-spirit-walker-build-guide",
+  "author": "helmbreaker",
+  "updated": "August 28, 2026",
+  "patch": "Return Of The Ancients 0.5.4",
+  "classes": [
+   "Huntress"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Huntress",
+   "Spirit Walker"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-08-29"
+ },
+ {
+  "id": "5e07084b4d3929a4a9f427cd8e827c6a",
+  "rank": 2,
   "title": "Cold Spark Pathfinder Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/cold-spark-pathfinder-build-guide",
   "author": "goratha",
@@ -17,11 +37,11 @@
    "Pathfinder"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-28"
+  "found_date": "2026-08-29"
  },
  {
   "id": "103400381c71c5baa27eddd4a2f3bbab",
-  "rank": 2,
+  "rank": 3,
   "title": "Disciple of Varashta Plant Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-plant-build-guide",
   "author": "goratha",
@@ -37,11 +57,11 @@
    "Disciple of Varashta"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-28"
+  "found_date": "2026-08-29"
  },
  {
   "id": "941451e884f3f9e92017f6b28f47d3cb",
-  "rank": 3,
+  "rank": 4,
   "title": "Poisonburst Arrow Acolyte of Chayula",
   "url": "https://maxroll.gg/poe2/build-guides/poisonburst-arrow-acolyte-of-chayula-build-guide",
   "author": "goratha",
@@ -57,11 +77,11 @@
    "Acolyte of Chayula"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-28"
+  "found_date": "2026-08-29"
  },
  {
   "id": "8e01a8f5022c1bf30b4ea97698fa2737",
-  "rank": 4,
+  "rank": 5,
   "title": "Hollow Focus Storm Wave Martial Artist Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/hollow-focus-storm-wave-martial-artist-build-guide",
   "author": "goratha",
@@ -77,11 +97,11 @@
    "Martial Artist"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-28"
+  "found_date": "2026-08-29"
  },
  {
   "id": "0462d6d7269fa2abade9096c2f952bbe",
-  "rank": 5,
+  "rank": 6,
   "title": "Bleed Rake Amazon Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/bleed-rake-amazon-build-guide",
   "author": "goratha",
@@ -97,11 +117,11 @@
    "Amazon"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-28"
+  "found_date": "2026-08-29"
  },
  {
   "id": "4d163efe56f9ed04289e32044016069b",
-  "rank": 6,
+  "rank": 7,
   "title": "Gemling Legionnaire Twister Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
   "author": "goratha",
@@ -117,11 +137,11 @@
    "Gemling Legionnaire"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-28"
+  "found_date": "2026-08-29"
  },
  {
   "id": "44d7b4cfbefd6d17c1d1c6c1781bd081",
-  "rank": 7,
+  "rank": 8,
   "title": "Ice Shot Amazon Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/ice-shot-amazon-build-guide",
   "author": "aer0",
@@ -137,11 +157,11 @@
    "Amazon"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-28"
+  "found_date": "2026-08-29"
  },
  {
   "id": "2b282814747062582073c3a56680f177",
-  "rank": 8,
+  "rank": 9,
   "title": "Disciple of Varashta Minion Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
   "author": "helmbreaker",
@@ -157,27 +177,7 @@
    "Disciple of Varashta"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-28"
- },
- {
-  "id": "aec46e6070985fc5145a26199d2ebc1d",
-  "rank": 9,
-  "title": "Minion Army Spirit Walker Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/minion-army-spirit-walker-build-guide",
-  "author": "helmbreaker",
-  "updated": "August 13, 2026",
-  "patch": "Return Of The Ancients 0.5.4",
-  "classes": [
-   "Huntress"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Huntress",
-   "Spirit Walker"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-08-28"
+  "found_date": "2026-08-29"
  },
  {
   "id": "7f6beffad17562f4ab6251da5fe6a17b",
@@ -197,6 +197,6 @@
    "Lich"
   ],
   "source": "maxroll",
-  "found_date": "2026-08-28"
+  "found_date": "2026-08-29"
  }
 ]
