@@ -553,11 +553,14 @@ def update_videos():
                 cache[vid] = it["date"]
             elif vid in cache:
                 it["date"] = cache[vid]
-        save_json(f"videos_hot_{lang}.json", hot)
-        save_json(f"videos_new_{lang}.json", new)
-        set_meta(f"videos_hot_{lang}")
-        set_meta(f"videos_new_{lang}")
-        log.info("videos [%s]: hot=%d new=%d", lang, len(hot), len(new))
+        for category, items in (("hot", hot), ("new", new)):
+            name = f"videos_{category}_{lang}"
+            if items:
+                save_json(f"{name}.json", items)
+                set_meta(name)
+                log.info("%s: %d videos", name, len(items))
+            else:
+                log.warning("%s: parsed 0 items, keeping previous data", name)
     save_json("video_dates.json", cache)
 
 
