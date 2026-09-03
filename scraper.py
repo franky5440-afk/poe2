@@ -36,7 +36,6 @@ UA = {
 
 VIDEO_DOMAINS = ("youtube.com", "youtu.be", "bilibili.com", "twitch.tv", "nicovideo.jp")
 
-NEW_CUTOFF_DAYS = 21
 HOT_CUTOFF_DAYS = 30
 RSS_CHANNEL_CAP = 60
 NEW_FLAT_LIMIT = 150
@@ -395,6 +394,94 @@ def within_cutoff(date_str, cutoff):
         return False
 
 
+def pick_hot_videos(pool, rss_map, keep, to_item, top_n, hot_cutoff_days=HOT_CUTOFF_DAYS):
+    """賽季遊戲不看全歷史觀看數：優先取近 hot_cutoff_days 天上傳的影片依觀看數排序；
+    窗內數量不足 top_n 時，用窗外（較舊）但觀看數較高的影片依序遞補湊滿，
+    窗內候選一律優先於窗外遞補，不因窗外觀看數更高就插隊。"""
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=hot_cutoff_days)).date()
+    chan_of = {v["video_id"]: v["channel"] for v in pool}
+    cands = {v["video_id"]: dict(v) for v in pool}
+    # 頻道 RSS 近 30 天上傳也列入候選，避免搜尋結果偏舊時樣本不足
+    for vid, info in rss_map.items():
+        if vid in cands:
+            continue
+        if not (within_cutoff(info["date"], cutoff) and keep(info["title"]) and game_in_title(info["title"])):
+            continue
+        cands[vid] = {"video_id": vid, "title": info["title"], "channel": chan_of.get(vid, ""),
+                      "url": f"https://www.youtube.com/watch?v={vid}", "view_count": info["views"]}
+
+    known = [v for v in cands.values() if isinstance(v.get("view_count"), int)]
+    unknown = [v for v in cands.values() if not isinstance(v.get("view_count"), int)]
+    need = max(0, top_n * 2 - len(known))
+    for v in unknown[:need]:
+        views = (rss_map.get(v["video_id"]) or {}).get("views")
+        if not isinstance(views, int):
+            _, views = yt_full_info(v["video_id"])
+            time.sleep(0.5)
+        if isinstance(views, int):
+            v["view_count"] = views
+            known.append(v)
+
+    out, fallback = [], []
+    checked, max_check = 0, top_n * 3  # 上限避免無止盡打 API 補查較舊候選的日期
+    for v in sorted(known, key=lambda x: -(x["view_count"] or 0)):
+        if len(out) >= top_n or checked >= max_check:
+            break
+        checked += 1
+        date = (rss_map.get(v["video_id"]) or {}).get("date")
+        if not date:
+            date, _ = yt_full_info(v["video_id"])
+            time.sleep(0.4)
+        item = to_item(v, date, v["view_count"])
+        if within_cutoff(date, cutoff):
+            out.append(item)
+        elif len(fallback) < top_n:
+            fallback.append(item)
+
+    if len(out) < top_n and fallback:
+        out.extend(fallback[: top_n - len(out)])
+
+    return out[:top_n]
+
+
+def pick_new_videos(pool, rss_map, keep, to_item, top_n):
+    """取候選池裡最近上傳的 top_n 部影片：一律依上傳日期新到舊排序；
+    近期候選不足 top_n 時，用較舊的候選遞補湊滿——語意是「目前最新的 top_n 部」，
+    不因某個時間窗內剛好樣本不足就讓 tab 顯示的部數縮水。"""
+    chan_of = {v["video_id"]: v["channel"] for v in pool}
+    cands = {}
+    for vid, info in rss_map.items():
+        if not (keep(info["title"]) and game_in_title(info["title"])):
+            continue
+        try:
+            datetime.strptime(info["date"], "%Y-%m-%d")
+        except (ValueError, TypeError):
+            continue
+        cands[vid] = to_item({"video_id": vid, "title": info["title"], "channel": chan_of.get(vid, ""),
+                              "url": f"https://www.youtube.com/watch?v={vid}"}, info["date"], info["views"])
+
+    items = sorted(cands.values(), key=lambda x: x["date"] or "", reverse=True)[:top_n]
+    if len(items) >= top_n:
+        return items
+
+    log.warning("videos new: rss candidates only %d (<%d), falling back to full-extract scan to backfill",
+                len(items), top_n)
+    seen = {it["video_id"] for it in items}
+    extra, scanned = [], 0
+    for v in pool:
+        if v["video_id"] in seen:
+            continue
+        if len(items) + len(extra) >= top_n or scanned >= 40:
+            break
+        scanned += 1
+        date, vc = yt_full_info(v["video_id"])
+        time.sleep(0.4)
+        if date:
+            extra.append(to_item(v, date, vc))
+            seen.add(v["video_id"])
+    return sorted(items + extra, key=lambda x: x["date"] or "", reverse=True)[:top_n]
+
+
 def collect_videos(lang):
     if lang == "zh":
         hot_queries, new_queries = ["POE2 攻略", "流亡黯道2 配裝"], ["POE2 攻略"]
@@ -464,81 +551,12 @@ def collect_videos(lang):
         time.sleep(0.3)
     log.info("videos [%s]: %d channels rss -> %d videos", lang, min(len(chans), RSS_CHANNEL_CAP), len(rss_map))
 
-    def pick_hot(pool, top_n):
-        """賽季遊戲不看全歷史觀看數：只取近 HOT_CUTOFF_DAYS 天上傳的影片，再依觀看數排序"""
-        cutoff = (datetime.now(timezone.utc) - timedelta(days=HOT_CUTOFF_DAYS)).date()
-        chan_of = {v["video_id"]: v["channel"] for v in pool}
-        cands = {v["video_id"]: dict(v) for v in pool}
-        # 頻道 RSS 近 30 天上傳也列入候選，避免搜尋結果偏舊時樣本不足
-        for vid, info in rss_map.items():
-            if vid in cands:
-                continue
-            if not (within_cutoff(info["date"], cutoff) and keep(info["title"]) and game_in_title(info["title"])):
-                continue
-            cands[vid] = {"video_id": vid, "title": info["title"], "channel": chan_of.get(vid, ""),
-                          "url": f"https://www.youtube.com/watch?v={vid}", "view_count": info["views"]}
-
-        known = [v for v in cands.values() if isinstance(v.get("view_count"), int)]
-        unknown = [v for v in cands.values() if not isinstance(v.get("view_count"), int)]
-        need = max(0, top_n * 2 - len(known))
-        for v in unknown[:need]:
-            views = (rss_map.get(v["video_id"]) or {}).get("views")
-            if not isinstance(views, int):
-                _, views = yt_full_info(v["video_id"])
-                time.sleep(0.5)
-            if isinstance(views, int):
-                v["view_count"] = views
-                known.append(v)
-
-        out = []
-        for v in sorted(known, key=lambda x: -(x["view_count"] or 0)):
-            date = (rss_map.get(v["video_id"]) or {}).get("date")
-            if not date:
-                date, _ = yt_full_info(v["video_id"])
-                time.sleep(0.4)
-            if not within_cutoff(date, cutoff):
-                continue
-            out.append(to_item(v, date, v["view_count"]))
-            if len(out) >= top_n:
-                break
-        return out
-
-    def pick_new(pool, top_n):
-        cutoff = (datetime.now(timezone.utc) - timedelta(days=NEW_CUTOFF_DAYS)).date()
-        chan_of = {v["video_id"]: v["channel"] for v in pool}
-        cands = {}
-        for vid, info in rss_map.items():
-            try:
-                recent = datetime.strptime(info["date"], "%Y-%m-%d").date() >= cutoff
-            except ValueError:
-                continue
-            if not (recent and keep(info["title"]) and game_in_title(info["title"])):
-                continue
-            cands[vid] = to_item({"video_id": vid, "title": info["title"], "channel": chan_of.get(vid, ""), "url": f"https://www.youtube.com/watch?v={vid}"}, info["date"], info["views"])
-        items = sorted(cands.values(), key=lambda x: x["date"] or "", reverse=True)[:top_n]
-        if items:
-            return items
-        log.warning("videos new [%s]: rss empty, falling back to full-extract scan", lang)
-        recent, scanned = [], 0
-        for v in pool:
-            if len(recent) >= top_n or scanned >= 40:
-                break
-            scanned += 1
-            date, vc = yt_full_info(v["video_id"])
-            time.sleep(0.4)
-            try:
-                is_recent = bool(date) and datetime.strptime(date, "%Y-%m-%d").date() >= cutoff
-            except ValueError:
-                is_recent = False
-            if is_recent:
-                recent.append(to_item(v, date, vc))
-        return sorted(recent, key=lambda x: x["date"] or "", reverse=True)
-
-    hot = pick_hot(pool_hot, 10)
+    hot = pick_hot_videos(pool_hot, rss_map, keep, to_item, 10)
     log.info("videos hot [%s]: %d within %dd", lang, len(hot), HOT_CUTOFF_DAYS)
 
     log.info("videos new [%s]: %d candidates", lang, len(pool_new))
-    new = pick_new(pool_new, 10)
+    new = pick_new_videos(pool_new, rss_map, keep, to_item, 10)
+    log.info("videos new [%s]: %d picked", lang, len(new))
 
     return hot, new
 
