@@ -1,23 +1,5 @@
 [
  {
-  "video_id": "MXETXZb2XT0",
-  "title": "Gemling something - !build !filter poe2",
-  "channel": "",
-  "url": "https://www.youtube.com/watch?v=MXETXZb2XT0",
-  "views": 51490,
-  "date": "2026-09-03",
-  "lang": "en"
- },
- {
-  "video_id": "NSb4BJBE7Aw",
-  "title": "Gemling something - !build !filter poe2",
-  "channel": "",
-  "url": "https://www.youtube.com/watch?v=NSb4BJBE7Aw",
-  "views": 0,
-  "date": "2026-09-03",
-  "lang": "en"
- },
- {
   "video_id": "xgP90rf6eI8",
   "title": "Testing My PoE 2 0.5.5 Supporting Fire Merc Starter BEFORE Launch - Act 1 to Mapping Speedrun",
   "channel": "",
@@ -27,47 +9,11 @@
   "lang": "en"
  },
  {
-  "video_id": "UMLk2w1ReKI",
-  "title": "POE2 Plants Leveling Guide - From Level 1 to Maps - Complete & Detailed",
-  "channel": "",
-  "url": "https://www.youtube.com/watch?v=UMLk2w1ReKI",
-  "views": 11,
-  "date": "2026-09-03",
-  "lang": "en"
- },
- {
-  "video_id": "4SnLTqEYcIA",
-  "title": "My Plans for 0.5.5 League Start in Path of Exile 2",
-  "channel": "CrimsonCasts",
-  "url": "https://www.youtube.com/watch?v=4SnLTqEYcIA",
-  "views": 1406,
-  "date": "2026-09-03",
-  "lang": "en"
- },
- {
-  "video_id": "xoD2Xm2lzco",
-  "title": "Ice Nova Chronomancer Build Guide 0.5.5 - Path of Exile 2",
-  "channel": "Ky - Path of Exile",
-  "url": "https://www.youtube.com/watch?v=xoD2Xm2lzco",
-  "views": 12604,
-  "date": "2026-09-03",
-  "lang": "en"
- },
- {
-  "video_id": "t6HXjq8Wnsg",
-  "title": "Arc Totem Gemling Legionnaire Build Guide 0.5.5 - Path of Exile 2",
-  "channel": "Ky - Path of Exile",
-  "url": "https://www.youtube.com/watch?v=t6HXjq8Wnsg",
-  "views": 37153,
-  "date": "2026-09-03",
-  "lang": "en"
- },
- {
   "video_id": "cGmPw9yQbKw",
   "title": "Godly Build for Path of Exile 2 0.5.5 - Grenade & Arc Totem Gemling Legionnaire League Starter",
   "channel": "Raxxanterax",
   "url": "https://www.youtube.com/watch?v=cGmPw9yQbKw",
-  "views": 4536,
+  "views": 4604,
   "date": "2026-09-03",
   "lang": "en"
  },
@@ -81,11 +27,65 @@
   "lang": "en"
  },
  {
-  "video_id": "gT7EmI4XMtg",
-  "title": "TOP 3 BEST SCREEN CLEAR BUILDS IN POE 2 PATCH 0.5 | INSANE MAPPING",
+  "video_id": "H6QoOBp_-CI",
+  "title": "My Leaguestart Plans for Patch 0.5.5 | Grim Pillars Oracle Totems | Path of Exile 2",
   "channel": "",
-  "url": "https://www.youtube.com/watch?v=gT7EmI4XMtg",
-  "views": 4,
+  "url": "https://www.youtube.com/watch?v=H6QoOBp_-CI",
+  "views": 4092,
+  "date": "2026-09-03",
+  "lang": "en"
+ },
+ {
+  "video_id": "UMLk2w1ReKI",
+  "title": "POE2 Plants Leveling Guide - From Level 1 to Maps - Complete & Detailed",
+  "channel": "",
+  "url": "https://www.youtube.com/watch?v=UMLk2w1ReKI",
+  "views": 85,
+  "date": "2026-09-03",
+  "lang": "en"
+ },
+ {
+  "video_id": "gf2LuHfZWiQ",
+  "title": "Mercenary Twister Levelling | Path of Exile 2",
+  "channel": "",
+  "url": "https://www.youtube.com/watch?v=gf2LuHfZWiQ",
+  "views": 3507,
+  "date": "2026-09-03",
+  "lang": "en"
+ },
+ {
+  "video_id": "4SnLTqEYcIA",
+  "title": "My Plans for 0.5.5 League Start in Path of Exile 2",
+  "channel": "",
+  "url": "https://www.youtube.com/watch?v=4SnLTqEYcIA",
+  "views": 1465,
+  "date": "2026-09-03",
+  "lang": "en"
+ },
+ {
+  "video_id": "xoD2Xm2lzco",
+  "title": "Ice Nova Chronomancer Build Guide 0.5.5 - Path of Exile 2",
+  "channel": "Ky - Path of Exile",
+  "url": "https://www.youtube.com/watch?v=xoD2Xm2lzco",
+  "views": 12701,
+  "date": "2026-09-03",
+  "lang": "en"
+ },
+ {
+  "video_id": "t6HXjq8Wnsg",
+  "title": "Arc Totem Gemling Legionnaire Build Guide 0.5.5 - Path of Exile 2",
+  "channel": "Ky - Path of Exile",
+  "url": "https://www.youtube.com/watch?v=t6HXjq8Wnsg",
+  "views": 37347,
+  "date": "2026-09-03",
+  "lang": "en"
+ },
+ {
+  "video_id": "cklQJ-rrjiI",
+  "title": "The League Starter That Will END All League Starters - Culling Dragon Witch Hunter | Path of Exile 2",
+  "channel": "",
+  "url": "https://www.youtube.com/watch?v=cklQJ-rrjiI",
+  "views": 10887,
   "date": "2026-09-03",
   "lang": "en"
  }
