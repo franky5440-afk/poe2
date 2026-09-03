@@ -219,7 +219,6 @@ function switchView(name) {
   $$(".view").forEach((el) => el.classList.add("hidden"));
   $(`#view-${name}`).classList.remove("hidden");
   $$(".tab").forEach((t) => t.classList.toggle("active", t.dataset.tab === name));
-  window.scrollTo({ top: 0 });
 }
 
 /* ---------- init ---------- */
