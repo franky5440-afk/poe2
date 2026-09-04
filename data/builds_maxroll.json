@@ -1,79 +1,96 @@
 [
  {
-  "id": "aec46e6070985fc5145a26199d2ebc1d",
+  "id": "55901c401c535f3a96b97895720fc3c1",
   "rank": 1,
-  "title": "Minion Army Spirit Walker Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/minion-army-spirit-walker-build-guide",
-  "author": "helmbreaker",
-  "updated": "September 3, 2026",
-  "patch": "Return Of The Ancients 0.5.4",
+  "title": "The Shapeshift Druid Leveling Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/the-shapeshift-druid-leveling-guide",
+  "author": "ZIGGYD",
+  "updated": "September 4, 2026",
+  "patch": null,
+  "classes": [
+   "Druid"
+  ],
+  "tags": [
+   "The Forbidden Rites 0.5.5",
+   "Leveling",
+   "Druid",
+   "Shaman"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-04"
+ },
+ {
+  "id": "f33a6b4e39b5be094e81df503e077947",
+  "rank": 2,
+  "title": "Grenade Mercenary Leveling Guide - Witchhunter, Tactician and Gemling Legionnaire",
+  "url": "https://maxroll.gg/poe2/build-guides/grenade-mercenary-leveling-guide",
+  "author": "ZIGGYD",
+  "updated": "September 4, 2026",
+  "patch": null,
+  "classes": [
+   "Mercenary"
+  ],
+  "tags": [
+   "The Forbidden Rites 0.5.5",
+   "Leveling",
+   "Mercenary",
+   "Witchhunter"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-04"
+ },
+ {
+  "id": "dccb176bbfc72f15403f21a76b01980f",
+  "rank": 3,
+  "title": "The Spear Huntress Leveling Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/spear-huntress-leveling-guide",
+  "author": "ZIGGYD",
+  "updated": "September 4, 2026",
+  "patch": null,
   "classes": [
    "Huntress"
   ],
   "tags": [
-   "Endgame",
+   "The Forbidden Rites 0.5.5",
    "Leveling",
    "Huntress",
-   "Spirit Walker"
+   "Amazon"
   ],
   "source": "maxroll",
-  "found_date": "2026-09-03"
+  "found_date": "2026-09-04"
+ },
+ {
+  "id": "9d9e63abb5a20f4bafbda216b7088f2a",
+  "rank": 4,
+  "title": "Grim Pillars Spell Totem Oracle Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/grim-pillars-spell-totem-oracle-build-guide",
+  "author": "Palsteron",
+  "updated": "September 4, 2026",
+  "patch": "Return Of The Ancients 0.5.4",
+  "classes": [
+   "Druid"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Druid",
+   "Oracle"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-04"
  },
  {
   "id": "2b282814747062582073c3a56680f177",
-  "rank": 2,
+  "rank": 5,
   "title": "Disciple of Varashta Minion Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
   "author": "helmbreaker",
   "updated": "September 3, 2026",
-  "patch": "Return Of The Ancients 0.5.4",
-  "classes": [
-   "Sorceress"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Sorceress",
-   "Disciple of Varashta"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-03"
- },
- {
-  "id": "b0ae71b2f50ea00f8f9f7f066da5331e",
-  "rank": 3,
-  "title": "Frostbolt Cast On Crit Comet Oracle Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-oracle",
-  "author": "zen_m",
-  "updated": "September 3, 2026",
-  "patch": null,
-  "classes": [
-   "Druid"
-  ],
-  "tags": [
-   "Early Access",
-   "The Forbidden Rites 0.5.5",
-   "Endgame",
-   "Leveling",
-   "Druid",
-   "Oracle"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-03"
- },
- {
-  "id": "937268b8398da7a6442027fed0792b65",
-  "rank": 4,
-  "title": "Frostbolt Cast on Crit Comet Disciple Of Varashta Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-disciple-of-varashta-build-guide",
-  "author": "zen_m",
-  "updated": "September 3, 2026",
   "patch": null,
   "classes": [
    "Sorceress"
   ],
   "tags": [
-   "Early Access",
    "The Forbidden Rites 0.5.5",
    "Endgame",
    "Leveling",
@@ -81,75 +98,14 @@
    "Disciple of Varashta"
   ],
   "source": "maxroll",
-  "found_date": "2026-09-03"
+  "found_date": "2026-09-04"
  },
  {
-  "id": "6286b806acff26764f659262e0ecdccc",
-  "rank": 5,
-  "title": "Ice Nova Snap Stormweaver Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/cold-snap-frostbolt-stormweaver-leveling-guide",
-  "author": "zen_m",
-  "updated": "September 3, 2026",
-  "patch": null,
-  "classes": [
-   "Sorceress"
-  ],
-  "tags": [
-   "The Forbidden Rites 0.5.5",
-   "Endgame",
-   "Leveling",
-   "Sorceress",
-   "Stormweaver"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-03"
- },
- {
-  "id": "d29d4e12e42c217b47c19dd22550fabc",
+  "id": "29e3589cbee207658dd65461454d5dc1",
   "rank": 6,
-  "title": "Frostbolt Cast On Crit Comet Stormweaver Endgame Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-stormweaver-endgame-build-guide",
-  "author": "zen_m",
-  "updated": "September 3, 2026",
-  "patch": null,
-  "classes": [
-   "Sorceress"
-  ],
-  "tags": [
-   "The Forbidden Rites 0.5.5",
-   "Endgame",
-   "Sorceress",
-   "Stormweaver"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-03"
- },
- {
-  "id": "46bbc343232b6fa71548f5ac5f991a80",
-  "rank": 7,
-  "title": "Lunar Assault Werewolf Oracle Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/lunar-assault-werewolf-oracle-build-guide",
-  "author": "zen_m",
-  "updated": "September 3, 2026",
-  "patch": null,
-  "classes": [
-   "Druid"
-  ],
-  "tags": [
-   "Early Access",
-   "The Forbidden Rites 0.5.5",
-   "Druid",
-   "Oracle"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-03"
- },
- {
-  "id": "745f064e151bb43513faa673060b0fe1",
-  "rank": 8,
-  "title": "Falling Thunder Martial Artist Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/falling-thunder-martial-artist-build-guide",
-  "author": "milkybk",
+  "title": "Hollow Form Whirling Assault Martial Artist Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/hollow-form-whirling-assault-martial-artist-build-guide",
+  "author": "manni",
   "updated": "September 3, 2026",
   "patch": null,
   "classes": [
@@ -163,11 +119,32 @@
    "Martial Artist"
   ],
   "source": "maxroll",
-  "found_date": "2026-09-03"
+  "found_date": "2026-09-04"
+ },
+ {
+  "id": "560ca57047132efef9d99661f867dd1c",
+  "rank": 7,
+  "title": "Glacial Lance Deadeye Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/glacial-lance-deadeye",
+  "author": "aer0",
+  "updated": "September 3, 2026",
+  "patch": null,
+  "classes": [
+   "Ranger"
+  ],
+  "tags": [
+   "The Forbidden Rites 0.5.5",
+   "Endgame",
+   "Leveling",
+   "Ranger",
+   "Deadeye"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-04"
  },
  {
   "id": "6f8680bbae36bfd4f3a87806c0ee6b17",
-  "rank": 9,
+  "rank": 8,
   "title": "Flameblast Oil Grenade Gemling Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/flameblast-oil-grenade-gemling-build-guide",
   "author": "cptngarbage",
@@ -185,7 +162,28 @@
    "Gemling Legionnaire"
   ],
   "source": "maxroll",
-  "found_date": "2026-09-03"
+  "found_date": "2026-09-04"
+ },
+ {
+  "id": "59fa9dfca50d149d9641372f4649788c",
+  "rank": 9,
+  "title": "Minion Army Shaman Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/minion-army-shaman-build-guide",
+  "author": "helmbreaker",
+  "updated": "September 3, 2026",
+  "patch": null,
+  "classes": [
+   "Druid"
+  ],
+  "tags": [
+   "The Forbidden Rites 0.5.5",
+   "Endgame",
+   "Leveling",
+   "Druid",
+   "Shaman"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-04"
  },
  {
   "id": "e13886801295f0be472e410268f1aab5",
@@ -193,18 +191,19 @@
   "title": "Minion Army Lich Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/minion-army-lich-build-guide",
   "author": "helmbreaker",
-  "updated": "September 2, 2026",
-  "patch": "Return Of The Ancients 0.5.4",
+  "updated": "September 3, 2026",
+  "patch": null,
   "classes": [
    "Witch"
   ],
   "tags": [
+   "The Forbidden Rites 0.5.5",
    "Endgame",
    "Leveling",
    "Witch",
    "Lich"
   ],
   "source": "maxroll",
-  "found_date": "2026-09-03"
+  "found_date": "2026-09-04"
  }
 ]
