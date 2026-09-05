@@ -1,69 +1,95 @@
 [
  {
-  "id": "157ec4a9b28b28ef07c8ff76ad14c083",
-  "title": "[0.5] BALROG - (0* button) Fire Bear Fury of the King Kitava",
-  "url": "https://mobalytics.gg/poe-2/builds/balrog-fire-bear-smith",
-  "author": "Skadoosh",
-  "updated": "Aug 21, 2026",
+  "id": "e18c7adb94df3d321734d42038f9d7c3",
+  "title": "[0.5.5] Grenades Gemling League Starter (Level 1 to Endgame)",
+  "url": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter",
+  "author": "DEADRABB1T",
+  "updated": "Sep 05, 2026",
+  "patch": "0.5.5 FR",
   "classes": [
-   "Warrior"
+   "Gemling Legionnaire"
   ],
   "tags": [
-   "Smith of Kitava",
-   "Starter"
+   "Starter",
+   "End Game",
+   "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-08-26",
+  "found_date": "2026-09-05",
   "rank": 1
  },
  {
-  "id": "83297e780e1522efa8d0001ee0eaf110",
-  "title": "[0.5] GEMLING SPARK - Endgame BLASTER @animeprincess",
-  "url": "https://mobalytics.gg/poe-2/builds/adonia-s-gemling-spark-anime-princess",
-  "author": "animeprincess",
-  "updated": "Aug 9, 2026",
+  "id": "c360ad7cf7d0314b58ab7d7889c2e87f",
+  "title": "0.5.5 Fubgun Flameblast Oil Grenade",
+  "url": "https://mobalytics.gg/poe-2/builds/fubgun-flameblast-oil-grenade",
+  "author": "Fubgun",
+  "updated": "Sep 04, 2026",
+  "patch": "0.5.5 FR",
   "classes": [
-   "Mercenary"
-  ],
-  "tags": [
    "Gemling Legionnaire"
   ],
+  "tags": [
+   "Starter",
+   "End Game"
+  ],
   "source": "mobalytics",
-  "found_date": "2026-08-26",
+  "found_date": "2026-09-05",
   "rank": 2
  },
  {
-  "id": "1fb62fe22c7904d90889f2f1de2c616e",
-  "title": "[0.5] Plants Abyssal Lich  League Starter (Level 1 to Endgame)",
-  "url": "https://mobalytics.gg/poe-2/builds/plants-lich-deadrabb1t",
-  "author": "DEADRABB1T",
-  "updated": "Jul 29, 2026",
+  "id": "90ac460e547d11dcd082eae4468352d8",
+  "title": "[0.5.5] Navira's Fracturing Varashta League Starter Guide w/Acts Walkthrough",
+  "url": "https://mobalytics.gg/poe-2/builds/naviras-fracturing-varashta-league-starter",
+  "author": "MisoxShiru",
+  "updated": "Sep 05, 2026",
+  "patch": "0.5.5 FR",
   "classes": [
-   "Witch"
+   "Disciple of Varashta"
   ],
   "tags": [
-   "Abyssal Lich",
-   "Starter"
+   "Starter",
+   "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-08-26",
+  "found_date": "2026-09-05",
   "rank": 3
  },
  {
-  "id": "df1a015d15c59bd08e7c79e424576d38",
-  "title": "[0.5] FULL Adonia's Trifusion Stormweaver Guide",
-  "url": "https://mobalytics.gg/poe-2/builds/adonia-s-trifusion-stormweaver",
-  "author": "OperatorOtter",
-  "updated": "Jul 28, 2026",
+  "id": "e794776d64063c766d53d65312d4d62c",
+  "title": "[0.5.5] Twister Gemling Legionnaire",
+  "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
+  "author": "snoobae85",
+  "updated": "Sep 04, 2026",
+  "patch": "0.5.5 FR",
   "classes": [
-   "Sorceress"
+   "Gemling Legionnaire"
   ],
   "tags": [
-   "Stormweaver"
+   "Starter",
+   "End Game",
+   "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-08-26",
+  "found_date": "2026-09-05",
   "rank": 4
+ },
+ {
+  "id": "9f77d45c8af97dc508ee309051e6b42d",
+  "title": "0.5.5 Grenade Gemling League Starter",
+  "url": "https://mobalytics.gg/poe-2/builds/lolcohol-grenade-gemling-league-starter",
+  "author": "Lolcohol",
+  "updated": "Sep 04, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Gemling Legionnaire"
+  ],
+  "tags": [
+   "Starter",
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-09-05",
+  "rank": 5
  },
  {
   "id": "cac0defd8ffaed10bf302996686db617",
@@ -71,65 +97,90 @@
   "url": "https://mobalytics.gg/poe-2/builds/martial-artist-monk-build-league-starter-to-endgame",
   "author": "Ronarray",
   "updated": "Jul 19, 2026",
+  "patch": "0.5.5 FR",
   "classes": [
-   "Monk"
+   "Martial Artist"
   ],
   "tags": [
-   "Martial Artist",
-   "Starter"
+   "Starter",
+   "End Game",
+   "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-08-26",
-  "rank": 5
+  "found_date": "2026-09-05",
+  "rank": 6
  },
  {
   "id": "2d5b08d1f9562906ca9427fee8e449df",
-  "title": "0.5 Fubgun Ice Shot Deadeye",
+  "title": "0.5.5 Fubgun Ice Shot Deadeye",
   "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
   "author": "Fubgun",
-  "updated": "Jun 18, 2026",
+  "updated": "Sep 04, 2026",
+  "patch": "0.5.5 FR",
   "classes": [
-   "Ranger"
-  ],
-  "tags": [
    "Deadeye"
   ],
+  "tags": [
+   "End Game"
+  ],
   "source": "mobalytics",
-  "found_date": "2026-08-26",
-  "rank": 6
+  "found_date": "2026-09-05",
+  "rank": 7
+ },
+ {
+  "id": "9d0baa7e9e723740a14476ed7070e750",
+  "title": "[0.5] CaptainLance9's Spirit Walker Beast Master",
+  "url": "https://mobalytics.gg/poe-2/builds/spirit-walker-beast-master",
+  "author": "CaptainLance9",
+  "updated": "Sep 02, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Spirit Walker"
+  ],
+  "tags": [
+   "Starter",
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-09-05",
+  "rank": 8
  },
  {
   "id": "8afcf60f3c07762269ffdb44e5fe8685",
   "title": "[0.5] Twister Spirit Walker",
   "url": "https://mobalytics.gg/poe-2/builds/twister-spirit-walker-snoobae",
   "author": "snoobae85",
-  "updated": "Jul 28, 2026",
+  "updated": "Aug 30, 2026",
+  "patch": "0.5.5 FR",
   "classes": [
-   "Huntress"
+   "Spirit Walker"
   ],
   "tags": [
-   "Spirit Walker",
-   "Starter"
+   "End Game",
+   "Starter",
+   "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-08-26",
-  "rank": 7
+  "found_date": "2026-09-05",
+  "rank": 9
  },
  {
   "id": "2cb7ffd9085eb37b32aa6ed4f241270f",
   "title": "[0.5] Comprehensive CoC Frostbolt/Spark Comet Recoup Infernalist - by Ignatius",
   "url": "https://mobalytics.gg/poe-2/builds/coc-spark-comet-recoup-infernalist-by-ignatius",
   "author": "Ignatius",
-  "updated": "Aug 24, 2026",
+  "updated": "Sep 03, 2026",
+  "patch": "0.5.5 FR",
   "classes": [
-   "Witch"
+   "Infernalist"
   ],
   "tags": [
-   "Infernalist",
-   "Starter"
+   "Starter",
+   "End Game",
+   "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-08-26",
-  "rank": 8
+  "found_date": "2026-09-05",
+  "rank": 10
  }
 ]
