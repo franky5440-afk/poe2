@@ -36,18 +36,23 @@ scraper.py ──> data/*.json ──> build_site.py ──> site/（靜態站�
 
 ### Mobalytics BD
 - 全站在 Cloudflare 後面：requests / Googlebot UA 一律 403，**必須用 cloudscraper**（requirements 已含）。若 Cloudflare 升級導致 cloudscraper 失效，當日保留舊資料即可，不要硬繞
-- 卡片選擇器 `[data-testid="discovery-item"]` 是官方 test id，比 Atomic CSS 亂數 class 穩；標題/作者靠「profile 連結所在 byline div 的前一個兄弟 div」定位，class 名（如 `xuxw1ft`）不可依賴
-- 列表混有非 BD 卡（工具頁、教學文），過濾條件：必須有 `/poe-2/builds/` 連結**且**有 `/poe-2/profile/` 作者
-- 同一 BD 卡會出現桌面/手動兩份重複（tag 也重複），以 URL 去重
+- **不要解析 HTML**（2026-09-05 改）：`/poe-2/builds` 的列表是 client-rendered，SSR 只嵌 5 筆主列表 + 4 筆 Featured，去重後湊不滿 10 筆
+- 正解是前端自己用的 GraphQL 端點 `POST https://mobalytics.gg/api/poe-2/v1/graphql/query`（見頁面 `POE_2_GQL_HTTP_URL`）。**introspection 已關，但接受自訂 query**，不必用 persisted query。要先 GET 一次 `/poe-2/builds` 拿 Cloudflare clearance cookie 再 POST
+- 查詢用 `userGeneratedDocuments(input, page)`；篩選條件寫在 `MOBA_FILTER_TAGS`，跟站上預設一致（見頁面 SSR 的 `discovery.initialState`）：`build-type=end-game-type`、`vefified=expert-verification`（注意官方就是拼成 `vefified`）、`patch=defaultValue`、`sortBy=TRENDING`、`publishedTimeframe=ALL`
+- **patch 一定要用 `defaultValue` 不要寫死版本 slug**（現行是 `0-5-rota`），這樣新賽季開了不必改程式
+- **BD 連結要用 `featured.slug`，不是 `slugifiedName`**：實測 `/poe-2/builds/{slugifiedName}` 會 404
 
 ### Maxroll BD
 - 直接 requests 可抓，伺服器端渲染完整 HTML；文章卡用 `article` + `a[href^="/poe2/build-guides/"]` 定位
+- 不帶任何 query string 就是站上預設檢視（職業 All、Endgame/Leveling/Twink Leveling 皆 All、Ascendancy All），列表已依 Last Updated 新到舊排，前 10 篇即最新 10 篇——不需要另外帶篩選參數
 - class 名帶 hash 後綴（`_post_odfl4_1`），網站重 build 會變，選擇器一律用部分匹配或結構定位
 - 「By 作者 | Last Updated: 日期」在 h2 文字裡，用 regex 抽
+- 版本 tag 現行格式是「The Forbidden Rites 0.5.5」（賽季名 + 版號），判斷條件用「tag 內含 `\d+\.\d+`」，不要只比對舊式賽季名
 
 ### poe.ninja BD
 - builds 頁面本身是 client-rendered Astro，HTML 內沒有表格資料，不要嘗試解析 HTML
-- 正解是未公開但穩定的 JSON 端點 `GET https://poe.ninja/poe2/api/data/build-index-state`（免 auth、datacenter IP 可打）；取第一個 `hardcore=false` 的聯盟，`statistics` 即前十升華占比（percentage = share of ladder）
+- 正解是未公開但穩定的 JSON 端點 `GET https://poe.ninja/poe2/api/data/build-index-state`（免 auth、datacenter IP 可打），`statistics` 即前十升華占比（percentage = share of ladder）
+- **選聯盟不能只挑「第一個 `hardcore=false`」**（2026-09-05 修）：那樣會撿到 SSF 或私人聯盟，賽季交替時也可能停在上一季。條件要寫明（見 `pick_ninja_league()`）：`category==0`（官方挑戰聯盟，排除 Standard 與私人聯盟）、`status==0`（進行中）、非 hardcore、`leagueUrl` 不以 `ssf` 結尾、且 `statistics` 非空。清單本身是新到舊排，第一個符合的就是現行賽季
 - **各升華專屬連結**：依官方前端 routing（`a2.AsVFAiaS.mjs`），格式為 `https://poe.ninja/poe2/builds/{leagueUrl}?class={Name}`（空格以 `+` 連接），點擊可直達該升華篩選頁
 - 不要再花時間逆推 builds 表格的列表端點（2026-08-26 已掃過全部 astro chunks，只有這一個公開端點）
 
@@ -56,6 +61,14 @@ scraper.py ──> data/*.json ──> build_site.py ──> site/（靜態站�
 - 找「最新影片」的正解：flat 搜尋結果自帶 `channel_id`，改抓候選頻道的上傳 RSS——免費附發佈日期與觀看數（見 `yt_rss_latest()`）
 - flat playlist 搜尋結果會混入播放清單項目（id 是 PL… 34 碼），組 pool 時只收 id 長度 11 的影片
 - 影片縮圖不下載、不入 repo：前端直接引用 `https://i.ytimg.com/vi/{video_id}/mqdefault.jpg`
+
+### 熱門影片挑選規則（不可退回舊做法）
+- **時間優先於觀看數**：先取近 `HOT_CUTOFF_DAYS`（30 天）內上傳的候選、再依觀看數排序；窗內湊不滿 10 部才用較舊的遞補。
+  舊版是「先依觀看數排序、邊掃邊查日期」並帶 `max_check` 上限，遇到 2024 上市期那批高觀看老片會把預算燒光，導致熱門區停在 2024
+- **候選池要同時吃相關度與上傳時間兩種搜尋**：只用相關度排序時 YouTube 幾乎只回老片，新片根本進不了候選
+- **日期先吃免費來源**（頻道 RSS → `data/video_dates.json` 快取），只有兩者都沒有才呼叫 `yt_full_info()`，且有 `HOT_LOOKUP_BUDGET` 次數上限。
+  雲端 IP 被 YouTube 擋時 `yt_full_info()` 會大量失敗、日期變 `None`，快取就是那時的救命稻草——**不要把快取只用在挑選之後**
+- 同頻道重複上傳／分段直播常出現完全同名的多支影片，熱門與最新都要過 `dedupe_video_items()`（以「頻道 + 標題」去重）
 
 ### DuckDuckGo（ddgs）
 - 同一批 query 短時間內重跑會回 "No results found" 或引擎 429/403——速率限制，不是程式壞掉。除錯時不要連續重跑

@@ -140,68 +140,113 @@ def is_video_url(url):
 # ---------------------------------------------------------------- 三大站 Top 10 BD
 
 MOBA_BUILDS_URL = "https://mobalytics.gg/poe-2/builds"
+MOBA_GQL_URL = "https://mobalytics.gg/api/poe-2/v1/graphql/query"
+# 站上 /poe-2/builds 預設就是這組條件（見頁面 SSR 的 discovery.initialState）：
+#   build-type=End Game、vefified=expert-verification（站方認證）、patch=defaultValue（自動跟著現行版本走）
+#   排序 Trending、時間範圍 All time
+# patch 用 defaultValue 而不是寫死 "0-5-rota"，新賽季開了不必改程式
+MOBA_FILTER_TAGS = [
+    {"groupSlug": "build-type", "slug": "end-game-type"},
+    {"groupSlug": "vefified", "slug": "expert-verification"},
+    {"groupSlug": "patch", "slug": "defaultValue"},
+]
+MOBA_SORT_BY = "TRENDING"
+MOBA_TIMEFRAME = "ALL"
+MOBA_GQL_QUERY = """query($input: Poe2UserGeneratedDocumentsListInput!, $page: Poe2UserGeneratedDocumentsListPage!) {
+  game: poe2 { documents { userGeneratedDocuments(input: $input, page: $page) {
+    error
+    pageInfo { total }
+    documents {
+      id slugifiedName status updatedAt
+      data { name }
+      author { name }
+      featured { slug status }
+      tags { data { groupSlug name slug } }
+    }
+  } } }
+}"""
+
 MAXROLL_BUILDS_URL = "https://maxroll.gg/poe2/build-guides"
 NINJA_STATE_URL = "https://poe.ninja/poe2/api/data/build-index-state"
 NINJAA_SITE_URL = "https://poe.ninja/poe2/builds"
 BUILD_TOP_N = 10
 
 
-def fetch_moba_html():
-    """mobalytics 在 Cloudflare 後面，requests 必被 403，須用 cloudscraper"""
+def fetch_moba_builds(limit):
+    """mobalytics 在 Cloudflare 後面，requests 必被 403，須用 cloudscraper。
+    列表本身是 client-rendered，SSR 的 HTML 只嵌 5 筆（湊不滿 10），
+    所以直接打前端自己用的 GraphQL 端點，把篩選條件寫明、一次要滿 limit 筆"""
     s = cloudscraper.create_scraper(browser={"browser": "firefox", "platform": "linux", "desktop": True})
-    r = s.get(MOBA_BUILDS_URL, timeout=40)
+    s.get(MOBA_BUILDS_URL, timeout=40)  # 先取得 Cloudflare clearance cookie
+    payload = {
+        "query": MOBA_GQL_QUERY,
+        "variables": {
+            "input": {
+                "type": "builds",
+                "sortBy": MOBA_SORT_BY,
+                "publishedTimeframe": MOBA_TIMEFRAME,
+                "tags": MOBA_FILTER_TAGS,
+            },
+            "page": {"limit": limit},
+        },
+    }
+    r = s.post(MOBA_GQL_URL, json=payload, timeout=40, headers={
+        "Content-Type": "application/json",
+        "Referer": MOBA_BUILDS_URL,
+        "Origin": "https://mobalytics.gg",
+    })
     r.raise_for_status()
-    return r.text
+    body = r.json()
+    if body.get("errors"):
+        raise ValueError(f"mobalytics graphql error: {body['errors'][:1]}")
+    node = body["data"]["game"]["documents"]["userGeneratedDocuments"]
+    if node.get("error"):
+        raise ValueError(f"mobalytics discovery error: {node['error']}")
+    return node.get("documents") or []
 
 
-def moba_card(card):
-    """單張 Mobalytics BD 卡 -> dict；非 BD 卡（工具/文章）回 None。
-    卡片內容區第一個 div 是標題、第二個是「By 作者 ∙ Updated on 日期」"""
-    link_a = card.select_one('a[href^="/poe-2/builds/"]')
-    if not link_a:
+def moba_item(doc):
+    """GraphQL 單筆 -> 站內 build dict；缺標題或作者視為非 BD 卡，回 None"""
+    title = ((doc.get("data") or {}).get("name") or "").strip()
+    author = ((doc.get("author") or {}).get("name") or "").strip()
+    if not title or not author:
         return None
-    path = link_a.get("href", "")
-    url = f"https://mobalytics.gg{path}"
-    author, title, updated = "", "", None
-    prof = card.select_one('a[href^="/poe-2/profile/"]')
-    if prof:
-        author = prof.get_text(strip=True)
-        byline = prof.find_parent("div")
-        wrap = byline.find_parent("div") if byline else None
-        if wrap is not None:
-            divs = wrap.find_all("div", recursive=False)
-            if len(divs) >= 2:
-                title = divs[0].get_text(" ", strip=True)
-                m = re.search(r"Updated on\s+(.+)$", divs[1].get_text(" ", strip=True))
-                if m:
-                    updated = m.group(1).strip()
-    if not title:
-        title = path.rsplit("/", 1)[-1].replace("-", " ")
-    if not author:
+    # 站上的網址用 featured.slug（實測 slugifiedName 那條路徑會 404）
+    slug = ((doc.get("featured") or {}).get("slug") or "").strip() or doc.get("slugifiedName") or ""
+    if not slug:
         return None
-    tags = []
-    for d in card.select('a[href*="-builds"]:not([href^="/poe-2/builds"])'):
-        t = d.get_text(strip=True)
-        if t and not t.startswith("+") and t not in tags:
-            tags.append(t)
+    url = f"https://mobalytics.gg/poe-2/builds/{slug}"
+    by_group = {}
+    for t in ((doc.get("tags") or {}).get("data") or []):
+        by_group.setdefault(t.get("groupSlug"), []).append(t.get("name") or "")
+    ascendancy = (by_group.get("ascendancy") or by_group.get("class") or [""])[0]
+    patch = (by_group.get("patch") or [None])[0]
+    tags = [t for t in by_group.get("build-type", []) if t]
+    updated = None
+    raw = doc.get("updatedAt") or ""
+    if raw:
+        try:
+            updated = datetime.strptime(raw[:10], "%Y-%m-%d").strftime("%b %d, %Y")
+        except ValueError:
+            updated = None
     return {
         "id": md5_id(url),
         "title": title,
         "url": url,
         "author": author,
         "updated": updated,
-        "classes": [t for t in tags[:1]],
-        "tags": tags[1:] if len(tags) > 1 else [],
+        "patch": patch,
+        "classes": [ascendancy] if ascendancy else [],
+        "tags": tags,
         "source": "mobalytics",
         "found_date": now_str()[:10],
     }
 
 
 def scrape_mobalytics():
-    soup = BeautifulSoup(fetch_moba_html(), "html.parser")
     out, seen = [], set()
-    for card in soup.select('[data-testid="discovery-item"]'):
-        it = moba_card(card)
+    for doc in fetch_moba_builds(BUILD_TOP_N * 2):
+        it = moba_item(doc)
         if not it:
             continue
         k = norm_url(it["url"])
@@ -216,6 +261,8 @@ def scrape_mobalytics():
 
 
 def scrape_maxroll():
+    """不帶任何 query string 就是站上的預設檢視：職業 All、Endgame/Leveling/Twink Leveling 皆 All、
+    Ascendancy All，列表本身依 Last Updated 新到舊排，所以前 10 篇即最新 10 篇"""
     r = requests.get(MAXROLL_BUILDS_URL, headers=UA, timeout=30)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, "html.parser")
@@ -243,7 +290,8 @@ def scrape_maxroll():
             t = sp.get_text(" ", strip=True)
             if not t or t in tags:
                 continue
-            if re.match(r"^[A-Z]\w+\s+Of\s+The\s+\w+", t) or re.match(r"^\d+\.\d+", t):
+            # 版本/賽季 tag：帶 x.y 版號（如「The Forbidden Rites 0.5.5」「0.5.5」）或舊式賽季名
+            if re.search(r"\d+\.\d+", t) or re.match(r"^[A-Z]\w+\s+Of\s+The\s+\w+", t):
                 patch = patch or t
                 continue
             tags.append(t)
@@ -265,15 +313,30 @@ def scrape_maxroll():
     return out
 
 
+def pick_ninja_league(leagues):
+    """挑現行主線軟核聯盟。poe.ninja 是新到舊排，但不能只取「第一個非 hardcore」——
+    那樣會撿到 SSF/私人聯盟，賽季交替時也可能停在上一季。條件寫明：
+    category 0（官方挑戰聯盟，排除 Standard 與私人聯盟）、status 0（進行中）、
+    非 hardcore、leagueUrl 不以 ssf 結尾，且要有 statistics"""
+    for l in leagues:
+        if l.get("hardcore") or l.get("category") != 0 or l.get("status") != 0:
+            continue
+        if (l.get("leagueUrl") or "").lower().endswith("ssf"):
+            continue
+        if l.get("statistics"):
+            return l
+    return None
+
+
 def scrape_poeninja():
-    """官方未公開但穩定的端點：各聯盟前十升華占比（share of ladder）。
-    取第一個非 hardcore 聯盟（現行主力軟核聯盟）的前 10 名"""
+    """官方未公開但穩定的端點：各聯盟前十升華占比（share of ladder）"""
     r = requests.get(NINJA_STATE_URL, headers={**UA, "Referer": NINJAA_SITE_URL}, timeout=30)
     r.raise_for_status()
     leagues = r.json().get("leagueBuilds") or []
-    league = next((l for l in leagues if not l.get("hardcore")), None)
+    league = pick_ninja_league(leagues)
     if not league:
-        raise ValueError("no softcore league in build-index-state")
+        raise ValueError("no active softcore league in build-index-state")
+    log.info("poe.ninja league: %s (%d chars)", league.get("leagueName"), league.get("total") or 0)
     out = []
     league_url = (league.get("leagueUrl") or "").strip("/")
     for st in (league.get("statistics") or [])[:BUILD_TOP_N]:
@@ -352,18 +415,22 @@ YDL_FULL = {"quiet": True, "no_warnings": True, "skip_download": True, "socket_t
 
 
 def yt_rss_latest(channel_id):
+    """回傳 (video_id, title, published_date, views, channel_name)。
+    channel_name 一併帶回，否則只出現在 RSS 的候選影片會沒有頻道名，前端顯示空白、也無法去重"""
     out = []
     try:
         r = requests.get(f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}", headers=UA, timeout=15)
         r.raise_for_status()
         ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015",
               "m": "http://search.yahoo.com/mrss/"}
-        for e in ET.fromstring(r.content).findall("a:entry", ns):
+        root = ET.fromstring(r.content)
+        chan = (root.findtext("a:author/a:name", "", ns) or "").strip()
+        for e in root.findall("a:entry", ns):
             vid = e.findtext("yt:videoId", "", ns)
             title = (e.findtext("a:title", "", ns) or "").strip()
             pub = (e.findtext("a:published", "", ns) or "")[:10]
             views = e.find(".//m:statistics", ns)
-            out.append((vid, title, pub, int(views.get("views")) if views is not None and views.get("views", "").isdigit() else None))
+            out.append((vid, title, pub, int(views.get("views")) if views is not None and views.get("views", "").isdigit() else None, chan))
     except Exception as e:
         log.warning("yt rss %s: %s", channel_id[:12], e)
     return out
@@ -394,54 +461,79 @@ def within_cutoff(date_str, cutoff):
         return False
 
 
-def pick_hot_videos(pool, rss_map, keep, to_item, top_n, hot_cutoff_days=HOT_CUTOFF_DAYS):
-    """賽季遊戲不看全歷史觀看數：優先取近 hot_cutoff_days 天上傳的影片依觀看數排序；
-    窗內數量不足 top_n 時，用窗外（較舊）但觀看數較高的影片依序遞補湊滿，
-    窗內候選一律優先於窗外遞補，不因窗外觀看數更高就插隊。"""
+def dedupe_video_items(items):
+    """同一頻道重複上傳／分段直播常出現完全同名的多支影片，前十名塞 3 份同一支很難看。
+    以（頻道, 標題）去重，保留先出現的那支（呼叫端已排好序）"""
+    out, seen = [], set()
+    for it in items:
+        k = ((it.get("channel") or "").strip().lower(), (it.get("title") or "").strip().lower())
+        if k in seen:
+            continue
+        seen.add(k)
+        out.append(it)
+    return out
+
+
+HOT_LOOKUP_BUDGET = 30
+
+
+def resolve_dates_and_views(cands, rss_map, date_cache, budget=HOT_LOOKUP_BUDGET):
+    """把候選的上傳日期／觀看數補齊：先吃免費來源（RSS、date_cache），
+    只有兩者都沒有的才動用 yt_full_info（會打 YouTube，雲端 IP 容易被擋），且有次數上限。
+    日期是熱門排序的第一順位條件，所以補日期的優先序放在觀看數高的候選"""
+    for v in cands:
+        info = rss_map.get(v["video_id"]) or {}
+        if not v.get("date"):
+            v["date"] = info.get("date") or date_cache.get(v["video_id"])
+        if not isinstance(v.get("view_count"), int) and isinstance(info.get("views"), int):
+            v["view_count"] = info["views"]
+        if not v.get("channel") and info.get("channel"):
+            v["channel"] = info["channel"]
+
+    pending = [v for v in cands if not v.get("date") or not isinstance(v.get("view_count"), int)]
+    pending.sort(key=lambda x: -(x.get("view_count") or 0))
+    for v in pending[:budget]:
+        date, views = yt_full_info(v["video_id"])
+        time.sleep(0.4)
+        if date:
+            v["date"] = date
+            date_cache[v["video_id"]] = date
+        if isinstance(views, int):
+            v["view_count"] = views
+    return cands
+
+
+def pick_hot_videos(pool, rss_map, keep, to_item, top_n, date_cache=None, hot_cutoff_days=HOT_CUTOFF_DAYS):
+    """賽季遊戲的「熱門」不看全歷史觀看數：**時間先於觀看數**。
+    先把候選的上傳日期補齊，取近 hot_cutoff_days 天內的依觀看數排序；
+    窗內湊不滿 top_n 才用窗外（較舊）的依觀看數遞補，窗內候選一律優先，
+    不因窗外某支觀看數更高就插隊。日期查不到的排最後，只在真的湊不滿時才用。"""
+    date_cache = date_cache if date_cache is not None else {}
     cutoff = (datetime.now(timezone.utc) - timedelta(days=hot_cutoff_days)).date()
     chan_of = {v["video_id"]: v["channel"] for v in pool}
     cands = {v["video_id"]: dict(v) for v in pool}
-    # 頻道 RSS 近 30 天上傳也列入候選，避免搜尋結果偏舊時樣本不足
+    # 頻道 RSS 近期上傳也列入候選，避免搜尋結果偏舊時樣本不足
     for vid, info in rss_map.items():
         if vid in cands:
             continue
         if not (within_cutoff(info["date"], cutoff) and keep(info["title"]) and game_in_title(info["title"])):
             continue
-        cands[vid] = {"video_id": vid, "title": info["title"], "channel": chan_of.get(vid, ""),
-                      "url": f"https://www.youtube.com/watch?v={vid}", "view_count": info["views"]}
+        cands[vid] = {"video_id": vid, "title": info["title"],
+                      "channel": chan_of.get(vid) or info.get("channel") or "",
+                      "url": f"https://www.youtube.com/watch?v={vid}", "view_count": info["views"],
+                      "date": info["date"]}
 
-    known = [v for v in cands.values() if isinstance(v.get("view_count"), int)]
-    unknown = [v for v in cands.values() if not isinstance(v.get("view_count"), int)]
-    need = max(0, top_n * 2 - len(known))
-    for v in unknown[:need]:
-        views = (rss_map.get(v["video_id"]) or {}).get("views")
-        if not isinstance(views, int):
-            _, views = yt_full_info(v["video_id"])
-            time.sleep(0.5)
-        if isinstance(views, int):
-            v["view_count"] = views
-            known.append(v)
+    resolve_dates_and_views(list(cands.values()), rss_map, date_cache)
 
-    out, fallback = [], []
-    checked, max_check = 0, top_n * 3  # 上限避免無止盡打 API 補查較舊候選的日期
-    for v in sorted(known, key=lambda x: -(x["view_count"] or 0)):
-        if len(out) >= top_n or checked >= max_check:
-            break
-        checked += 1
-        date = (rss_map.get(v["video_id"]) or {}).get("date")
-        if not date:
-            date, _ = yt_full_info(v["video_id"])
-            time.sleep(0.4)
-        item = to_item(v, date, v["view_count"])
-        if within_cutoff(date, cutoff):
-            out.append(item)
-        elif len(fallback) < top_n:
-            fallback.append(item)
+    by_views = sorted(cands.values(), key=lambda x: -(x["view_count"] or 0))
+    recent = [v for v in by_views if within_cutoff(v.get("date"), cutoff)]
+    older = [v for v in by_views if v.get("date") and not within_cutoff(v["date"], cutoff)]
+    undated = [v for v in by_views if not v.get("date")]
 
-    if len(out) < top_n and fallback:
-        out.extend(fallback[: top_n - len(out)])
-
-    return out[:top_n]
+    picked = dedupe_video_items(recent)[:top_n]
+    if len(picked) < top_n:
+        picked = dedupe_video_items(picked + older + undated)[:top_n]
+    return [to_item(v, v.get("date"), v["view_count"]) for v in picked]
 
 
 def pick_new_videos(pool, rss_map, keep, to_item, top_n):
@@ -457,10 +549,11 @@ def pick_new_videos(pool, rss_map, keep, to_item, top_n):
             datetime.strptime(info["date"], "%Y-%m-%d")
         except (ValueError, TypeError):
             continue
-        cands[vid] = to_item({"video_id": vid, "title": info["title"], "channel": chan_of.get(vid, ""),
+        cands[vid] = to_item({"video_id": vid, "title": info["title"],
+                              "channel": chan_of.get(vid) or info.get("channel") or "",
                               "url": f"https://www.youtube.com/watch?v={vid}"}, info["date"], info["views"])
 
-    items = sorted(cands.values(), key=lambda x: x["date"] or "", reverse=True)[:top_n]
+    items = dedupe_video_items(sorted(cands.values(), key=lambda x: x["date"] or "", reverse=True))[:top_n]
     if len(items) >= top_n:
         return items
 
@@ -479,10 +572,10 @@ def pick_new_videos(pool, rss_map, keep, to_item, top_n):
         if date:
             extra.append(to_item(v, date, vc))
             seen.add(v["video_id"])
-    return sorted(items + extra, key=lambda x: x["date"] or "", reverse=True)[:top_n]
+    return dedupe_video_items(sorted(items + extra, key=lambda x: x["date"] or "", reverse=True))[:top_n]
 
 
-def collect_videos(lang):
+def collect_videos(lang, date_cache):
     if lang == "zh":
         hot_queries, new_queries = ["POE2 攻略", "流亡黯道2 配裝"], ["POE2 攻略"]
 
@@ -499,10 +592,21 @@ def collect_videos(lang):
         def keep(title):
             return not has_cjk(title)
 
+    # 熱門池同時吃「相關度」與「上傳時間」兩種排序：只用相關度的話，
+    # YouTube 會一直回 2024 上市期那批高觀看數老片，近 30 天的新片根本進不了候選池
     pool_hot = []
     seen = set()
     for q in hot_queries:
         for v in yt_flat_search(q, 25):
+            k = v["video_id"]
+            if k in seen:
+                continue
+            seen.add(k)
+            if not keep(v["title"]):
+                continue
+            pool_hot.append(v)
+    for q in hot_queries:
+        for v in yt_flat_search(q, 25, sort_by_date=True, flat_limit=50):
             k = v["video_id"]
             if k in seen:
                 continue
@@ -545,14 +649,19 @@ def collect_videos(lang):
             chans.append(cid)
     rss_map = {}
     for cid in chans[:RSS_CHANNEL_CAP]:
-        for vid, title, pub, views in yt_rss_latest(cid):
+        for vid, title, pub, views, chan in yt_rss_latest(cid):
             if pub and len(pub) == 10:
-                rss_map[vid] = {"title": title, "date": pub, "views": views}
+                rss_map[vid] = {"title": title, "date": pub, "views": views, "channel": chan}
         time.sleep(0.3)
     log.info("videos [%s]: %d channels rss -> %d videos", lang, min(len(chans), RSS_CHANNEL_CAP), len(rss_map))
 
-    hot = pick_hot_videos(pool_hot, rss_map, keep, to_item, 10)
-    log.info("videos hot [%s]: %d within %dd", lang, len(hot), HOT_CUTOFF_DAYS)
+    hot = pick_hot_videos(pool_hot, rss_map, keep, to_item, 10, date_cache)
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=HOT_CUTOFF_DAYS)).date()
+    fresh = sum(1 for it in hot if within_cutoff(it["date"], cutoff))
+    log.info("videos hot [%s]: %d picked, %d within %dd", lang, len(hot), fresh, HOT_CUTOFF_DAYS)
+    if fresh < len(hot):
+        log.warning("videos hot [%s]: only %d/%d within %dd, backfilled with older",
+                    lang, fresh, len(hot), HOT_CUTOFF_DAYS)
 
     log.info("videos new [%s]: %d candidates", lang, len(pool_new))
     new = pick_new_videos(pool_new, rss_map, keep, to_item, 10)
@@ -564,7 +673,7 @@ def collect_videos(lang):
 def update_videos():
     cache = load_json("video_dates.json", {})
     for lang in ("zh", "en", "ja"):
-        hot, new = collect_videos(lang)
+        hot, new = collect_videos(lang, cache)
         for it in [*hot, *new]:
             vid = it["video_id"]
             if it["date"]:
