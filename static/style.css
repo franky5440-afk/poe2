@@ -185,7 +185,7 @@ a { color: inherit; text-decoration: none; }
     background-position-y: top;
   }
   .hero-content { justify-content: flex-start; padding-top: 18vh; }
-  .hero-title { margin-bottom: 12vh; font-size: clamp(29px, 9vw, 52px); }
+  .hero-title { margin-bottom: 12vh; font-size: min(7.2vw, 52px); white-space: nowrap; }
   .cta-grid { grid-template-columns: repeat(2, 1fr); overflow-y: auto; max-height: 42vh; }
   .cta-card { min-height: 92px; }
 }
