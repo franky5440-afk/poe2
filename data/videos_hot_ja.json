@@ -1,28 +1,10 @@
 [
  {
-  "video_id": "KM8Rj4789Mo",
-  "title": "PoE 2の新イベント 0.5.5でプレイすべきビルド トップ10",
-  "channel": "Scorpius",
-  "url": "https://www.youtube.com/watch?v=KM8Rj4789Mo",
-  "views": 257866,
-  "date": "2026-08-31",
-  "lang": "ja"
- },
- {
-  "video_id": "d2QbaO-sJ3o",
-  "title": "最強のSSFリーグスターター｜Varashta 完全キャンペーン攻略ガイド (PoE 2 0.5.5)",
-  "channel": "Blazeworks TV",
-  "url": "https://www.youtube.com/watch?v=d2QbaO-sJ3o",
-  "views": 217392,
-  "date": "2026-08-31",
-  "lang": "ja"
- },
- {
   "video_id": "JvSbR8V9EtQ",
   "title": "史上最高に快適なリーグスターター - Navira's Fracturing Disciple of Varashta | PoE 2 パッチ 0.5.5",
   "channel": "MisoxShiru",
   "url": "https://www.youtube.com/watch?v=JvSbR8V9EtQ",
-  "views": 102179,
+  "views": 110578,
   "date": "2026-09-03",
   "lang": "ja"
  },
@@ -31,7 +13,7 @@
   "title": "【重要！】POE2 0.5.5 リーグスターターのランキング ― 最強＆最弱ビルド！",
   "channel": "Path of Dan",
   "url": "https://www.youtube.com/watch?v=OvE27rUu-0g",
-  "views": 69770,
+  "views": 76720,
   "date": "2026-09-03",
   "lang": "ja"
  },
@@ -40,25 +22,16 @@
   "title": "[PoE2 0.5.5] ツイスター・ジェムリング・レギオネア - ビルド概要",
   "channel": "SnooBAE85",
   "url": "https://www.youtube.com/watch?v=7azWJzKsAAw",
-  "views": 52896,
+  "views": 58288,
   "date": "2026-09-03",
   "lang": "ja"
  },
  {
-  "video_id": "BOKTyW1rkk0",
-  "title": "【PoE2】0.5.5ミニリーグの詳細判明！やる？やらない？【Forbidden Rites】",
-  "channel": "やまん",
-  "url": "https://www.youtube.com/watch?v=BOKTyW1rkk0",
-  "views": 29507,
-  "date": "2026-08-28",
-  "lang": "ja"
- },
- {
-  "video_id": "JcTnJcvG4BI",
-  "title": "Path of Exile 2：タクティシャンでAct1からエンドゲームまで！このマーセナリービルドが強すぎる",
-  "channel": "P4wnyhof",
-  "url": "https://www.youtube.com/watch?v=JcTnJcvG4BI",
-  "views": 28472,
+  "video_id": "Jrj2YtLSJSk",
+  "title": "文句なしに最強のリーグスターター！Navira's Fracturing Varashta 初日振り返り【PoE 2】",
+  "channel": "MisoxShiru",
+  "url": "https://www.youtube.com/watch?v=Jrj2YtLSJSk",
+  "views": 53406,
   "date": "2026-09-05",
   "lang": "ja"
  },
@@ -67,8 +40,17 @@
   "title": "たった一つの秘密のコンボで異常なダメージ | POE 2 0.5.5",
   "channel": "Spud the King – Builds & Guides",
   "url": "https://www.youtube.com/watch?v=2s-i_fII7FQ",
-  "views": 27713,
+  "views": 45829,
   "date": "2026-09-05",
+  "lang": "ja"
+ },
+ {
+  "video_id": "BOKTyW1rkk0",
+  "title": "【PoE2】0.5.5ミニリーグの詳細判明！やる？やらない？【Forbidden Rites】",
+  "channel": "やまん",
+  "url": "https://www.youtube.com/watch?v=BOKTyW1rkk0",
+  "views": 30272,
+  "date": "2026-08-28",
   "lang": "ja"
  },
  {
@@ -76,7 +58,7 @@
   "title": "PoE2 0.5.5ミニリーグのビルドはこれで行く。デュエリストとサイクロンについても考察。【パスオブエグザイル2 Forbidden Rites】",
   "channel": "バチャ丸",
   "url": "https://www.youtube.com/watch?v=Yq00SC9KR3Q",
-  "views": 23722,
+  "views": 24318,
   "date": "2026-08-30",
   "lang": "ja"
  },
@@ -85,8 +67,26 @@
   "title": "【PoE2】正式リリース日は12月12日に決定！剣とデュエリストの実装も決まる【PathofExile 2 無料化】",
   "channel": "やまん",
   "url": "https://www.youtube.com/watch?v=brRmqqyWkwY",
-  "views": 20303,
+  "views": 20519,
   "date": "2026-08-25",
+  "lang": "ja"
+ },
+ {
+  "video_id": "XnqpAIsufuU",
+  "title": "【PoE2/0.5.5】ミニリーグ開幕直前！失敗しないクラス選びと「最強候補」4選を徹底解説",
+  "channel": "KTR Gaming",
+  "url": "https://www.youtube.com/watch?v=XnqpAIsufuU",
+  "views": 19858,
+  "date": "2026-08-29",
+  "lang": "ja"
+ },
+ {
+  "video_id": "QTeVA7dU3ww",
+  "title": "【PoE2/0.5.5】疑惑のミニリーグ忖度なしガチレビュー！前半戦は明確に「良い！」",
+  "channel": "KTR Gaming",
+  "url": "https://www.youtube.com/watch?v=QTeVA7dU3ww",
+  "views": 19676,
+  "date": "2026-09-05",
   "lang": "ja"
  }
 ]
