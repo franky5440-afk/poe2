@@ -118,7 +118,7 @@ a { color: inherit; text-decoration: none; }
   padding: 8vh 24px 7vh;
   color: var(--text);
 }
-.hero-eyebrow, .hero-prompt { color: var(--silver); font-size: 11px; letter-spacing: 5px; }
+.hero-prompt { color: var(--silver); font-size: 11px; letter-spacing: 5px; }
 .hero-title {
   margin: 14px 0 18vh;
   color: var(--silver-hi);
@@ -128,8 +128,35 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: .12em;
   line-height: 1;
   opacity: var(--title-opacity);
-  text-shadow: 0 4px 30px rgba(0, 0, 0, .65);
+  /* 3D：上緣一道亮邊當高光，往下用漸暗的銀灰堆出立體側面，最後加落地陰影 */
+  text-shadow:
+    0 -1px 0 #f4f7fb,
+    0 1px 0 #c6ccd6,
+    0 2px 0 #aeb5c0,
+    0 3px 0 #969da9,
+    0 4px 0 #7e8593,
+    0 5px 0 #676e7c,
+    0 6px 0 #515863,
+    0 7px 0 #3d434d,
+    0 8px 0 #2c313a,
+    0 9px 0 #1e222a,
+    0 11px 16px rgba(0, 0, 0, .55),
+    0 4px 30px rgba(0, 0, 0, .6);
+  transform: perspective(700px) rotateX(9deg);
+  transform-origin: 50% 100%;
   transition: opacity .15s linear;
+  position: relative;
+}
+/* 疊在 3D 側面之上的金屬字面：上緣受光、下緣落入陰影 */
+.hero-title::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #ffffff 0%, #e8ecf2 32%, #b7bec9 58%, #868d9b 82%, #6b7280 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  pointer-events: none;
 }
 .hero-prompt { margin-bottom: 18px; opacity: max(0, calc(.72 * (1 - var(--hero-progress) * 5))); }
 .cta-grid { display: grid; grid-template-columns: repeat(6, minmax(120px, 1fr)); gap: 10px; width: min(1120px, 100%); opacity: var(--cards-opacity); transform: translate3d(0, var(--cards-y), 0); will-change: transform, opacity; }
