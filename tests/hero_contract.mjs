@@ -58,9 +58,9 @@ const CONTRACT = `(async () => {
       ? true : \`期望 \${JSON.stringify(want)}，實得 \${JSON.stringify(got)}\`;
   });
 
-  check("C3 五張 CTA 卡的 data-tab 依序對應既有 tab", () => {
+  check("C3 六張 CTA 卡的 data-tab 依序對應既有 tab", () => {
     const got = [...document.querySelectorAll("#hero .cta-card")].map(e => e.dataset.tab);
-    const want = ["builds", "hot", "new", "bahamut", "tweets"];
+    const want = ["builds", "hot", "new", "bahamut", "tweets", "resources"];
     return JSON.stringify(got) === JSON.stringify(want)
       ? true : \`期望 \${JSON.stringify(want)}，實得 \${JSON.stringify(got)}\`;
   });
