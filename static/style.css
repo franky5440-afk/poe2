@@ -320,6 +320,18 @@ main { flex: 1; padding-top: 28px; padding-bottom: 48px; }
 .lang-flag { font-size: 11px; padding: 1px 7px; border-radius: 4px; border: 1px solid var(--border); }
 .empty-msg { color: var(--muted); text-align: center; padding: 60px 0; grid-column: 1/-1; }
 
+/* ---------- game resources ---------- */
+.link-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 1000px; }
+.link-card {
+  display: block; background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px 20px; transition: border-color .2s, transform .2s;
+}
+.link-card:hover { border-color: var(--silver); transform: translateY(-2px); }
+.link-card h4 { font-size: 16px; margin-bottom: 8px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.link-card:hover h4 { color: var(--silver-hi); }
+.link-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+.ext-tag { font-size: 11px; color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 1px 7px; font-weight: 400; }
+
 /* ---------- bahamut threads ---------- */
 .thread-list { display: flex; flex-direction: column; gap: 10px; max-width: 860px; }
 .thread-item {

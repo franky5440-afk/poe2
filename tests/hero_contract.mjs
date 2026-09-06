@@ -211,9 +211,9 @@ const CONTRACT = `(async () => {
   });
 
   // ── 回歸：既有功能不可被破壞 ──
-  check("R1 五個既有 tab 按鈕都還在", () => {
+  check("R1 六個既有 tab 按鈕都還在", () => {
     const got = [...document.querySelectorAll("nav.tabs .tab")].map(e => e.dataset.tab);
-    const want = ["builds", "hot", "new", "bahamut", "tweets"];
+    const want = ["builds", "hot", "new", "bahamut", "tweets", "resources"];
     return JSON.stringify(got) === JSON.stringify(want) ? true : \`實得 \${JSON.stringify(got)}\`;
   });
 
@@ -221,6 +221,15 @@ const CONTRACT = `(async () => {
     document.querySelector('.tab[data-tab="bahamut"]').click();
     const v = document.querySelector("#view-bahamut");
     return v && !v.classList.contains("hidden") ? true : "#view-bahamut 沒有顯示出來";
+  });
+
+  check("R4 遊戲資料分頁可切換且三個外部連結都在", () => {
+    document.querySelector('.tab[data-tab="resources"]').click();
+    const v = document.querySelector("#view-resources");
+    if (!v || v.classList.contains("hidden")) return "#view-resources 沒有顯示出來";
+    const got = [...v.querySelectorAll("a.link-card")].map(a => a.getAttribute("href"));
+    const want = ["https://www.pathofexile.com/trade2", "https://poe2db.tw/tw/", "https://poe.ninja/poe2/economy/"];
+    return JSON.stringify(got) === JSON.stringify(want) ? true : \`實得 \${JSON.stringify(got)}\`;
   });
 
   check("R3 BD 內容區仍有渲染出卡片（資料流沒斷）", () => {
