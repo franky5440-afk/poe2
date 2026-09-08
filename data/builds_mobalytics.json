@@ -1,29 +1,10 @@
 [
  {
-  "id": "e18c7adb94df3d321734d42038f9d7c3",
-  "title": "[0.5.5] Grenades Gemling League Starter (Level 1 to Endgame)",
-  "url": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter",
-  "author": "DEADRABB1T",
-  "updated": "Sep 06, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Gemling Legionnaire"
-  ],
-  "tags": [
-   "Starter",
-   "End Game",
-   "Speed Leveling"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-09-06",
-  "rank": 1
- },
- {
   "id": "c360ad7cf7d0314b58ab7d7889c2e87f",
   "title": "0.5.5 Fubgun Flameblast Oil Grenade",
   "url": "https://mobalytics.gg/poe-2/builds/fubgun-flameblast-oil-grenade",
   "author": "Fubgun",
-  "updated": "Sep 05, 2026",
+  "updated": "Sep 07, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Gemling Legionnaire"
@@ -33,15 +14,15 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-06",
-  "rank": 2
+  "found_date": "2026-09-08",
+  "rank": 1
  },
  {
   "id": "90ac460e547d11dcd082eae4468352d8",
   "title": "[0.5.5] Navira's Fracturing Varashta League Starter Guide w/Acts Walkthrough",
   "url": "https://mobalytics.gg/poe-2/builds/naviras-fracturing-varashta-league-starter",
   "author": "MisoxShiru",
-  "updated": "Sep 06, 2026",
+  "updated": "Sep 07, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Disciple of Varashta"
@@ -51,15 +32,15 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-06",
-  "rank": 3
+  "found_date": "2026-09-08",
+  "rank": 2
  },
  {
-  "id": "e794776d64063c766d53d65312d4d62c",
-  "title": "[0.5.5] Twister Gemling Legionnaire",
-  "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
-  "author": "snoobae85",
-  "updated": "Sep 06, 2026",
+  "id": "e18c7adb94df3d321734d42038f9d7c3",
+  "title": "[0.5.5] Grenades Gemling League Starter (Level 1 to Endgame)",
+  "url": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter",
+  "author": "DEADRABB1T",
+  "updated": "Sep 07, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Gemling Legionnaire"
@@ -70,7 +51,26 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-06",
+  "found_date": "2026-09-08",
+  "rank": 3
+ },
+ {
+  "id": "e794776d64063c766d53d65312d4d62c",
+  "title": "[0.5.5] Twister Gemling Legionnaire",
+  "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
+  "author": "snoobae85",
+  "updated": "Sep 07, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Gemling Legionnaire"
+  ],
+  "tags": [
+   "Starter",
+   "End Game",
+   "Speed Leveling"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-09-08",
   "rank": 4
  },
  {
@@ -78,7 +78,7 @@
   "title": "0.5.5 Grenade Gemling League Starter",
   "url": "https://mobalytics.gg/poe-2/builds/lolcohol-grenade-gemling-league-starter",
   "author": "Lolcohol",
-  "updated": "Sep 05, 2026",
+  "updated": "Sep 07, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Gemling Legionnaire"
@@ -88,15 +88,32 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-06",
+  "found_date": "2026-09-08",
   "rank": 5
+ },
+ {
+  "id": "9f45a9398f16377d50d2464ae25f9a64",
+  "title": "[0.5.5] Scorps Plants COC Endgame Guide",
+  "url": "https://mobalytics.gg/poe-2/builds/scorps-plants-coc-endgame-guide-scorpius",
+  "author": "Scorpius",
+  "updated": "Sep 07, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Oracle"
+  ],
+  "tags": [
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-09-08",
+  "rank": 6
  },
  {
   "id": "cac0defd8ffaed10bf302996686db617",
   "title": "[0.5] WHIRLING Trinity Martial Artist Monk Build - League Starter to Endgame",
   "url": "https://mobalytics.gg/poe-2/builds/martial-artist-monk-build-league-starter-to-endgame",
   "author": "Ronarray",
-  "updated": "Sep 06, 2026",
+  "updated": "Sep 07, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Martial Artist"
@@ -107,8 +124,8 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-06",
-  "rank": 6
+  "found_date": "2026-09-08",
+  "rank": 7
  },
  {
   "id": "2d5b08d1f9562906ca9427fee8e449df",
@@ -124,8 +141,27 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-06",
-  "rank": 7
+  "found_date": "2026-09-08",
+  "rank": 8
+ },
+ {
+  "id": "57a15039f1a67aa2fed85e85aa922963",
+  "title": "[0.5.5] Ky's 1 Button Arc Totems Gemling Legionnaire [ LeagueStart to Endgame]",
+  "url": "https://mobalytics.gg/poe-2/builds/arc-gemling-path-of-ky",
+  "author": "Ky",
+  "updated": "Sep 08, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Gemling Legionnaire"
+  ],
+  "tags": [
+   "End Game",
+   "Speed Leveling",
+   "Starter"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-09-08",
+  "rank": 9
  },
  {
   "id": "9d0baa7e9e723740a14476ed7070e750",
@@ -142,45 +178,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-06",
-  "rank": 8
- },
- {
-  "id": "8afcf60f3c07762269ffdb44e5fe8685",
-  "title": "[0.5] Twister Spirit Walker",
-  "url": "https://mobalytics.gg/poe-2/builds/twister-spirit-walker-snoobae",
-  "author": "snoobae85",
-  "updated": "Aug 30, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Spirit Walker"
-  ],
-  "tags": [
-   "End Game",
-   "Starter",
-   "Speed Leveling"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-09-06",
-  "rank": 9
- },
- {
-  "id": "2cb7ffd9085eb37b32aa6ed4f241270f",
-  "title": "[0.5.5] Comprehensive CoC Frostbolt/Spark Comet Recoup Infernalist - by Ignatius",
-  "url": "https://mobalytics.gg/poe-2/builds/coc-spark-comet-recoup-infernalist-by-ignatius",
-  "author": "Ignatius",
-  "updated": "Sep 06, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Infernalist"
-  ],
-  "tags": [
-   "Starter",
-   "End Game",
-   "Speed Leveling"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-09-06",
+  "found_date": "2026-09-08",
   "rank": 10
  }
 ]

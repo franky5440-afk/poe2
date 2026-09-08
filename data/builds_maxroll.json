@@ -1,7 +1,168 @@
 [
  {
-  "id": "9d9e63abb5a20f4bafbda216b7088f2a",
+  "id": "2b282814747062582073c3a56680f177",
   "rank": 1,
+  "title": "Disciple of Varashta Minion Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
+  "author": "helmbreaker",
+  "updated": "September 7, 2026",
+  "patch": "The Forbidden Rites 0.5.5",
+  "classes": [
+   "Sorceress"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Sorceress",
+   "Disciple of Varashta"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-08"
+ },
+ {
+  "id": "9ecb482a3616545f7a9af47282d258e1",
+  "rank": 2,
+  "title": "Lightning Minion Shaman Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/lightning-minion-shaman-build-guide",
+  "author": "helmbreaker",
+  "updated": "September 7, 2026",
+  "patch": "The Forbidden Rites 0.5.5",
+  "classes": [
+   "Druid"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Druid",
+   "Shaman"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-08"
+ },
+ {
+  "id": "e13886801295f0be472e410268f1aab5",
+  "rank": 3,
+  "title": "Minion Army Lich Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/minion-army-lich-build-guide",
+  "author": "helmbreaker",
+  "updated": "September 7, 2026",
+  "patch": "The Forbidden Rites 0.5.5",
+  "classes": [
+   "Witch"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Witch",
+   "Lich"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-08"
+ },
+ {
+  "id": "7f6beffad17562f4ab6251da5fe6a17b",
+  "rank": 4,
+  "title": "Lightning Minion Lich Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/storm-mage-lich-build-guide",
+  "author": "helmbreaker",
+  "updated": "September 7, 2026",
+  "patch": "The Forbidden Rites 0.5.5",
+  "classes": [
+   "Witch"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Witch",
+   "Lich"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-08"
+ },
+ {
+  "id": "59fa9dfca50d149d9641372f4649788c",
+  "rank": 5,
+  "title": "Minion Army Shaman Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/minion-army-shaman-build-guide",
+  "author": "helmbreaker",
+  "updated": "September 7, 2026",
+  "patch": "The Forbidden Rites 0.5.5",
+  "classes": [
+   "Druid"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Druid",
+   "Shaman"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-08"
+ },
+ {
+  "id": "aec46e6070985fc5145a26199d2ebc1d",
+  "rank": 6,
+  "title": "Minion Army Spirit Walker Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/minion-army-spirit-walker-build-guide",
+  "author": "helmbreaker",
+  "updated": "September 7, 2026",
+  "patch": "The Forbidden Rites 0.5.5",
+  "classes": [
+   "Huntress"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Huntress",
+   "Spirit Walker"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-08"
+ },
+ {
+  "id": "6f8680bbae36bfd4f3a87806c0ee6b17",
+  "rank": 7,
+  "title": "Flameblast Oil Grenade Gemling Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/flameblast-oil-grenade-gemling-build-guide",
+  "author": "cptngarbage",
+  "updated": "September 7, 2026",
+  "patch": "The Forbidden Rites 0.5.5",
+  "classes": [
+   "Mercenary"
+  ],
+  "tags": [
+   "Early Access",
+   "Endgame",
+   "Leveling",
+   "Mercenary",
+   "Gemling Legionnaire"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-08"
+ },
+ {
+  "id": "b5d24ed68b485d48d8bb0929471d2c59",
+  "rank": 8,
+  "title": "Shield Wall Warbringer Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/shield-wall-warbringer-build-guide",
+  "author": "carn",
+  "updated": "September 7, 2026",
+  "patch": "The Forbidden Rites 0.5.5",
+  "classes": [
+   "Warrior"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Warrior",
+   "Warbringer"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-09-08"
+ },
+ {
+  "id": "9d9e63abb5a20f4bafbda216b7088f2a",
+  "rank": 9,
   "title": "Grim Pillars Spell Totem Oracle Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/grim-pillars-spell-totem-oracle-build-guide",
   "author": "Palsteron",
@@ -17,132 +178,11 @@
    "Oracle"
   ],
   "source": "maxroll",
-  "found_date": "2026-09-07"
- },
- {
-  "id": "2b282814747062582073c3a56680f177",
-  "rank": 2,
-  "title": "Disciple of Varashta Minion Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
-  "author": "helmbreaker",
-  "updated": "September 6, 2026",
-  "patch": "The Forbidden Rites 0.5.5",
-  "classes": [
-   "Sorceress"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Sorceress",
-   "Disciple of Varashta"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-07"
- },
- {
-  "id": "7f6beffad17562f4ab6251da5fe6a17b",
-  "rank": 3,
-  "title": "Lightning Minion Lich Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/storm-mage-lich-build-guide",
-  "author": "helmbreaker",
-  "updated": "September 6, 2026",
-  "patch": "The Forbidden Rites 0.5.5",
-  "classes": [
-   "Witch"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Witch",
-   "Lich"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-07"
- },
- {
-  "id": "9ecb482a3616545f7a9af47282d258e1",
-  "rank": 4,
-  "title": "Lightning Minion Shaman Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/lightning-minion-shaman-build-guide",
-  "author": "helmbreaker",
-  "updated": "September 6, 2026",
-  "patch": "The Forbidden Rites 0.5.5",
-  "classes": [
-   "Druid"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Druid",
-   "Shaman"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-07"
- },
- {
-  "id": "e13886801295f0be472e410268f1aab5",
-  "rank": 5,
-  "title": "Minion Army Lich Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/minion-army-lich-build-guide",
-  "author": "helmbreaker",
-  "updated": "September 6, 2026",
-  "patch": "The Forbidden Rites 0.5.5",
-  "classes": [
-   "Witch"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Witch",
-   "Lich"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-07"
- },
- {
-  "id": "59fa9dfca50d149d9641372f4649788c",
-  "rank": 6,
-  "title": "Minion Army Shaman Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/minion-army-shaman-build-guide",
-  "author": "helmbreaker",
-  "updated": "September 6, 2026",
-  "patch": "The Forbidden Rites 0.5.5",
-  "classes": [
-   "Druid"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Druid",
-   "Shaman"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-07"
- },
- {
-  "id": "6f8680bbae36bfd4f3a87806c0ee6b17",
-  "rank": 7,
-  "title": "Flameblast Oil Grenade Gemling Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/flameblast-oil-grenade-gemling-build-guide",
-  "author": "cptngarbage",
-  "updated": "September 6, 2026",
-  "patch": "The Forbidden Rites 0.5.5",
-  "classes": [
-   "Mercenary"
-  ],
-  "tags": [
-   "Early Access",
-   "Endgame",
-   "Leveling",
-   "Mercenary",
-   "Gemling Legionnaire"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-07"
+  "found_date": "2026-09-08"
  },
  {
   "id": "560ca57047132efef9d99661f867dd1c",
-  "rank": 8,
+  "rank": 10,
   "title": "Glacial Lance Deadeye Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/glacial-lance-deadeye",
   "author": "aer0",
@@ -158,45 +198,6 @@
    "Deadeye"
   ],
   "source": "maxroll",
-  "found_date": "2026-09-07"
- },
- {
-  "id": "941451e884f3f9e92017f6b28f47d3cb",
-  "rank": 9,
-  "title": "Poisonburst Arrow Acolyte of Chayula",
-  "url": "https://maxroll.gg/poe2/build-guides/poisonburst-arrow-acolyte-of-chayula-build-guide",
-  "author": "goratha",
-  "updated": "September 6, 2026",
-  "patch": "The Forbidden Rites 0.5.5",
-  "classes": [
-   "Monk"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Monk",
-   "Acolyte of Chayula"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-07"
- },
- {
-  "id": "e211a2ac62c469c9b345650bc39e2921",
-  "rank": 10,
-  "title": "Spark Comet Gemling Legionnaire Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/spark-comet-gemling-legionnaire-build-guide",
-  "author": "legi",
-  "updated": "September 4, 2026",
-  "patch": "The Forbidden Rites 0.5.5",
-  "classes": [
-   "Mercenary"
-  ],
-  "tags": [
-   "Endgame",
-   "Mercenary",
-   "Gemling Legionnaire"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-09-07"
+  "found_date": "2026-09-08"
  }
 ]
