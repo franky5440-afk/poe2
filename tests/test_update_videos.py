@@ -52,7 +52,7 @@ class UpdateVideosKeepsPreviousOnEmptyTest(unittest.TestCase):
         self.new_hot_ja = [_item("new_hot_ja", "new-hot-ja")]
         self.new_new_ja = [_item("new_new_ja", "new-new-ja")]
 
-        def fake_collect_videos(lang):
+        def fake_collect_videos(lang, cache):
             # zh 模擬這次 YouTube 擋下、兩區都拿不到任何影片
             if lang == "zh":
                 return [], []
