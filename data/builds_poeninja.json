@@ -3,120 +3,120 @@
   "id": "fae40b3f21cac48c5d92463877639336",
   "rank": 1,
   "title": "Gemling Legionnaire",
-  "share_pct": 37.1,
+  "share_pct": 36.79,
   "trend": 1,
   "league": "Forbidden Rites",
-  "total_chars": 93534,
+  "total_chars": 99027,
   "url": "https://poe.ninja/poe2/builds/forbiddenrites?class=Gemling+Legionnaire",
   "source": "poeninja",
-  "found_date": "2026-09-09"
+  "found_date": "2026-09-10"
  },
  {
   "id": "96014493736393f97e4971548ab969a9",
   "rank": 2,
   "title": "Disciple of Varashta",
-  "share_pct": 9.48,
+  "share_pct": 9.45,
   "trend": 1,
   "league": "Forbidden Rites",
-  "total_chars": 93534,
+  "total_chars": 99027,
   "url": "https://poe.ninja/poe2/builds/forbiddenrites?class=Disciple+of+Varashta",
   "source": "poeninja",
-  "found_date": "2026-09-09"
+  "found_date": "2026-09-10"
  },
  {
   "id": "c6814e1e6d55f698c6a667335933f353",
   "rank": 3,
   "title": "Martial Artist",
-  "share_pct": 8.65,
+  "share_pct": 8.74,
   "trend": 1,
   "league": "Forbidden Rites",
-  "total_chars": 93534,
+  "total_chars": 99027,
   "url": "https://poe.ninja/poe2/builds/forbiddenrites?class=Martial+Artist",
   "source": "poeninja",
-  "found_date": "2026-09-09"
+  "found_date": "2026-09-10"
  },
  {
   "id": "aafe9e9af4f43ed66d18c08fd93ff2c7",
   "rank": 4,
   "title": "Spirit Walker",
-  "share_pct": 8.62,
+  "share_pct": 8.61,
   "trend": 1,
   "league": "Forbidden Rites",
-  "total_chars": 93534,
+  "total_chars": 99027,
   "url": "https://poe.ninja/poe2/builds/forbiddenrites?class=Spirit+Walker",
   "source": "poeninja",
-  "found_date": "2026-09-09"
+  "found_date": "2026-09-10"
  },
  {
   "id": "3fae3b8204023c1b096690a7bdc22f9c",
   "rank": 5,
   "title": "Deadeye",
-  "share_pct": 7.73,
+  "share_pct": 7.64,
   "trend": 1,
   "league": "Forbidden Rites",
-  "total_chars": 93534,
+  "total_chars": 99027,
   "url": "https://poe.ninja/poe2/builds/forbiddenrites?class=Deadeye",
   "source": "poeninja",
-  "found_date": "2026-09-09"
+  "found_date": "2026-09-10"
  },
  {
   "id": "914eb7e32705e76fd49960f2c0714f2c",
   "rank": 6,
   "title": "Oracle",
-  "share_pct": 7.36,
+  "share_pct": 7.37,
   "trend": 1,
   "league": "Forbidden Rites",
-  "total_chars": 93534,
+  "total_chars": 99027,
   "url": "https://poe.ninja/poe2/builds/forbiddenrites?class=Oracle",
   "source": "poeninja",
-  "found_date": "2026-09-09"
+  "found_date": "2026-09-10"
  },
  {
   "id": "93b2746ba18627269f6b05fa20ef7389",
   "rank": 7,
   "title": "Infernalist",
-  "share_pct": 2.89,
+  "share_pct": 2.93,
   "trend": 1,
   "league": "Forbidden Rites",
-  "total_chars": 93534,
+  "total_chars": 99027,
   "url": "https://poe.ninja/poe2/builds/forbiddenrites?class=Infernalist",
   "source": "poeninja",
-  "found_date": "2026-09-09"
+  "found_date": "2026-09-10"
  },
  {
   "id": "f73f5c92e8ce1c3e56fd661683035f88",
   "rank": 8,
   "title": "Tactician",
-  "share_pct": 2.34,
+  "share_pct": 2.19,
   "trend": 1,
   "league": "Forbidden Rites",
-  "total_chars": 93534,
+  "total_chars": 99027,
   "url": "https://poe.ninja/poe2/builds/forbiddenrites?class=Tactician",
   "source": "poeninja",
-  "found_date": "2026-09-09"
- },
- {
-  "id": "6370b6559732eb55d0469c9c907151c0",
-  "rank": 9,
-  "title": "Lich",
-  "share_pct": 2.02,
-  "trend": 1,
-  "league": "Forbidden Rites",
-  "total_chars": 93534,
-  "url": "https://poe.ninja/poe2/builds/forbiddenrites?class=Lich",
-  "source": "poeninja",
-  "found_date": "2026-09-09"
+  "found_date": "2026-09-10"
  },
  {
   "id": "ead9c897ec1f94ce0b8ec80a0db6fc76",
-  "rank": 10,
+  "rank": 9,
   "title": "Stormweaver",
-  "share_pct": 1.99,
+  "share_pct": 2.12,
   "trend": 1,
   "league": "Forbidden Rites",
-  "total_chars": 93534,
+  "total_chars": 99027,
   "url": "https://poe.ninja/poe2/builds/forbiddenrites?class=Stormweaver",
   "source": "poeninja",
-  "found_date": "2026-09-09"
+  "found_date": "2026-09-10"
+ },
+ {
+  "id": "6370b6559732eb55d0469c9c907151c0",
+  "rank": 10,
+  "title": "Lich",
+  "share_pct": 1.95,
+  "trend": 1,
+  "league": "Forbidden Rites",
+  "total_chars": 99027,
+  "url": "https://poe.ninja/poe2/builds/forbiddenrites?class=Lich",
+  "source": "poeninja",
+  "found_date": "2026-09-10"
  }
 ]
