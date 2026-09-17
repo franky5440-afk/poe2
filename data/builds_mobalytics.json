@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-16",
+  "found_date": "2026-09-17",
   "rank": 1
  },
  {
@@ -22,7 +22,7 @@
   "title": "[0.5.5] Navira's Fracturing Varashta League Starter Guide w/Acts Walkthrough",
   "url": "https://mobalytics.gg/poe-2/builds/naviras-fracturing-varashta-league-starter",
   "author": "MisoxShiru",
-  "updated": "Sep 14, 2026",
+  "updated": "Sep 16, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Disciple of Varashta"
@@ -32,7 +32,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-16",
+  "found_date": "2026-09-17",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-16",
+  "found_date": "2026-09-17",
   "rank": 3
  },
  {
@@ -70,7 +70,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-16",
+  "found_date": "2026-09-17",
   "rank": 4
  },
  {
@@ -78,7 +78,7 @@
   "title": "[0.5.5] Scorps Plants COC Endgame Guide",
   "url": "https://mobalytics.gg/poe-2/builds/scorps-plants-coc-endgame-guide-scorpius",
   "author": "Scorpius",
-  "updated": "Sep 15, 2026",
+  "updated": "Sep 16, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Oracle"
@@ -87,7 +87,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-16",
+  "found_date": "2026-09-17",
   "rank": 5
  },
  {
@@ -105,8 +105,25 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-16",
+  "found_date": "2026-09-17",
   "rank": 6
+ },
+ {
+  "id": "4151ec11c2f12f34a5edab72282723f2",
+  "title": "[0.5.5] Immortal Witchhunter Frostbolt Infinite Loop",
+  "url": "https://mobalytics.gg/poe-2/builds/immortal-witchhunter-frostbolt-infinite-loop",
+  "author": "Lazy Exile",
+  "updated": "Sep 16, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Witchhunter"
+  ],
+  "tags": [
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-09-17",
+  "rank": 7
  },
  {
   "id": "cac0defd8ffaed10bf302996686db617",
@@ -124,8 +141,8 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-16",
-  "rank": 7
+  "found_date": "2026-09-17",
+  "rank": 8
  },
  {
   "id": "2d5b08d1f9562906ca9427fee8e449df",
@@ -141,8 +158,8 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-16",
-  "rank": 8
+  "found_date": "2026-09-17",
+  "rank": 9
  },
  {
   "id": "57a15039f1a67aa2fed85e85aa922963",
@@ -160,25 +177,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-16",
-  "rank": 9
- },
- {
-  "id": "9d0baa7e9e723740a14476ed7070e750",
-  "title": "[0.5] CaptainLance9's Spirit Walker Beast Master",
-  "url": "https://mobalytics.gg/poe-2/builds/spirit-walker-beast-master",
-  "author": "CaptainLance9",
-  "updated": "Sep 15, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Spirit Walker"
-  ],
-  "tags": [
-   "Starter",
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-09-16",
+  "found_date": "2026-09-17",
   "rank": 10
  }
 ]

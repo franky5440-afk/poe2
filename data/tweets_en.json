@@ -1,5 +1,16 @@
 [
  {
+  "id": "ced23392e9e9303d8c5b81ec2eec1edc",
+  "tid": "2099344332000268442",
+  "url": "https://x.com/poe2alerts/status/2099344332000268442",
+  "author": "poe2alerts",
+  "author_name": "Path of Exile 2 Updates",
+  "text": "PoE2 is a horror game WideDirection5",
+  "date": "2026-09-14",
+  "likes": null,
+  "lang": "en"
+ },
+ {
   "id": "0277144084863215bf8391d00e0685ed",
   "tid": "2098929187453050945",
   "url": "https://x.com/zoricgames/status/2098929187453050945",
@@ -11,6 +22,39 @@
   "lang": "en"
  },
  {
+  "id": "ed71de021acd076c8b53df9ae53fb9b6",
+  "tid": "2098245162606411829",
+  "url": "https://x.com/pathofexile/status/2098245162606411829",
+  "author": "pathofexile",
+  "author_name": "Path of Exile",
+  "text": "Commune with sacred Spirits with the Legends of Wraeclast Spirit Warden set or channel ancient rites as the Seer of the Maji.\n\nSeveral new cosmetic bundles for Path of Exile 2 are out now, check them out in the store!\n\nhttps://t.co/p9hccUV3jV https://t.co/CsMmTVwKkW",
+  "date": "2026-09-11",
+  "likes": 837,
+  "lang": "en"
+ },
+ {
+  "id": "d4797bd1ad52ed68d799a6787c818648",
+  "tid": "2097441036553617690",
+  "url": "https://x.com/pathofexile/status/2097441036553617690",
+  "author": "pathofexile",
+  "author_name": "Path of Exile",
+  "text": "Our recent Fan Art Competition has come to a close! Check out some of the fantastic submissions themed around Path of Exile 1 and Path of Exile 2 new expansions, as well as the winners, in this news post!\n\nhttps://t.co/JVzeUjD2rb https://t.co/XVOm8MMtVI",
+  "date": "2026-09-08",
+  "likes": 304,
+  "lang": "en"
+ },
+ {
+  "id": "d0c61d8cf30dc677ab9109891d2fb3fa",
+  "tid": "2096720731623350376",
+  "url": "https://x.com/pathofexile/status/2096720731623350376",
+  "author": "pathofexile",
+  "author_name": "Path of Exile",
+  "text": "A couple of weeks ago, we attended gamescom in Cologne, giving over 9,000 players a preview of what’s coming in the Path of Exile 2 Full Release. \n\nThank you for stopping by our booth, and we hope you’re looking forward to what’s coming at ExileCon 2026!\n\nhttps://t.co/f9AeQC7gPY https://t.co/evcfy6aa5l",
+  "date": "2026-09-06",
+  "likes": 690,
+  "lang": "en"
+ },
+ {
   "id": "867df6c3c7f3fee594f690c6a10d2260",
   "tid": "2095934926654996663",
   "url": "https://x.com/pathofexile/status/2095934926654996663",
@@ -18,7 +62,7 @@
   "author_name": "Path of Exile",
   "text": "We've taken the realm down to begin deploying the 0.5.5 update for Path of Exile 2. Stay tuned!",
   "date": "2026-09-04",
-  "likes": 884,
+  "likes": 1006,
   "lang": "en"
  },
  {
@@ -29,7 +73,7 @@
   "author_name": "Path of Exile",
   "text": "The Forbidden Rites Event League is now live!\n\nLaunch Twitch Drops are also available, so tune in to your favourite Path of Exile 2 stream and earn the Blade of the Champion Pet! 🗡️ https://t.co/tUfacue3C1",
   "date": "2026-09-04",
-  "likes": 569,
+  "likes": 847,
   "lang": "en"
  },
  {
@@ -44,6 +88,17 @@
   "lang": "en"
  },
  {
+  "id": "8198ccafd3c2ee9dd4baea6e9d107cac",
+  "tid": "2095315846038192323",
+  "url": "https://x.com/pathofexile/status/2095315846038192323",
+  "author": "pathofexile",
+  "author_name": "Path of Exile",
+  "text": "🎁 Sign up for Path of Exile 2 Full Release updates and exclusive rewards at https://t.co/9JvrivcVMb. Don’t forget to confirm your registration!\n\n📬 Already submitted your email? Check your inbox for a confirmation email from us! https://t.co/T1FO7i21nQ",
+  "date": "2026-09-03",
+  "likes": 2314,
+  "lang": "en"
+ },
+ {
   "id": "036d02959c8ab0ae134f7fcee91df5ed",
   "tid": "2095640480264433878",
   "url": "https://x.com/pathofexile/status/2095640480264433878",
@@ -51,18 +106,7 @@
   "author_name": "Path of Exile",
   "text": "Forbidden Rites is almost here! The 0.5.5 patch for Path of Exile 2 launches on September 4 at 1 PM PDT!\n\n🗡️ New Twitch Drop: Blade of the Champion Pet\n👉 Find out more and pre-download the update: \nhttps://t.co/B7yN4NMkFi https://t.co/QNNRdTreZZ",
   "date": "2026-09-03",
-  "likes": 1134,
-  "lang": "en"
- },
- {
-  "id": "8198ccafd3c2ee9dd4baea6e9d107cac",
-  "tid": "2095315846038192323",
-  "url": "https://x.com/pathofexile/status/2095315846038192323",
-  "author": "pathofexile",
-  "author_name": "Path of Exile",
-  "text": "🎁 Sign up for Path of Exile 2 Full Release updates and exclusive rewards at https://t.co/9JvrivcVMb. Don’t forget to confirm your registration! 📬 Already submitted your email? Check your inbox for a confirmation email from us!",
-  "date": "2026-09-03",
-  "likes": null,
+  "likes": 1148,
   "lang": "en"
  },
  {
@@ -258,9 +302,9 @@
   "url": "https://x.com/pathofexile/status/2092334226846949851",
   "author": "pathofexile",
   "author_name": "Path of Exile",
-  "text": "The wait is almost over. Path of Exile 2 fully releases on December 11 PST. Ready your swords, Exile. Your greatest battle is about to begin. ⚔️ Sign up for exclusive rewards and learn more here: https://t.co/9JvrivcVMb",
+  "text": "The wait is almost over. Path of Exile 2 fully releases on December 11 PST.\n\nReady your swords, Exile. Your greatest battle is about to begin. ⚔️\n\nSign up for exclusive rewards and learn more here: https://t.co/9JvrivcVMb https://t.co/JPwLKJGodX",
   "date": "2026-08-25",
-  "likes": null,
+  "likes": 17051,
   "lang": "en"
  },
  {
@@ -766,6 +810,17 @@
   "author_name": "X-এ Path of Exile: \"If you're just arriving, feel free to check out the ...",
   "text": "We've taken the realm down to begin deploying Path of Exile 2: Dawn of the Hunt. Follow this thread for updates on as we release our very first ...",
   "date": "2025-04-04",
+  "likes": null,
+  "lang": "en"
+ },
+ {
+  "id": "fa78b0ed2bd942d5175331b0a6c57f41",
+  "tid": "1882498091955507611",
+  "url": "https://x.com/serverstatus2/status/1882498091955507611",
+  "author": "serverstatus2",
+  "author_name": "Server Status",
+  "text": "PoE2 servers are down again. An Unexpected Disconnection Occurred Check Path of Exile 2 Server Status for PS5, PC and Xbox Series X/S Path of Exile 2 servers are down. #PathofExile2 https://t.co/JAjlNCXT5E",
+  "date": "2025-01-23",
   "likes": null,
   "lang": "en"
  },
