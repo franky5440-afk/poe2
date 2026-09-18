@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-17",
+  "found_date": "2026-09-18",
   "rank": 1
  },
  {
@@ -22,7 +22,7 @@
   "title": "[0.5.5] Navira's Fracturing Varashta League Starter Guide w/Acts Walkthrough",
   "url": "https://mobalytics.gg/poe-2/builds/naviras-fracturing-varashta-league-starter",
   "author": "MisoxShiru",
-  "updated": "Sep 16, 2026",
+  "updated": "Sep 17, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Disciple of Varashta"
@@ -32,7 +32,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-17",
+  "found_date": "2026-09-18",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-17",
+  "found_date": "2026-09-18",
   "rank": 3
  },
  {
@@ -70,7 +70,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-17",
+  "found_date": "2026-09-18",
   "rank": 4
  },
  {
@@ -87,8 +87,25 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-17",
+  "found_date": "2026-09-18",
   "rank": 5
+ },
+ {
+  "id": "4151ec11c2f12f34a5edab72282723f2",
+  "title": "[0.5.5] Immortal Witchhunter Frostbolt Infinite Loop",
+  "url": "https://mobalytics.gg/poe-2/builds/immortal-witchhunter-frostbolt-infinite-loop",
+  "author": "Lazy Exile",
+  "updated": "Sep 16, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Witchhunter"
+  ],
+  "tags": [
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-09-18",
+  "rank": 6
  },
  {
   "id": "9f77d45c8af97dc508ee309051e6b42d",
@@ -105,24 +122,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-17",
-  "rank": 6
- },
- {
-  "id": "4151ec11c2f12f34a5edab72282723f2",
-  "title": "[0.5.5] Immortal Witchhunter Frostbolt Infinite Loop",
-  "url": "https://mobalytics.gg/poe-2/builds/immortal-witchhunter-frostbolt-infinite-loop",
-  "author": "Lazy Exile",
-  "updated": "Sep 16, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Witchhunter"
-  ],
-  "tags": [
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-09-17",
+  "found_date": "2026-09-18",
   "rank": 7
  },
  {
@@ -141,7 +141,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-17",
+  "found_date": "2026-09-18",
   "rank": 8
  },
  {
@@ -158,7 +158,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-17",
+  "found_date": "2026-09-18",
   "rank": 9
  },
  {
@@ -166,7 +166,7 @@
   "title": "[0.5.5] Ky's 1 Button Arc Totems Gemling Legionnaire [ LeagueStart to Endgame]",
   "url": "https://mobalytics.gg/poe-2/builds/arc-gemling-path-of-ky",
   "author": "Ky",
-  "updated": "Sep 11, 2026",
+  "updated": "Sep 17, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Gemling Legionnaire"
@@ -177,7 +177,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-17",
+  "found_date": "2026-09-18",
   "rank": 10
  }
 ]
