@@ -1,5 +1,23 @@
 [
  {
+  "id": "90ac460e547d11dcd082eae4468352d8",
+  "title": "[0.5.5] Navira's Fracturing Varashta League Starter Guide w/Acts Walkthrough",
+  "url": "https://mobalytics.gg/poe-2/builds/naviras-fracturing-varashta-league-starter",
+  "author": "MisoxShiru",
+  "updated": "Sep 19, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Disciple of Varashta"
+  ],
+  "tags": [
+   "Starter",
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-09-19",
+  "rank": 1
+ },
+ {
   "id": "c360ad7cf7d0314b58ab7d7889c2e87f",
   "title": "0.5.5 Fubgun Flameblast Oil Grenade",
   "url": "https://mobalytics.gg/poe-2/builds/fubgun-flameblast-oil-grenade",
@@ -14,25 +32,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-18",
-  "rank": 1
- },
- {
-  "id": "90ac460e547d11dcd082eae4468352d8",
-  "title": "[0.5.5] Navira's Fracturing Varashta League Starter Guide w/Acts Walkthrough",
-  "url": "https://mobalytics.gg/poe-2/builds/naviras-fracturing-varashta-league-starter",
-  "author": "MisoxShiru",
-  "updated": "Sep 17, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Disciple of Varashta"
-  ],
-  "tags": [
-   "Starter",
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-09-18",
+  "found_date": "2026-09-19",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-18",
+  "found_date": "2026-09-19",
   "rank": 3
  },
  {
@@ -59,7 +59,7 @@
   "title": "[0.5.5] Twister Gemling Legionnaire",
   "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
   "author": "snoobae85",
-  "updated": "Sep 11, 2026",
+  "updated": "Sep 18, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Gemling Legionnaire"
@@ -70,7 +70,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-18",
+  "found_date": "2026-09-19",
   "rank": 4
  },
  {
@@ -87,7 +87,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-18",
+  "found_date": "2026-09-19",
   "rank": 5
  },
  {
@@ -104,7 +104,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-18",
+  "found_date": "2026-09-19",
   "rank": 6
  },
  {
@@ -122,7 +122,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-18",
+  "found_date": "2026-09-19",
   "rank": 7
  },
  {
@@ -141,7 +141,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-18",
+  "found_date": "2026-09-19",
   "rank": 8
  },
  {
@@ -158,7 +158,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-18",
+  "found_date": "2026-09-19",
   "rank": 9
  },
  {
@@ -177,7 +177,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-18",
+  "found_date": "2026-09-19",
   "rank": 10
  }
 ]
