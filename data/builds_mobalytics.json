@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-29",
+  "found_date": "2026-09-30",
   "rank": 1
  },
  {
@@ -32,7 +32,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-29",
+  "found_date": "2026-09-30",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-29",
+  "found_date": "2026-09-30",
   "rank": 3
  },
  {
@@ -70,7 +70,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-29",
+  "found_date": "2026-09-30",
   "rank": 4
  },
  {
@@ -78,7 +78,7 @@
   "title": "[0.5.5] Scorps Plants COC Endgame Guide",
   "url": "https://mobalytics.gg/poe-2/builds/scorps-plants-coc-endgame-guide-scorpius",
   "author": "Scorpius",
-  "updated": "Sep 25, 2026",
+  "updated": "Sep 30, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Oracle"
@@ -87,7 +87,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-29",
+  "found_date": "2026-09-30",
   "rank": 5
  },
  {
@@ -95,7 +95,7 @@
   "title": "[0.5.5] Immortal Witchhunter Frostbolt Infinite Loop",
   "url": "https://mobalytics.gg/poe-2/builds/immortal-witchhunter-frostbolt-infinite-loop",
   "author": "Lazy Exile",
-  "updated": "Sep 24, 2026",
+  "updated": "Sep 30, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Witchhunter"
@@ -104,25 +104,24 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-29",
+  "found_date": "2026-09-30",
   "rank": 6
  },
  {
-  "id": "9f77d45c8af97dc508ee309051e6b42d",
-  "title": "0.5.5 Grenade Gemling League Starter (Level 1 to Min-Max)",
-  "url": "https://mobalytics.gg/poe-2/builds/lolcohol-grenade-gemling-league-starter",
-  "author": "Lolcohol",
-  "updated": "Sep 24, 2026",
+  "id": "2d5b08d1f9562906ca9427fee8e449df",
+  "title": "0.5.5 Fubgun Ice Shot Deadeye",
+  "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
+  "author": "Fubgun",
+  "updated": "Sep 12, 2026",
   "patch": "0.5.5 FR",
   "classes": [
-   "Gemling Legionnaire"
+   "Deadeye"
   ],
   "tags": [
-   "Starter",
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-29",
+  "found_date": "2026-09-30",
   "rank": 7
  },
  {
@@ -141,24 +140,25 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-29",
+  "found_date": "2026-09-30",
   "rank": 8
  },
  {
-  "id": "2d5b08d1f9562906ca9427fee8e449df",
-  "title": "0.5.5 Fubgun Ice Shot Deadeye",
-  "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
-  "author": "Fubgun",
-  "updated": "Sep 12, 2026",
+  "id": "9f77d45c8af97dc508ee309051e6b42d",
+  "title": "0.5.5 Grenade Gemling League Starter (Level 1 to Min-Max)",
+  "url": "https://mobalytics.gg/poe-2/builds/lolcohol-grenade-gemling-league-starter",
+  "author": "Lolcohol",
+  "updated": "Sep 24, 2026",
   "patch": "0.5.5 FR",
   "classes": [
-   "Deadeye"
+   "Gemling Legionnaire"
   ],
   "tags": [
+   "Starter",
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-29",
+  "found_date": "2026-09-30",
   "rank": 9
  },
  {
@@ -166,7 +166,7 @@
   "title": "[0.5.5] Ky's 1 Button Arc Totems Gemling Legionnaire [ LeagueStart to Endgame]",
   "url": "https://mobalytics.gg/poe-2/builds/arc-gemling-path-of-ky",
   "author": "Ky",
-  "updated": "Sep 17, 2026",
+  "updated": "Sep 29, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Gemling Legionnaire"
@@ -177,7 +177,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-09-29",
+  "found_date": "2026-09-30",
   "rank": 10
  }
 ]
