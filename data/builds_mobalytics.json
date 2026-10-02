@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-01",
+  "found_date": "2026-10-02",
   "rank": 1
  },
  {
@@ -32,7 +32,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-01",
+  "found_date": "2026-10-02",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-01",
+  "found_date": "2026-10-02",
   "rank": 3
  },
  {
@@ -70,7 +70,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-01",
+  "found_date": "2026-10-02",
   "rank": 4
  },
  {
@@ -87,7 +87,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-01",
+  "found_date": "2026-10-02",
   "rank": 5
  },
  {
@@ -95,7 +95,7 @@
   "title": "[0.5.5] Immortal Witchhunter Frostbolt Infinite Loop",
   "url": "https://mobalytics.gg/poe-2/builds/immortal-witchhunter-frostbolt-infinite-loop",
   "author": "Lazy Exile",
-  "updated": "Sep 30, 2026",
+  "updated": "Oct 01, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Witchhunter"
@@ -104,7 +104,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-01",
+  "found_date": "2026-10-02",
   "rank": 6
  },
  {
@@ -121,7 +121,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-01",
+  "found_date": "2026-10-02",
   "rank": 7
  },
  {
@@ -140,26 +140,8 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-01",
+  "found_date": "2026-10-02",
   "rank": 8
- },
- {
-  "id": "9f77d45c8af97dc508ee309051e6b42d",
-  "title": "0.5.5 Grenade Gemling League Starter (Level 1 to Min-Max)",
-  "url": "https://mobalytics.gg/poe-2/builds/lolcohol-grenade-gemling-league-starter",
-  "author": "Lolcohol",
-  "updated": "Sep 24, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Gemling Legionnaire"
-  ],
-  "tags": [
-   "Starter",
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-10-01",
-  "rank": 9
  },
  {
   "id": "57a15039f1a67aa2fed85e85aa922963",
@@ -177,7 +159,25 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-01",
+  "found_date": "2026-10-02",
+  "rank": 9
+ },
+ {
+  "id": "9f77d45c8af97dc508ee309051e6b42d",
+  "title": "0.5.5 Grenade Gemling League Starter (Level 1 to Min-Max)",
+  "url": "https://mobalytics.gg/poe-2/builds/lolcohol-grenade-gemling-league-starter",
+  "author": "Lolcohol",
+  "updated": "Sep 24, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Gemling Legionnaire"
+  ],
+  "tags": [
+   "Starter",
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-10-02",
   "rank": 10
  }
 ]
