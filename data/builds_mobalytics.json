@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-04",
+  "found_date": "2026-10-05",
   "rank": 1
  },
  {
@@ -32,7 +32,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-04",
+  "found_date": "2026-10-05",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-04",
+  "found_date": "2026-10-05",
   "rank": 3
  },
  {
@@ -59,7 +59,7 @@
   "title": "[0.5.5] Twister Gemling Legionnaire",
   "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
   "author": "snoobae85",
-  "updated": "Oct 03, 2026",
+  "updated": "Oct 04, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Gemling Legionnaire"
@@ -70,7 +70,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-04",
+  "found_date": "2026-10-05",
   "rank": 4
  },
  {
@@ -87,7 +87,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-04",
+  "found_date": "2026-10-05",
   "rank": 5
  },
  {
@@ -95,7 +95,7 @@
   "title": "[0.5.5] Immortal Witchhunter Frostbolt Infinite Loop",
   "url": "https://mobalytics.gg/poe-2/builds/immortal-witchhunter-frostbolt-infinite-loop",
   "author": "Lazy Exile",
-  "updated": "Oct 03, 2026",
+  "updated": "Oct 04, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Witchhunter"
@@ -104,25 +104,8 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-04",
+  "found_date": "2026-10-05",
   "rank": 6
- },
- {
-  "id": "2d5b08d1f9562906ca9427fee8e449df",
-  "title": "0.5.5 Fubgun Ice Shot Deadeye",
-  "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
-  "author": "Fubgun",
-  "updated": "Sep 12, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Deadeye"
-  ],
-  "tags": [
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-10-04",
-  "rank": 7
  },
  {
   "id": "cac0defd8ffaed10bf302996686db617",
@@ -140,7 +123,24 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-04",
+  "found_date": "2026-10-05",
+  "rank": 7
+ },
+ {
+  "id": "2d5b08d1f9562906ca9427fee8e449df",
+  "title": "0.5.5 Fubgun Ice Shot Deadeye",
+  "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
+  "author": "Fubgun",
+  "updated": "Sep 12, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Deadeye"
+  ],
+  "tags": [
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-10-05",
   "rank": 8
  },
  {
@@ -159,7 +159,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-04",
+  "found_date": "2026-10-05",
   "rank": 9
  },
  {
@@ -177,7 +177,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-04",
+  "found_date": "2026-10-05",
   "rank": 10
  }
 ]
