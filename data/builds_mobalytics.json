@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-08",
+  "found_date": "2026-10-09",
   "rank": 1
  },
  {
@@ -32,7 +32,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-08",
+  "found_date": "2026-10-09",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-08",
+  "found_date": "2026-10-09",
   "rank": 3
  },
  {
@@ -68,8 +68,25 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-08",
+  "found_date": "2026-10-09",
   "rank": 4
+ },
+ {
+  "id": "4151ec11c2f12f34a5edab72282723f2",
+  "title": "[0.5.5] Immortal Witchhunter Frostbolt Infinite Loop",
+  "url": "https://mobalytics.gg/poe-2/builds/immortal-witchhunter-frostbolt-infinite-loop",
+  "author": "Lazy Exile",
+  "updated": "Oct 08, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Witchhunter"
+  ],
+  "tags": [
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-10-09",
+  "rank": 5
  },
  {
   "id": "e794776d64063c766d53d65312d4d62c",
@@ -87,24 +104,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-08",
-  "rank": 5
- },
- {
-  "id": "4151ec11c2f12f34a5edab72282723f2",
-  "title": "[0.5.5] Immortal Witchhunter Frostbolt Infinite Loop",
-  "url": "https://mobalytics.gg/poe-2/builds/immortal-witchhunter-frostbolt-infinite-loop",
-  "author": "Lazy Exile",
-  "updated": "Oct 04, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Witchhunter"
-  ],
-  "tags": [
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-10-08",
+  "found_date": "2026-10-09",
   "rank": 6
  },
  {
@@ -123,7 +123,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-08",
+  "found_date": "2026-10-09",
   "rank": 7
  },
  {
@@ -140,7 +140,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-08",
+  "found_date": "2026-10-09",
   "rank": 8
  },
  {
@@ -159,7 +159,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-08",
+  "found_date": "2026-10-09",
   "rank": 9
  },
  {
@@ -177,7 +177,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-08",
+  "found_date": "2026-10-09",
   "rank": 10
  }
 ]

@@ -1,7 +1,27 @@
 [
  {
-  "id": "e13886801295f0be472e410268f1aab5",
+  "id": "aec46e6070985fc5145a26199d2ebc1d",
   "rank": 1,
+  "title": "Minion Army Spirit Walker Build Guide",
+  "url": "https://maxroll.gg/poe2/build-guides/minion-army-spirit-walker-build-guide",
+  "author": "helmbreaker",
+  "updated": "October 8, 2026",
+  "patch": "The Forbidden Rites 0.5.5",
+  "classes": [
+   "Huntress"
+  ],
+  "tags": [
+   "Endgame",
+   "Leveling",
+   "Huntress",
+   "Spirit Walker"
+  ],
+  "source": "maxroll",
+  "found_date": "2026-10-09"
+ },
+ {
+  "id": "e13886801295f0be472e410268f1aab5",
+  "rank": 2,
   "title": "Minion Army Lich Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/minion-army-lich-build-guide",
   "author": "helmbreaker",
@@ -17,11 +37,11 @@
    "Lich"
   ],
   "source": "maxroll",
-  "found_date": "2026-10-08"
+  "found_date": "2026-10-09"
  },
  {
   "id": "57f4d0552ae1d0a7ce800031a4fe0bca",
-  "rank": 2,
+  "rank": 3,
   "title": "Minion Army Acolyte of Chayula Build Guide",
   "url": "https://maxroll.gg/poe2/build-guides/minion-army-acolyte-of-chayula-build-guide",
   "author": "helmbreaker",
@@ -37,27 +57,7 @@
    "Acolyte of Chayula"
   ],
   "source": "maxroll",
-  "found_date": "2026-10-08"
- },
- {
-  "id": "aec46e6070985fc5145a26199d2ebc1d",
-  "rank": 3,
-  "title": "Minion Army Spirit Walker Build Guide",
-  "url": "https://maxroll.gg/poe2/build-guides/minion-army-spirit-walker-build-guide",
-  "author": "helmbreaker",
-  "updated": "October 7, 2026",
-  "patch": "The Forbidden Rites 0.5.5",
-  "classes": [
-   "Huntress"
-  ],
-  "tags": [
-   "Endgame",
-   "Leveling",
-   "Huntress",
-   "Spirit Walker"
-  ],
-  "source": "maxroll",
-  "found_date": "2026-10-08"
+  "found_date": "2026-10-09"
  },
  {
   "id": "2b282814747062582073c3a56680f177",
@@ -77,7 +77,7 @@
    "Disciple of Varashta"
   ],
   "source": "maxroll",
-  "found_date": "2026-10-08"
+  "found_date": "2026-10-09"
  },
  {
   "id": "b255c1581b5e178c84e2e5f31c7dc5ef",
@@ -97,7 +97,7 @@
    "Infernalist"
   ],
   "source": "maxroll",
-  "found_date": "2026-10-08"
+  "found_date": "2026-10-09"
  },
  {
   "id": "7f6beffad17562f4ab6251da5fe6a17b",
@@ -117,7 +117,7 @@
    "Lich"
   ],
   "source": "maxroll",
-  "found_date": "2026-10-08"
+  "found_date": "2026-10-09"
  },
  {
   "id": "9ecb482a3616545f7a9af47282d258e1",
@@ -137,7 +137,7 @@
    "Shaman"
   ],
   "source": "maxroll",
-  "found_date": "2026-10-08"
+  "found_date": "2026-10-09"
  },
  {
   "id": "59fa9dfca50d149d9641372f4649788c",
@@ -157,7 +157,7 @@
    "Shaman"
   ],
   "source": "maxroll",
-  "found_date": "2026-10-08"
+  "found_date": "2026-10-09"
  },
  {
   "id": "ce39399a49917f86b8de1a5f456a4eaa",
@@ -177,7 +177,7 @@
    "Shaman"
   ],
   "source": "maxroll",
-  "found_date": "2026-10-08"
+  "found_date": "2026-10-09"
  },
  {
   "id": "4d163efe56f9ed04289e32044016069b",
@@ -197,6 +197,6 @@
    "Gemling Legionnaire"
   ],
   "source": "maxroll",
-  "found_date": "2026-10-08"
+  "found_date": "2026-10-09"
  }
 ]
