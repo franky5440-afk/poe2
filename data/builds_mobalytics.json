@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-09",
+  "found_date": "2026-10-10",
   "rank": 1
  },
  {
@@ -32,7 +32,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-09",
+  "found_date": "2026-10-10",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-09",
+  "found_date": "2026-10-10",
   "rank": 3
  },
  {
@@ -68,7 +68,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-09",
+  "found_date": "2026-10-10",
   "rank": 4
  },
  {
@@ -85,7 +85,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-09",
+  "found_date": "2026-10-10",
   "rank": 5
  },
  {
@@ -104,8 +104,25 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-09",
+  "found_date": "2026-10-10",
   "rank": 6
+ },
+ {
+  "id": "2d5b08d1f9562906ca9427fee8e449df",
+  "title": "0.5.5 Fubgun Ice Shot Deadeye",
+  "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
+  "author": "Fubgun",
+  "updated": "Sep 12, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Deadeye"
+  ],
+  "tags": [
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-10-10",
+  "rank": 7
  },
  {
   "id": "cac0defd8ffaed10bf302996686db617",
@@ -123,24 +140,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-09",
-  "rank": 7
- },
- {
-  "id": "2d5b08d1f9562906ca9427fee8e449df",
-  "title": "0.5.5 Fubgun Ice Shot Deadeye",
-  "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
-  "author": "Fubgun",
-  "updated": "Sep 12, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Deadeye"
-  ],
-  "tags": [
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-10-09",
+  "found_date": "2026-10-10",
   "rank": 8
  },
  {
@@ -159,7 +159,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-09",
+  "found_date": "2026-10-10",
   "rank": 9
  },
  {
@@ -177,7 +177,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-09",
+  "found_date": "2026-10-10",
   "rank": 10
  }
 ]
