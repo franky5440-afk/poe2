@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-10",
+  "found_date": "2026-10-11",
   "rank": 1
  },
  {
@@ -32,7 +32,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-10",
+  "found_date": "2026-10-11",
   "rank": 2
  },
  {
@@ -51,25 +51,8 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-10",
+  "found_date": "2026-10-11",
   "rank": 3
- },
- {
-  "id": "9f45a9398f16377d50d2464ae25f9a64",
-  "title": "[0.5.5] Scorps Plants COC Endgame Guide",
-  "url": "https://mobalytics.gg/poe-2/builds/scorps-plants-coc-endgame-guide-scorpius",
-  "author": "Scorpius",
-  "updated": "Sep 30, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Oracle"
-  ],
-  "tags": [
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-10-10",
-  "rank": 4
  },
  {
   "id": "4151ec11c2f12f34a5edab72282723f2",
@@ -85,7 +68,24 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-10",
+  "found_date": "2026-10-11",
+  "rank": 4
+ },
+ {
+  "id": "9f45a9398f16377d50d2464ae25f9a64",
+  "title": "[0.5.5] Scorps Plants COC Endgame Guide",
+  "url": "https://mobalytics.gg/poe-2/builds/scorps-plants-coc-endgame-guide-scorpius",
+  "author": "Scorpius",
+  "updated": "Sep 30, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Oracle"
+  ],
+  "tags": [
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-10-11",
   "rank": 5
  },
  {
@@ -104,7 +104,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-10",
+  "found_date": "2026-10-11",
   "rank": 6
  },
  {
@@ -121,7 +121,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-10",
+  "found_date": "2026-10-11",
   "rank": 7
  },
  {
@@ -140,7 +140,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-10",
+  "found_date": "2026-10-11",
   "rank": 8
  },
  {
@@ -159,7 +159,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-10",
+  "found_date": "2026-10-11",
   "rank": 9
  },
  {
@@ -177,7 +177,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-10",
+  "found_date": "2026-10-11",
   "rank": 10
  }
 ]
