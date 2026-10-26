@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-25",
+  "found_date": "2026-10-26",
   "rank": 1
  },
  {
@@ -32,7 +32,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-25",
+  "found_date": "2026-10-26",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-25",
+  "found_date": "2026-10-26",
   "rank": 3
  },
  {
@@ -68,7 +68,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-25",
+  "found_date": "2026-10-26",
   "rank": 4
  },
  {
@@ -85,7 +85,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-25",
+  "found_date": "2026-10-26",
   "rank": 5
  },
  {
@@ -104,7 +104,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-25",
+  "found_date": "2026-10-26",
   "rank": 6
  },
  {
@@ -121,7 +121,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-25",
+  "found_date": "2026-10-26",
   "rank": 7
  },
  {
@@ -140,7 +140,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-25",
+  "found_date": "2026-10-26",
   "rank": 8
  },
  {
@@ -159,25 +159,25 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-25",
+  "found_date": "2026-10-26",
   "rank": 9
  },
  {
-  "id": "9d0baa7e9e723740a14476ed7070e750",
-  "title": "[0.5] CaptainLance9's Spirit Walker Beast Master",
-  "url": "https://mobalytics.gg/poe-2/builds/spirit-walker-beast-master",
-  "author": "CaptainLance9",
-  "updated": "Sep 15, 2026",
+  "id": "1945955cc099a5615636e9d303047bc9",
+  "title": "[0.5.5] Giga Bonk Martial Artist - Falling Thunder Monk - League Starter to Endgame",
+  "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-build",
+  "author": "FGKorbyn21",
+  "updated": "Oct 01, 2026",
   "patch": "0.5.5 FR",
   "classes": [
-   "Spirit Walker"
+   "Martial Artist"
   ],
   "tags": [
-   "Starter",
-   "End Game"
+   "End Game",
+   "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-25",
+  "found_date": "2026-10-26",
   "rank": 10
  }
 ]
