@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-27",
+  "found_date": "2026-10-28",
   "rank": 1
  },
  {
@@ -32,7 +32,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-27",
+  "found_date": "2026-10-28",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-27",
+  "found_date": "2026-10-28",
   "rank": 3
  },
  {
@@ -68,7 +68,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-27",
+  "found_date": "2026-10-28",
   "rank": 4
  },
  {
@@ -85,7 +85,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-27",
+  "found_date": "2026-10-28",
   "rank": 5
  },
  {
@@ -104,7 +104,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-27",
+  "found_date": "2026-10-28",
   "rank": 6
  },
  {
@@ -121,7 +121,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-27",
+  "found_date": "2026-10-28",
   "rank": 7
  },
  {
@@ -140,8 +140,26 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-27",
+  "found_date": "2026-10-28",
   "rank": 8
+ },
+ {
+  "id": "1945955cc099a5615636e9d303047bc9",
+  "title": "[0.5.5] Giga Bonk Martial Artist - Falling Thunder Monk - League Starter to Endgame",
+  "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-build",
+  "author": "FGKorbyn21",
+  "updated": "Oct 26, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Martial Artist"
+  ],
+  "tags": [
+   "End Game",
+   "Starter"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-10-28",
+  "rank": 9
  },
  {
   "id": "57a15039f1a67aa2fed85e85aa922963",
@@ -159,25 +177,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-27",
-  "rank": 9
- },
- {
-  "id": "1945955cc099a5615636e9d303047bc9",
-  "title": "[0.5.5] Giga Bonk Martial Artist - Falling Thunder Monk - League Starter to Endgame",
-  "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-build",
-  "author": "FGKorbyn21",
-  "updated": "Oct 26, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Martial Artist"
-  ],
-  "tags": [
-   "End Game",
-   "Starter"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-10-27",
+  "found_date": "2026-10-28",
   "rank": 10
  }
 ]
