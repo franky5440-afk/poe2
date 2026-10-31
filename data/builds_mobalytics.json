@@ -14,26 +14,8 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-30",
+  "found_date": "2026-10-31",
   "rank": 1
- },
- {
-  "id": "c360ad7cf7d0314b58ab7d7889c2e87f",
-  "title": "0.5.5 Fubgun Flameblast Oil Grenade",
-  "url": "https://mobalytics.gg/poe-2/builds/fubgun-flameblast-oil-grenade",
-  "author": "Fubgun",
-  "updated": "Sep 12, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Gemling Legionnaire"
-  ],
-  "tags": [
-   "Starter",
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-10-30",
-  "rank": 2
  },
  {
   "id": "e18c7adb94df3d321734d42038f9d7c3",
@@ -51,7 +33,25 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-30",
+  "found_date": "2026-10-31",
+  "rank": 2
+ },
+ {
+  "id": "c360ad7cf7d0314b58ab7d7889c2e87f",
+  "title": "0.5.5 Fubgun Flameblast Oil Grenade",
+  "url": "https://mobalytics.gg/poe-2/builds/fubgun-flameblast-oil-grenade",
+  "author": "Fubgun",
+  "updated": "Sep 12, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Gemling Legionnaire"
+  ],
+  "tags": [
+   "Starter",
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-10-31",
   "rank": 3
  },
  {
@@ -68,7 +68,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-30",
+  "found_date": "2026-10-31",
   "rank": 4
  },
  {
@@ -85,7 +85,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-30",
+  "found_date": "2026-10-31",
   "rank": 5
  },
  {
@@ -104,7 +104,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-30",
+  "found_date": "2026-10-31",
   "rank": 6
  },
  {
@@ -121,7 +121,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-30",
+  "found_date": "2026-10-31",
   "rank": 7
  },
  {
@@ -140,7 +140,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-30",
+  "found_date": "2026-10-31",
   "rank": 8
  },
  {
@@ -148,7 +148,7 @@
   "title": "[0.5.5] Giga Bonk Martial Artist - Falling Thunder Monk - League Starter to Endgame",
   "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-build",
   "author": "FGKorbyn21",
-  "updated": "Oct 26, 2026",
+  "updated": "Oct 30, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Martial Artist"
@@ -158,25 +158,26 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-30",
+  "found_date": "2026-10-31",
   "rank": 9
  },
  {
-  "id": "9d0baa7e9e723740a14476ed7070e750",
-  "title": "[0.5] CaptainLance9's Spirit Walker Beast Master",
-  "url": "https://mobalytics.gg/poe-2/builds/spirit-walker-beast-master",
-  "author": "CaptainLance9",
-  "updated": "Sep 15, 2026",
+  "id": "57a15039f1a67aa2fed85e85aa922963",
+  "title": "[0.5.5] Ky's 1 Button Arc Totems Gemling Legionnaire [ LeagueStart to Endgame]",
+  "url": "https://mobalytics.gg/poe-2/builds/arc-gemling-path-of-ky",
+  "author": "Ky",
+  "updated": "Sep 29, 2026",
   "patch": "0.5.5 FR",
   "classes": [
-   "Spirit Walker"
+   "Gemling Legionnaire"
   ],
   "tags": [
-   "Starter",
-   "End Game"
+   "End Game",
+   "Speed Leveling",
+   "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-10-30",
+  "found_date": "2026-10-31",
   "rank": 10
  }
 ]
