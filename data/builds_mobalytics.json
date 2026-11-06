@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-05",
+  "found_date": "2026-11-06",
   "rank": 1
  },
  {
@@ -33,7 +33,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-05",
+  "found_date": "2026-11-06",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-05",
+  "found_date": "2026-11-06",
   "rank": 3
  },
  {
@@ -68,7 +68,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-05",
+  "found_date": "2026-11-06",
   "rank": 4
  },
  {
@@ -85,7 +85,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-05",
+  "found_date": "2026-11-06",
   "rank": 5
  },
  {
@@ -104,7 +104,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-05",
+  "found_date": "2026-11-06",
   "rank": 6
  },
  {
@@ -121,7 +121,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-05",
+  "found_date": "2026-11-06",
   "rank": 7
  },
  {
@@ -140,7 +140,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-05",
+  "found_date": "2026-11-06",
   "rank": 8
  },
  {
@@ -158,26 +158,26 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-05",
+  "found_date": "2026-11-06",
   "rank": 9
  },
  {
-  "id": "57a15039f1a67aa2fed85e85aa922963",
-  "title": "[0.5.5] Ky's 1 Button Arc Totems Gemling Legionnaire [ LeagueStart to Endgame]",
-  "url": "https://mobalytics.gg/poe-2/builds/arc-gemling-path-of-ky",
-  "author": "Ky",
-  "updated": "Sep 29, 2026",
+  "id": "2cb7ffd9085eb37b32aa6ed4f241270f",
+  "title": "[0.5.5] Comprehensive CoC Frostbolt/Spark Comet Recoup Infernalist - by Ignatius",
+  "url": "https://mobalytics.gg/poe-2/builds/coc-spark-comet-recoup-infernalist-by-ignatius",
+  "author": "Ignatius",
+  "updated": "Oct 08, 2026",
   "patch": "0.5.5 FR",
   "classes": [
-   "Gemling Legionnaire"
+   "Infernalist"
   ],
   "tags": [
+   "Starter",
    "End Game",
-   "Speed Leveling",
-   "Starter"
+   "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-05",
+  "found_date": "2026-11-06",
   "rank": 10
  }
 ]
