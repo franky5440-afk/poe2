@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-11",
+  "found_date": "2026-11-12",
   "rank": 1
  },
  {
@@ -33,7 +33,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-11",
+  "found_date": "2026-11-12",
   "rank": 2
  },
  {
@@ -51,7 +51,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-11",
+  "found_date": "2026-11-12",
   "rank": 3
  },
  {
@@ -68,7 +68,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-11",
+  "found_date": "2026-11-12",
   "rank": 4
  },
  {
@@ -87,7 +87,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-11",
+  "found_date": "2026-11-12",
   "rank": 5
  },
  {
@@ -104,8 +104,25 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-11",
+  "found_date": "2026-11-12",
   "rank": 6
+ },
+ {
+  "id": "2d5b08d1f9562906ca9427fee8e449df",
+  "title": "0.5.5 Fubgun Ice Shot Deadeye",
+  "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
+  "author": "Fubgun",
+  "updated": "Sep 12, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Deadeye"
+  ],
+  "tags": [
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-11-12",
+  "rank": 7
  },
  {
   "id": "cac0defd8ffaed10bf302996686db617",
@@ -123,24 +140,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-11",
-  "rank": 7
- },
- {
-  "id": "2d5b08d1f9562906ca9427fee8e449df",
-  "title": "0.5.5 Fubgun Ice Shot Deadeye",
-  "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
-  "author": "Fubgun",
-  "updated": "Sep 12, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Deadeye"
-  ],
-  "tags": [
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-11-11",
+  "found_date": "2026-11-12",
   "rank": 8
  },
  {
@@ -158,7 +158,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-11",
+  "found_date": "2026-11-12",
   "rank": 9
  },
  {
@@ -166,7 +166,7 @@
   "title": "[0.5.5] Comprehensive CoC Frostbolt/Spark Comet Recoup Infernalist - by Ignatius",
   "url": "https://mobalytics.gg/poe-2/builds/coc-spark-comet-recoup-infernalist-by-ignatius",
   "author": "Ignatius",
-  "updated": "Oct 08, 2026",
+  "updated": "Nov 11, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Infernalist"
@@ -177,7 +177,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-11",
+  "found_date": "2026-11-12",
   "rank": 10
  }
 ]
