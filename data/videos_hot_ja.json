@@ -1,38 +1,11 @@
 [
  {
-  "video_id": "JXqaFr3FiIE",
-  "title": "究極のエナベーティング・ノヴァ・クロノマンサー・ビルド - Path of Exile 2",
-  "channel": "Logan Almighty",
-  "url": "https://www.youtube.com/watch?v=JXqaFr3FiIE",
-  "views": 82594,
-  "date": "2026-10-31",
-  "lang": "ja"
- },
- {
   "video_id": "4OmbysS4N7s",
   "title": "【PoE2】シャドウ実装＆新リーグ発表！ExileCon 2026まとめ",
   "channel": "やまん",
   "url": "https://www.youtube.com/watch?v=4OmbysS4N7s",
-  "views": 67780,
+  "views": 68009,
   "date": "2026-11-07",
-  "lang": "ja"
- },
- {
-  "video_id": "iJtH1JJIjgE",
-  "title": "ビルドの概念を覆す新ユニーク装備が公開！ - PoE 2 1.0 ティーザー＆リーク情報",
-  "channel": "Master T",
-  "url": "https://www.youtube.com/watch?v=iJtH1JJIjgE",
-  "views": 53999,
-  "date": "2026-11-08",
-  "lang": "ja"
- },
- {
-  "video_id": "dwFfHGfzMZI",
-  "title": "【PoE2】『堕ちたる陣形』が超強力である理由【ver 1.0前】",
-  "channel": "やまん",
-  "url": "https://www.youtube.com/watch?v=dwFfHGfzMZI",
-  "views": 35257,
-  "date": "2026-11-09",
   "lang": "ja"
  },
  {
@@ -40,8 +13,17 @@
   "title": "【PoE2】ついに1.0の全貌が判明！正式リリースの新要素・変更点を総まとめ！",
   "channel": "セージ Ch.【ゲーム攻略】",
   "url": "https://www.youtube.com/watch?v=XbwL83EM9aM",
-  "views": 34420,
+  "views": 35953,
   "date": "2026-11-07",
+  "lang": "ja"
+ },
+ {
+  "video_id": "dwFfHGfzMZI",
+  "title": "【PoE2】『堕ちたる陣形』が超強力である理由【ver 1.0前】",
+  "channel": "やまん",
+  "url": "https://www.youtube.com/watch?v=dwFfHGfzMZI",
+  "views": 35390,
+  "date": "2026-11-09",
   "lang": "ja"
  },
  {
@@ -49,7 +31,7 @@
   "title": "【PoE2】こっそりとモッドナーフまで…クリティカルはどう変わる？Q＆Aとラウンドアップまとめ【ver 1.0前】",
   "channel": "やまん",
   "url": "https://www.youtube.com/watch?v=J86iAXRoUF0",
-  "views": 29782,
+  "views": 29941,
   "date": "2026-11-10",
   "lang": "ja"
  },
@@ -58,7 +40,7 @@
   "title": "【PoE2】1.0の重要情報が続々判明！開発者Q&A全48項目を総まとめ",
   "channel": "セージ Ch.【ゲーム攻略】",
   "url": "https://www.youtube.com/watch?v=oefrCUPg3W0",
-  "views": 24088,
+  "views": 24406,
   "date": "2026-11-08",
   "lang": "ja"
  },
@@ -67,7 +49,7 @@
   "title": "PoE2正式版の情報公開！デュエリストヤバめか！？「Exilecon 2026」の率直な感想とまとめ、そして5段階評価！ 【パスオブエグザイル2】",
   "channel": "バチャ丸",
   "url": "https://www.youtube.com/watch?v=VnXkMIPKeEY",
-  "views": 22139,
+  "views": 22522,
   "date": "2026-11-07",
   "lang": "ja"
  },
@@ -76,7 +58,7 @@
   "title": "【Path of Exile 2】1.0で変わること、増えること【PoE2】",
   "channel": "ゲーミングナマケモノ",
   "url": "https://www.youtube.com/watch?v=lN5FDp3E8xA",
-  "views": 18234,
+  "views": 18428,
   "date": "2026-11-08",
   "lang": "ja"
  },
@@ -85,8 +67,26 @@
   "title": "【PoE2 1.0】新クラス「シャドウ」完全解説！現在判明している全スキル・新システム・アセンダンシーの情報を徹底紹介！",
   "channel": "セージ Ch.【ゲーム攻略】",
   "url": "https://www.youtube.com/watch?v=mesG1PvmhZc",
-  "views": 17650,
+  "views": 18252,
   "date": "2026-11-11",
+  "lang": "ja"
+ },
+ {
+  "video_id": "jKe-DCuMZ5Q",
+  "title": "【Path of Exile 2】1.0の新ユニークが笑わせにきてる【PoE2】",
+  "channel": "ゲーミングナマケモノ",
+  "url": "https://www.youtube.com/watch?v=jKe-DCuMZ5Q",
+  "views": 17747,
+  "date": "2026-11-09",
+  "lang": "ja"
+ },
+ {
+  "video_id": "j7ZjmT2KWcg",
+  "title": "【PoE2 1.0】パッシブツリーからクリ率ノード全削除！？開発者が明かした衝撃の変更とビルド環境への影響",
+  "channel": "セージ Ch.【ゲーム攻略】",
+  "url": "https://www.youtube.com/watch?v=j7ZjmT2KWcg",
+  "views": 17474,
+  "date": "2026-11-07",
   "lang": "ja"
  }
 ]
