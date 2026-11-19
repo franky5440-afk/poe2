@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-18",
+  "found_date": "2026-11-19",
   "rank": 1
  },
  {
@@ -33,7 +33,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-18",
+  "found_date": "2026-11-19",
   "rank": 2
  },
  {
@@ -51,8 +51,25 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-18",
+  "found_date": "2026-11-19",
   "rank": 3
+ },
+ {
+  "id": "9f45a9398f16377d50d2464ae25f9a64",
+  "title": "[0.5.5] Scorps Plants COC Endgame Guide",
+  "url": "https://mobalytics.gg/poe-2/builds/scorps-plants-coc-endgame-guide-scorpius",
+  "author": "Scorpius",
+  "updated": "Nov 17, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Oracle"
+  ],
+  "tags": [
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-11-19",
+  "rank": 4
  },
  {
   "id": "e794776d64063c766d53d65312d4d62c",
@@ -70,24 +87,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-18",
-  "rank": 4
- },
- {
-  "id": "9f45a9398f16377d50d2464ae25f9a64",
-  "title": "[0.5.5] Scorps Plants COC Endgame Guide",
-  "url": "https://mobalytics.gg/poe-2/builds/scorps-plants-coc-endgame-guide-scorpius",
-  "author": "Scorpius",
-  "updated": "Nov 17, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Oracle"
-  ],
-  "tags": [
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-11-18",
+  "found_date": "2026-11-19",
   "rank": 5
  },
  {
@@ -104,7 +104,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-18",
+  "found_date": "2026-11-19",
   "rank": 6
  },
  {
@@ -123,7 +123,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-18",
+  "found_date": "2026-11-19",
   "rank": 7
  },
  {
@@ -141,7 +141,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-18",
+  "found_date": "2026-11-19",
   "rank": 8
  },
  {
@@ -160,24 +160,25 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-18",
+  "found_date": "2026-11-19",
   "rank": 9
  },
  {
-  "id": "4151ec11c2f12f34a5edab72282723f2",
-  "title": "[0.5.5] Immortal Witchhunter Frostbolt Infinite Loop",
-  "url": "https://mobalytics.gg/poe-2/builds/immortal-witchhunter-frostbolt-infinite-loop",
-  "author": "Lazy Exile",
+  "id": "57b5f591ec3f3f7ef7412c5dffab45fa",
+  "title": "[0.5.5] Spin to Win ONE-Shot Bosses",
+  "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
+  "author": "Scorpius",
   "updated": "Oct 26, 2026",
   "patch": "0.5.5 FR",
   "classes": [
-   "Witchhunter"
+   "Martial Artist"
   ],
   "tags": [
+   "Starter",
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-18",
+  "found_date": "2026-11-19",
   "rank": 10
  }
 ]
