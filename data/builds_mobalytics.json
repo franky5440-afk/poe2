@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-22",
+  "found_date": "2026-11-23",
   "rank": 1
  },
  {
@@ -33,7 +33,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-22",
+  "found_date": "2026-11-23",
   "rank": 2
  },
  {
@@ -50,7 +50,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-22",
+  "found_date": "2026-11-23",
   "rank": 3
  },
  {
@@ -67,7 +67,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-22",
+  "found_date": "2026-11-23",
   "rank": 4
  },
  {
@@ -86,7 +86,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-22",
+  "found_date": "2026-11-23",
   "rank": 5
  },
  {
@@ -105,7 +105,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-22",
+  "found_date": "2026-11-23",
   "rank": 6
  },
  {
@@ -123,7 +123,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-22",
+  "found_date": "2026-11-23",
   "rank": 7
  },
  {
@@ -141,8 +141,26 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-22",
+  "found_date": "2026-11-23",
   "rank": 8
+ },
+ {
+  "id": "57b5f591ec3f3f7ef7412c5dffab45fa",
+  "title": "[0.5.5] Spin to Win ONE-Shot Bosses",
+  "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
+  "author": "Scorpius",
+  "updated": "Oct 26, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Martial Artist"
+  ],
+  "tags": [
+   "Starter",
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-11-23",
+  "rank": 9
  },
  {
   "id": "2cb7ffd9085eb37b32aa6ed4f241270f",
@@ -160,25 +178,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-22",
-  "rank": 9
- },
- {
-  "id": "57b5f591ec3f3f7ef7412c5dffab45fa",
-  "title": "[0.5.5] Spin to Win ONE-Shot Bosses",
-  "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
-  "author": "Scorpius",
-  "updated": "Oct 26, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Martial Artist"
-  ],
-  "tags": [
-   "Starter",
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-11-22",
+  "found_date": "2026-11-23",
   "rank": 10
  }
 ]
