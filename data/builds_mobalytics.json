@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-23",
+  "found_date": "2026-11-24",
   "rank": 1
  },
  {
@@ -22,7 +22,7 @@
   "title": "[0.5.5] Grenades Gemling League Starter (Level 1 to Endgame)",
   "url": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter",
   "author": "DEADRABB1T",
-  "updated": "Nov 19, 2026",
+  "updated": "Nov 24, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Gemling Legionnaire"
@@ -33,32 +33,15 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-23",
+  "found_date": "2026-11-24",
   "rank": 2
- },
- {
-  "id": "9f45a9398f16377d50d2464ae25f9a64",
-  "title": "[0.5.5] Scorps Plants COC Endgame Guide",
-  "url": "https://mobalytics.gg/poe-2/builds/scorps-plants-coc-endgame-guide-scorpius",
-  "author": "Scorpius",
-  "updated": "Nov 17, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Oracle"
-  ],
-  "tags": [
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-11-23",
-  "rank": 3
  },
  {
   "id": "2d5b08d1f9562906ca9427fee8e449df",
   "title": "0.5.5 Fubgun Ice Shot Deadeye",
   "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
   "author": "Fubgun",
-  "updated": "Sep 12, 2026",
+  "updated": "Nov 24, 2026",
   "patch": "0.5.5 FR",
   "classes": [
    "Deadeye"
@@ -67,27 +50,8 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-23",
-  "rank": 4
- },
- {
-  "id": "e794776d64063c766d53d65312d4d62c",
-  "title": "[0.5.5] Twister Gemling Legionnaire",
-  "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
-  "author": "snoobae85",
-  "updated": "Oct 26, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Gemling Legionnaire"
-  ],
-  "tags": [
-   "Starter",
-   "End Game",
-   "Speed Leveling"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-11-23",
-  "rank": 5
+  "found_date": "2026-11-24",
+  "rank": 3
  },
  {
   "id": "cac0defd8ffaed10bf302996686db617",
@@ -105,7 +69,43 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-23",
+  "found_date": "2026-11-24",
+  "rank": 4
+ },
+ {
+  "id": "e794776d64063c766d53d65312d4d62c",
+  "title": "[0.5.5] Twister Gemling Legionnaire",
+  "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
+  "author": "snoobae85",
+  "updated": "Nov 24, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Gemling Legionnaire"
+  ],
+  "tags": [
+   "Starter",
+   "End Game",
+   "Speed Leveling"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-11-24",
+  "rank": 5
+ },
+ {
+  "id": "9f45a9398f16377d50d2464ae25f9a64",
+  "title": "[0.5.5] Scorps Plants COC Endgame Guide",
+  "url": "https://mobalytics.gg/poe-2/builds/scorps-plants-coc-endgame-guide-scorpius",
+  "author": "Scorpius",
+  "updated": "Nov 17, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Oracle"
+  ],
+  "tags": [
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-11-24",
   "rank": 6
  },
  {
@@ -123,7 +123,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-23",
+  "found_date": "2026-11-24",
   "rank": 7
  },
  {
@@ -141,7 +141,7 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-23",
+  "found_date": "2026-11-24",
   "rank": 8
  },
  {
@@ -159,7 +159,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-23",
+  "found_date": "2026-11-24",
   "rank": 9
  },
  {
@@ -178,7 +178,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-23",
+  "found_date": "2026-11-24",
   "rank": 10
  }
 ]
