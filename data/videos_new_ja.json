@@ -1,10 +1,19 @@
 [
  {
-  "video_id": "VuPBjZCGHgE",
+  "video_id": "0qycPTllwRM",
+  "title": "【POE2】今日もぽえぽえ！！",
+  "channel": "スイクンゲームズ",
+  "url": "https://www.youtube.com/watch?v=0qycPTllwRM",
+  "views": 638,
+  "date": "2026-11-25",
+  "lang": "ja"
+ },
+ {
+  "video_id": "0ezGZJwWXkk",
   "title": "【POE2】新情報いっぱい！皆ではなそー！",
   "channel": "スイクンゲームズ",
-  "url": "https://www.youtube.com/watch?v=VuPBjZCGHgE",
-  "views": 1853,
+  "url": "https://www.youtube.com/watch?v=0ezGZJwWXkk",
+  "views": 2545,
   "date": "2026-11-24",
   "lang": "ja"
  },
@@ -13,7 +22,34 @@
   "title": "【PoE2】Act3攻略を固めたい！正式リリースに向けたアクト練習＆新情報考察！【生配信】",
   "channel": "田中の友達",
   "url": "https://www.youtube.com/watch?v=I6cwEoUZ-j4",
-  "views": 3031,
+  "views": 5933,
+  "date": "2026-11-24",
+  "lang": "ja"
+ },
+ {
+  "video_id": "yH2C2pw1HXI",
+  "title": "【PoE2 1.0】全ダガースキルが明らかに！シャドウの可能性を語ろう！【LIVE】",
+  "channel": "セージ Ch.【ゲーム攻略】",
+  "url": "https://www.youtube.com/watch?v=yH2C2pw1HXI",
+  "views": 0,
+  "date": "2026-11-24",
+  "lang": "ja"
+ },
+ {
+  "video_id": "2YzDo58AGTs",
+  "title": "POE2正式リリース前イベント『ジョナサンに直接インタビューしてきた！　シャドウ　デュエリスト使用感についても話します』ARPG　パスオブエグザイル２【Path of Exile 2】",
+  "channel": "タカピィTKAP",
+  "url": "https://www.youtube.com/watch?v=2YzDo58AGTs",
+  "views": 7907,
+  "date": "2026-11-24",
+  "lang": "ja"
+ },
+ {
+  "video_id": "IavKMwF59B8",
+  "title": "PoE2正式版の先行体験イベントに招待されたんで行ってきた。先行プレイ感想と、ジョナサンへの質問を共有します。ジョナサンの推しクラスは？サイクロンはワンボタン可能？など 【パスオブエグザイル2】",
+  "channel": "バチャ丸",
+  "url": "https://www.youtube.com/watch?v=IavKMwF59B8",
+  "views": 12546,
   "date": "2026-11-24",
   "lang": "ja"
  },
@@ -22,7 +58,7 @@
   "title": "全21スキル徹底解説！新クラス「シャドー」のダガー＆トラップがヤバい！【PoE2】",
   "channel": "KTR Gaming",
   "url": "https://www.youtube.com/watch?v=3T8YI3axebo",
-  "views": 11018,
+  "views": 11987,
   "date": "2026-11-23",
   "lang": "ja"
  },
@@ -31,7 +67,7 @@
   "title": "【POE2】新規さん大歓迎！ストーリー攻略配信！",
   "channel": "スイクンゲームズ",
   "url": "https://www.youtube.com/watch?v=ebuaLWv9eQo",
-  "views": 1624,
+  "views": 1698,
   "date": "2026-11-23",
   "lang": "ja"
  },
@@ -40,7 +76,7 @@
   "title": "【PoE2 1.0】デュエリストとシャドウを先行プレイ！サイクロンは弱すぎる？ジョナサンに低予算のおすすめクラスも聞いてきた",
   "channel": "ゆきデンマークから配信中",
   "url": "https://www.youtube.com/watch?v=LakCYkCNuKc",
-  "views": 10531,
+  "views": 15392,
   "date": "2026-11-23",
   "lang": "ja"
  },
@@ -49,44 +85,8 @@
   "title": "【PoE2 1.0】新クラス「シャドウ」を先行試遊！実際に触って分かったこと！",
   "channel": "セージ Ch.【ゲーム攻略】",
   "url": "https://www.youtube.com/watch?v=czvtISjQNv0",
-  "views": 11448,
+  "views": 22783,
   "date": "2026-11-23",
-  "lang": "ja"
- },
- {
-  "video_id": "5dXYR0Mv_ww",
-  "title": "【PoE2 1.0】ハズレユニークがリワークで大化け！？激変する注目ユニーク4選！！",
-  "channel": "セージ Ch.【ゲーム攻略】",
-  "url": "https://www.youtube.com/watch?v=5dXYR0Mv_ww",
-  "views": 9550,
-  "date": "2026-11-23",
-  "lang": "ja"
- },
- {
-  "video_id": "QRN08kRnpSU",
-  "title": "【POE2】製品版が待ち遠しくて狂いそうな人が集まる配信",
-  "channel": "スイクンゲームズ",
-  "url": "https://www.youtube.com/watch?v=QRN08kRnpSU",
-  "views": 3674,
-  "date": "2026-11-22",
-  "lang": "ja"
- },
- {
-  "video_id": "ut1qNyUrMJ8",
-  "title": "ジョナサン明言！「従者はぶっ壊れの可能性」「1.0で絶対ナーフはしない」マジ！？【PoE2】",
-  "channel": "KTR Gaming",
-  "url": "https://www.youtube.com/watch?v=ut1qNyUrMJ8",
-  "views": 17729,
-  "date": "2026-11-21",
-  "lang": "ja"
- },
- {
-  "video_id": "--Ui9wX-rU4",
-  "title": "【PoE2】最終版！不滅のクマビルド徹底解説！T16城塞ボスもアービターも棒立ちで完封!? 圧倒的回復量と耐久力の仕組み シャーマン【Path of Exile 2】",
-  "channel": "おひつじのゲーム",
-  "url": "https://www.youtube.com/watch?v=--Ui9wX-rU4",
-  "views": 7267,
-  "date": "2026-11-21",
   "lang": "ja"
  }
 ]
