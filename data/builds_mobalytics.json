@@ -14,7 +14,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-26",
+  "found_date": "2026-11-27",
   "rank": 1
  },
  {
@@ -33,7 +33,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-26",
+  "found_date": "2026-11-27",
   "rank": 2
  },
  {
@@ -50,7 +50,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-26",
+  "found_date": "2026-11-27",
   "rank": 3
  },
  {
@@ -69,7 +69,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-26",
+  "found_date": "2026-11-27",
   "rank": 4
  },
  {
@@ -88,7 +88,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-26",
+  "found_date": "2026-11-27",
   "rank": 5
  },
  {
@@ -105,26 +105,8 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-26",
+  "found_date": "2026-11-27",
   "rank": 6
- },
- {
-  "id": "c360ad7cf7d0314b58ab7d7889c2e87f",
-  "title": "0.5.5 Fubgun Flameblast Oil Grenade",
-  "url": "https://mobalytics.gg/poe-2/builds/fubgun-flameblast-oil-grenade",
-  "author": "Fubgun",
-  "updated": "Sep 12, 2026",
-  "patch": "0.5.5 FR",
-  "classes": [
-   "Gemling Legionnaire"
-  ],
-  "tags": [
-   "Starter",
-   "End Game"
-  ],
-  "source": "mobalytics",
-  "found_date": "2026-11-26",
-  "rank": 7
  },
  {
   "id": "1945955cc099a5615636e9d303047bc9",
@@ -141,7 +123,25 @@
    "Starter"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-26",
+  "found_date": "2026-11-27",
+  "rank": 7
+ },
+ {
+  "id": "c360ad7cf7d0314b58ab7d7889c2e87f",
+  "title": "0.5.5 Fubgun Flameblast Oil Grenade",
+  "url": "https://mobalytics.gg/poe-2/builds/fubgun-flameblast-oil-grenade",
+  "author": "Fubgun",
+  "updated": "Sep 12, 2026",
+  "patch": "0.5.5 FR",
+  "classes": [
+   "Gemling Legionnaire"
+  ],
+  "tags": [
+   "Starter",
+   "End Game"
+  ],
+  "source": "mobalytics",
+  "found_date": "2026-11-27",
   "rank": 8
  },
  {
@@ -159,7 +159,7 @@
    "End Game"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-26",
+  "found_date": "2026-11-27",
   "rank": 9
  },
  {
@@ -178,7 +178,7 @@
    "Speed Leveling"
   ],
   "source": "mobalytics",
-  "found_date": "2026-11-26",
+  "found_date": "2026-11-27",
   "rank": 10
  }
 ]
